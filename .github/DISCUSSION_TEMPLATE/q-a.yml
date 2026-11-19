@@ -1,0 +1,17 @@
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        A bug — a result that differs from Apache Velocity's, a panic — belongs in an
+        [issue](https://github.com/oxidestack/velocity-rs/issues/new/choose).
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The crate's version or commit, if it matters to the question.

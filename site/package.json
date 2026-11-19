@@ -1,0 +1,22 @@
+{
+  "name": "velocity-rs-site",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "description": "The documentation site: Astro Starlight over README.md and docs/guide/. `make site` builds it in the pinned node image.",
+  "scripts": {
+    "prebuild": "node scripts/stage.mjs",
+    "build": "astro build",
+    "predev": "node scripts/stage.mjs",
+    "dev": "astro dev --host 0.0.0.0",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "0.42.6",
+    "astro": "7.3.8",
+    "starlight-links-validator": "0.27.0"
+  },
+  "engines": {
+    "node": "22"
+  }
+}

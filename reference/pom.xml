@@ -1,0 +1,7 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"><modelVersion>4.0.0</modelVersion>
+<groupId>x</groupId><artifactId>velocity-reference</artifactId><version>1</version>
+<dependencies>
+<dependency><groupId>org.apache.velocity</groupId><artifactId>velocity-engine-core</artifactId><version>2.4.1</version></dependency>
+<dependency><groupId>org.apache.velocity.tools</groupId><artifactId>velocity-tools-generic</artifactId><version>3.1</version></dependency>
+<dependency><groupId>org.slf4j</groupId><artifactId>slf4j-simple</artifactId><version>2.0.17</version></dependency>
+</dependencies></project>

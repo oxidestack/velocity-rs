@@ -1,0 +1,794 @@
+[
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \".\" (in lexical state 8) at *unset*[line 1, column 24]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \".\" (in lexical state 8) at \t\t#set($. = [line 1, column 24]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ':' (58), after prefix \"&\" (in lexical state 8) at *unset*[line 1, column 17]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ':' (58), after prefix \"&\" (in lexical state 8) at \t#if($a &: $b)[line 1, column 17]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"|\\u001c\" (in lexical state 8) at *unset*[line 1, column 15]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"|\\u001c\" (in lexical state 8) at \t#if(|[line 1, column 15]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'a' (97), after prefix \"|\" (in lexical state 8) at *unset*[line 2, column 9]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'a' (97), after prefix \"|\" (in lexical state 8) at   #set($a = 1)\n  #if($|a)\n  x\n  #end\n[line 2, column 9]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \".\\u001c\" (in lexical state 8) at *unset*[line 15, column 12]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \".\\u001c\" (in lexical state 8) at ## This template is used for the case in which #set with a null\n## is not accepted\nset1\n\n#set ($abc = \"123\")\n$abc\n#set\t($abc = $boohoo)\n$abc\n\n#set    ($map = {})\n#set($map.foo = \"foo\")\n#set($map.bar = \"bar\")\n$map.foo\n$map.bar\n#set($map.[line 15, column 12]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ';' (59), (in lexical state 8) at *unset*[line 4, column 65]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ';' (59), (in lexical state 8) at ## test of evaluate in a macro context whith local refs (foreach refs)\n\n#macro(testEval $expr)\n#foreach($value in [\"val1\", \"val2\"])value is : #evaluate( $expr ;#end\n#end\n\n#testEval( \"${value}\" )\n[line 4, column 65]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\n' (10), after prefix \"|\" (in lexical state 8) at *unset*[line 6, column 25]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\n' (10), after prefix \"|\" (in lexical state 8) at ## tests to see if\n## missing parse throws an error\n\ntext\n\n#parse(\"doesntexist.vm\"|\n\ntext[line 6, column 25]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\n' (10), after prefix \".\" (in lexical state 8) at *unset*[line 14, column 33]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\n' (10), after prefix \".\" (in lexical state 8) at #*\n\n@test parse2.vm\n\nThis template is used for Velocity regression testing.\nIf you alter this template make sure you change the\ncorresponding comparison file so that the regression \ntest doesn't fail incorrectly.\n\n*#\nThis is parse2.vm.\n\n#if (true)\n\tThis is from a true #if.\n#end\n[line 14, column 33]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> (in lexical state 16) at *unset*[line 1, column 5]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> (in lexical state 16) at #[[[line 1, column 5]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> (in lexical state 16) at *unset*[line 1, column 7]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> (in lexical state 16) at #[[ x[line 1, column 7]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error: org.apache.velocity.runtime.parser.TokenMgrError: Lexical error at line 1, column 7.  Encountered: <EOF> after prefix \"\\\"\\u001c\" (in lexical state 8)",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error: org.apache.velocity.runtime.parser.TokenMgrError: Lexical error at line 1, column 7.  Encountered: <EOF> after prefix \"\\\"\\u001c\" (in lexical state 8)"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error: org.apache.velocity.runtime.parser.TokenMgrError: Lexical error at line 1, column 8.  Encountered: 'x' (120), after prefix \".\" (in lexical state 8)",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error: org.apache.velocity.runtime.parser.TokenMgrError: Lexical error at line 1, column 8.  Encountered: 'x' (120), after prefix \".\" (in lexical state 8)"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error: org.apache.velocity.runtime.parser.TokenMgrError: Lexical error at line 1, column 14.  Encountered: ':' (58), after prefix \"&\" (in lexical state 8)",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error: org.apache.velocity.runtime.parser.TokenMgrError: Lexical error at line 1, column 14.  Encountered: ':' (58), after prefix \"&\" (in lexical state 8)"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error: org.apache.velocity.runtime.parser.TokenMgrError: Lexical error at line 1, column 12.  Encountered: ')' (41), after prefix \".\" (in lexical state 8)",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error: org.apache.velocity.runtime.parser.TokenMgrError: Lexical error at line 1, column 12.  Encountered: ')' (41), after prefix \".\" (in lexical state 8)"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error: org.apache.velocity.runtime.parser.TokenMgrError: Lexical error at line 1, column 10.  Encountered: '=' (61), after prefix \"\\\\\" (in lexical state 8)",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error: org.apache.velocity.runtime.parser.TokenMgrError: Lexical error at line 1, column 10.  Encountered: '=' (61), after prefix \"\\\\\" (in lexical state 8)"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error: org.apache.velocity.runtime.parser.TokenMgrError: Lexical error at line 1, column 10.  Encountered: '=' (61), after prefix \".\" (in lexical state 8)",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error: org.apache.velocity.runtime.parser.TokenMgrError: Lexical error at line 1, column 10.  Encountered: '=' (61), after prefix \".\" (in lexical state 8)"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\')\\u001c\" (in lexical state 8) at *unset*[line 1, column 23]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\')\\u001c\" (in lexical state 8) at #evaluate('$a.b(\\'x')[line 1, column 23]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error: org.apache.velocity.runtime.parser.TokenMgrError: Lexical error at line 2, column 8.  Encountered: '|' (124), after prefix \".\" (in lexical state 8)",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error: org.apache.velocity.runtime.parser.TokenMgrError: Lexical error at line 2, column 8.  Encountered: '|' (124), after prefix \".\" (in lexical state 8)"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ',' (44), after prefix \".\" (in lexical state 8) at *unset*[line 1, column 8]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ',' (44), after prefix \".\" (in lexical state 8) at #foo($.,)[line 1, column 8]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ',' (44), after prefix \"|\" (in lexical state 8) at *unset*[line 1, column 8]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ',' (44), after prefix \"|\" (in lexical state 8) at #foo($|,)[line 1, column 8]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '.' (46), after prefix \"|\" (in lexical state 8) at *unset*[line 1, column 8]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '.' (46), after prefix \"|\" (in lexical state 8) at #foo([|..3])[line 1, column 8]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\'' (39), after prefix \"|\" (in lexical state 8) at *unset*[line 1, column 7]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\'' (39), after prefix \"|\" (in lexical state 8) at #foo(|'x')[line 1, column 7]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '.' (46), after prefix \"|\" (in lexical state 8) at *unset*[line 1, column 7]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '.' (46), after prefix \"|\" (in lexical state 8) at #foo(|.5)[line 1, column 7]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 't' (116), after prefix \"\\\\\" (in lexical state 8) at *unset*[line 1, column 21]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 't' (116), after prefix \"\\\\\" (in lexical state 8) at #foreach($a in $vec\\tor)\n $a\n#end\n[line 1, column 21]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '$' (36), after prefix \".\" (in lexical state 8) at *unset*[line 1, column 21]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '$' (36), after prefix \".\" (in lexical state 8) at #foreach($i in $map.$i,#end[line 1, column 21]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '#' (35), after prefix \".\" (in lexical state 8) at *unset*[line 1, column 38]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '#' (35), after prefix \".\" (in lexical state 8) at #foreach($i in [1..3])$i#if($foreach.#[[asNext),#end#end[line 1, column 38]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '.' (46), after prefix \"|\" (in lexical state 8) at *unset*[line 1, column 18]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '.' (46), after prefix \"|\" (in lexical state 8) at #foreach($i in [|..2])#foreach($j in [1..3])#break($foreach.parent)$j#end$i#end|[line 1, column 18]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \".\" (in lexical state 8) at *unset*[line 1, column 16]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \".\" (in lexical state 8) at #foreach($i in. $l)x[line 1, column 16]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \".\" (in lexical state 8) at *unset*[line 1, column 13]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \".\" (in lexical state 8) at #foreach($i. in 'abc')x#else none#end[line 1, column 13]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\u00e9' (233), (in lexical state 8) at *unset*[line 1, column 5]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\u00e9' (233), (in lexical state 8) at #if$\u00e9[line 1, column 5]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'n' (110), after prefix \"\\\\\" (in lexical state 8) at *unset*[line 1, column 13]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'n' (110), after prefix \"\\\\\" (in lexical state 8) at #if(!$missi\\ng)y#end[line 1, column 13]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error, )\\u001c\" (in lexical state 8) at *unset*[line 1, column 2]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error, )\\u001c\" (in lexical state 8) at #if(\"x line 1, column 2.)[line 1, column 2]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"|\\u001c\" (in lexical state 8) at *unset*[line 1, column 16]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"|\\u001c\" (in lexical state 8) at #if($a && $b |[line 1, column 16]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \"|\" (in lexical state 8) at *unset*[line 1, column 15]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \"|\" (in lexical state 8) at #if($a && $b | $c)x#end[line 1, column 15]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ':' (58), after prefix \"&\" (in lexical state 8) at *unset*[line 1, column 9]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ':' (58), after prefix \"&\" (in lexical state 8) at #if($a &:& $b || $c)x#end[line 1, column 9]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\\"x)\\u001c\" (in lexical state 8) at *unset*[line 1, column 15]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\\"x)\\u001c\" (in lexical state 8) at #if($a == \"x)[line 1, column 15]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '$' (36), after prefix \".\" (in lexical state 8) at *unset*[line 1, column 22]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '$' (36), after prefix \".\" (in lexical state 8) at #if($a == 1)x#elseif.$b)y#else z#end[line 1, column 22]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \"t\" (in lexical state 7) at *unset*[line 1, column 10]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \"t\" (in lexical state 7) at #if($li[t)y#end[line 1, column 10]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \"\\\\\" (in lexical state 8) at *unset*[line 1, column 10]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \"\\\\\" (in lexical state 8) at #if($lis\\)y#end[line 1, column 10]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'h' (104), (in lexical state 7) at *unset*[line 1, column 22]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'h' (104), (in lexical state 7) at #if($missing == $not[hing)y#else n#end[line 1, column 22]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '$' (36), after prefix \".\" (in lexical state 8) at *unset*[line 1, column 17]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '$' (36), after prefix \".\" (in lexical state 8) at #if($missing ==.$nothing)y#else n#end[line 1, column 17]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \"|\" (in lexical state 8) at *unset*[line 1, column 15]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \"|\" (in lexical state 8) at #if($missing | $name)y#end[line 1, column 15]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '$' (36), after prefix \"|\" (in lexical state 8) at *unset*[line 1, column 17]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '$' (36), after prefix \"|\" (in lexical state 8) at #if($missing |||$name)y#end[line 1, column 17]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '|' (124), after prefix \".\" (in lexical state 8) at *unset*[line 1, column 14]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '|' (124), after prefix \".\" (in lexical state 8) at #if($missing.|| $name)y#end[line 1, column 14]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \".\" (in lexical state 8) at *unset*[line 1, column 11]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \".\" (in lexical state 8) at #if($n < .)y#else n#end[line 1, column 11]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '!' (33), after prefix \"\\\\\" (in lexical state 8) at *unset*[line 1, column 12]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '!' (33), after prefix \"\\\\\" (in lexical state 8) at #if($name \\!= 'value')y#else n#end[line 1, column 12]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"&\\u001c\" (in lexical state 8) at *unset*[line 1, column 10]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"&\\u001c\" (in lexical state 8) at #if($t &[line 1, column 10]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '=' (61), after prefix \"&\" (in lexical state 8) at *unset*[line 1, column 9]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '=' (61), after prefix \"&\" (in lexical state 8) at #if($t &== $n)y#end[line 1, column 9]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '[' (91), after prefix \"&\" (in lexical state 8) at *unset*[line 1, column 9]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '[' (91), after prefix \"&\" (in lexical state 8) at #if($t &[ $n)y#end[line 1, column 9]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '[' (91), after prefix \"&\" (in lexical state 8) at *unset*[line 1, column 9]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '[' (91), after prefix \"&\" (in lexical state 8) at #if($t &[& $n)y#end[line 1, column 9]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '{' (123), after prefix \"&\" (in lexical state 8) at *unset*[line 1, column 9]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '{' (123), after prefix \"&\" (in lexical state 8) at #if($t &{ $n)y#end[line 1, column 9]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \"|\" (in lexical state 8) at *unset*[line 1, column 7]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \"|\" (in lexical state 8) at #if($|)x#end[line 1, column 7]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\u00e9' (233), (in lexical state 8) at *unset*[line 1, column 6]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\u00e9' (233), (in lexical state 8) at #if($\u00e9'[line 1, column 6]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\ud83d' (55357), (in lexical state 8) at *unset*[line 1, column 6]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\ud83d' (55357), (in lexical state 8) at #if($\ud83d\ude00)[line 1, column 6]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> (in lexical state 16) at *unset*[line 1, column 25]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> (in lexical state 16) at #if('a' #[[== 'a')y#end[line 1, column 25]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), after prefix \"|\" (in lexical state 8) at *unset*[line 1, column 5]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), after prefix \"|\" (in lexical state 8) at #if|($a)x#elseif()y#end[line 1, column 5]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \".\" (in lexical state 8) at *unset*[line 1, column 10]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \".\" (in lexical state 8) at #m($a $b.)[line 1, column 10]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> (in lexical state 16) at *unset*[line 1, column 34]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> (in lexical state 16) at #mac#[[o(m $a $b)$a$b#end#m(1 2)[line 1, column 34]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\u3000' (12288), (in lexical state 8) at *unset*[line 1, column 11]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\u3000' (12288), (in lexical state 8) at #macro(m a\u3000[line 1, column 11]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '$' (36), after prefix \"|\" (in lexical state 8) at *unset*[line 1, column 68]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '$' (36), after prefix \"|\" (in lexical state 8) at #macro(setter $a)#set($a = 'changed')#end#set($v = 'orig')#setter(|$v)$v[line 1, column 68]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\\"2\\u001c\" (in lexical state 8) at *unset*[line 15, column 15]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\\"2\\u001c\" (in lexical state 8) at #macro(test $a $b)\n\ta: $a\n\tb: $b\n#end\n#macro(test2 $a, $b,$c,$d)\n\ta2: $a\n\tb2: $b\n\tc2: $c\n\td2: $d\n#end\n\n#test(\"1\",\"2\")\n#test(\"1\" , \"2\")\n#test(\"1\" \"2\")\n#test2(\"1\",\"2[line 15, column 15]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\\")\\n\\n$foo\\n\\n#set($list = \\n\\t[1..10])\\n\\n#foreach($item \\nin $list)\\n$item\\n#end\\n\\u001c\" (in lexical state 8) at *unset*[line 30, column 2]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\\")\\n\\n$foo\\n\\n#set($list = \\n\\t[1..10])\\n\\n#foreach($item \\nin $list)\\n$item\\n#end\\n\\u001c\" (in lexical state 8) at #macro(woogie $a)\nThis is $a\n#end\n\n#woogie(\n\"a string\n)\n\n#macro(\n   name \n   $thing\n)\nCall $thing\n#end\n\n#name(\"woog\")\n\n#set($foo = \n\"hello there\")\n\n$foo\n\n#set($list = \n\t[1..10])\n\n#foreach($item \nin $list)\n$item\n#end\n[line 30, column 2]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \"\\\\\" (in lexical state 8) at *unset*[line 10, column 2]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \"\\\\\" (in lexical state 8) at #macro(woogie $a)\nThis is $a\n#end\n\n#woogie(\n\"a string\"\n)\n\n#macro(\n\\  name \n   $thing\n)\nCall $thing\n#end\n\n#name(\"woog\")\n\n#set($foo = \n\"hello there\")\n\n$foo\n\n#set($list = \n\t[1..10])\n\n#foreach($item \nin $list)\n$item\n#end\n[line 10, column 2]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'v' (118), after prefix \".\" (in lexical state 8) at *unset*[line 2, column 20]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'v' (118), after prefix \".\" (in lexical state 8) at #parse(\"vm_library1.vm\")\n#parse(vm_library2.vm\")\n#foo(1) #bar(2)\n\n[line 2, column 20]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'v' (118), after prefix \".\" (in lexical state 8) at *unset*[line 2, column 21]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'v' (118), after prefix \".\" (in lexical state 8) at #parse(\"vm_library1.vm)\n#parse(\"vm_library2.vm\")\n#foo(1) #bar(2)\n\n[line 2, column 21]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \"|\" (in lexical state 8) at *unset*[line 1, column 15]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \"|\" (in lexical state 8) at #parse('a.vm'|)[line 1, column 15]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \"\\\\\" (in lexical state 8) at *unset*[line 1, column 8]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \"\\\\\" (in lexical state 8) at #set($\\ = $b &&)[line 1, column 8]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '=' (61), after prefix \".\" (in lexical state 8) at *unset*[line 1, column 10]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '=' (61), after prefix \".\" (in lexical state 8) at #set($a .= 'x' + $missing)$a[line 1, column 10]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '=' (61), after prefix \".\" (in lexical state 8) at *unset*[line 1, column 10]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '=' (61), after prefix \".\" (in lexical state 8) at #set($a .= [1,[line 1, column 10]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\\"\\t\\n\\u001c\" (in lexical state 8) at *unset*[line 2, column 2]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\\"\\t\\n\\u001c\" (in lexical state 8) at #set($a = \"\t\n[line 2, column 2]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error, \\u001c\" (in lexical state 8) at *unset*[line 3, column 4]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error, \\u001c\" (in lexical state 8) at #set($a = \"Lexical error TokenMgrError line 3, column 4.[line 3, column 4]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\\"\\\\\\u001c\" (in lexical state 8) at *unset*[line 1, column 14]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\\"\\\\\\u001c\" (in lexical state 8) at #set($a = \"\\[line 1, column 14]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,  x\\u001c\" (in lexical state 8) at *unset*[line 9, column 9]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,  x\\u001c\" (in lexical state 8) at #set($a = \"line 9, column 9. x[line 9, column 9]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\\"x\\r\\u001c\" (in lexical state 8) at *unset*[line 2, column 2]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\\"x\\r\\u001c\" (in lexical state 8) at #set($a = \"x\r[line 2, column 2]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \"&\" (in lexical state 8) at *unset*[line 1, column 16]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \"&\" (in lexical state 8) at #set($a = $b %&)[line 1, column 16]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \"&\" (in lexical state 8) at *unset*[line 1, column 15]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \"&\" (in lexical state 8) at #set($a = $b &)[line 1, column 15]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \"&\" (in lexical state 8) at *unset*[line 1, column 20]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \"&\" (in lexical state 8) at #set($a = $b < $c & $d >= $e && $f > $g && $h <= $i)[line 1, column 20]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \"&\" (in lexical state 8) at *unset*[line 1, column 43]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \"&\" (in lexical state 8) at #set($a = $b < $c && $d >= $e && $f > $g & $h <= $i)[line 1, column 43]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'h' (104), after prefix \".\" (in lexical state 8) at *unset*[line 1, column 46]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'h' (104), after prefix \".\" (in lexical state 8) at #set($a = $b < $c && $d >= $e && $f > $g && .h <= $i)[line 1, column 46]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '|' (124), after prefix \"\\\\\" (in lexical state 8) at *unset*[line 1, column 20]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '|' (124), after prefix \"\\\\\" (in lexical state 8) at #set($a = $b == $c\\|| $d != $e)[line 1, column 20]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \"|\" (in lexical state 8) at *unset*[line 1, column 17]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \"|\" (in lexical state 8) at #set($a = $b |||)[line 1, column 17]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \".\\u001c\" (in lexical state 8) at *unset*[line 1, column 15]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \".\\u001c\" (in lexical state 8) at #set($a = $b.[line 1, column 15]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), after prefix \".\" (in lexical state 8) at *unset*[line 1, column 14]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), after prefix \".\" (in lexical state 8) at #set($a = $b.($d, 'e'))[line 1, column 14]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'd' (100), after prefix \"\\\\\" (in lexical state 9) at *unset*[line 1, column 18]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'd' (100), after prefix \"\\\\\" (in lexical state 9) at #set($a = $b.c($\\d, 'e'))[line 1, column 18]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '0' (48), after prefix \"|\" (in lexical state 8) at *unset*[line 1, column 27]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '0' (48), after prefix \"|\" (in lexical state 8) at #set($a = $big * 10000000|00)$a[line 1, column 27]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '*' (42), after prefix \"\\\\\" (in lexical state 8) at *unset*[line 1, column 14]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '*' (42), after prefix \"\\\\\" (in lexical state 8) at #set($a = $n\\* $f)$a[line 1, column 14]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error, \\u001c\" (in lexical state 8) at *unset*[line 12, column 34]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error, \\u001c\" (in lexical state 8) at #set($a = 'line 12, column 34.[line 12, column 34]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\'x\\u001c\" (in lexical state 8) at *unset*[line 1, column 14]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\'x\\u001c\" (in lexical state 8) at #set($a = 'x[line 1, column 14]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"&\\u001c\" (in lexical state 8) at *unset*[line 1, column 17]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"&\\u001c\" (in lexical state 8) at #set($a = ($b &[line 1, column 17]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"|\\u001c\" (in lexical state 8) at *unset*[line 1, column 24]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"|\\u001c\" (in lexical state 8) at #set($a = ($b && $c) |[line 1, column 24]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '4' (52), after prefix \"|\" (in lexical state 8) at *unset*[line 1, column 17]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '4' (52), after prefix \"|\" (in lexical state 8) at #set($a = 10 / |4.0)$a[line 1, column 17]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '+' (43), after prefix \"|\" (in lexical state 8) at *unset*[line 1, column 13]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '+' (43), after prefix \"|\" (in lexical state 8) at #set($a = 1|+ $str5)$a[line 1, column 13]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '-' (45), after prefix \"|\" (in lexical state 8) at *unset*[line 1, column 13]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '-' (45), after prefix \"|\" (in lexical state 8) at #set($a = 5|- 1)$a[line 1, column 13]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \".\\u001c\" (in lexical state 8) at *unset*[line 1, column 14]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \".\\u001c\" (in lexical state 8) at #set($a = [.[line 1, column 14]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '1' (49), after prefix \"\\\\\" (in lexical state 8) at *unset*[line 1, column 12]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '1' (49), after prefix \"\\\\\" (in lexical state 8) at #set($a = \\1)\n$a[line 1, column 12]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\ud83d' (55357), (in lexical state 8) at *unset*[line 1, column 11]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\ud83d' (55357), (in lexical state 8) at #set($a = \ud83d\ude00)[line 1, column 11]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \"\\\\\" (in lexical state 8) at *unset*[line 1, column 11]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \"\\\\\" (in lexical state 8) at #set($a =\\ 7 / 2)$a[line 1, column 11]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), after prefix \"\\\\\" (in lexical state 8) at *unset*[line 1, column 11]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), after prefix \"\\\\\" (in lexical state 8) at #set($a =\\($b && $c) || !$d)[line 1, column 11]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \"|\" (in lexical state 8) at *unset*[line 1, column 11]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \"|\" (in lexical state 8) at #set($a =| [1..5])[line 1, column 11]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '=' (61), after prefix \"|\" (in lexical state 8) at *unset*[line 1, column 10]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '=' (61), after prefix \"|\" (in lexical state 8) at #set($a |= 'x[line 1, column 10]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '#' (35), after prefix \".\" (in lexical state 8) at *unset*[line 1, column 9]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '#' (35), after prefix \".\" (in lexical state 8) at #set($a.#end(1) = 1)[line 1, column 9]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), after prefix \".\" (in lexical state 8) at *unset*[line 1, column 9]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), after prefix \".\" (in lexical state 8) at #set($a.(1) = 1)[line 1, column 9]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '=' (61), after prefix \".\" (in lexical state 8) at *unset*[line 1, column 9]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '=' (61), after prefix \".\" (in lexical state 8) at #set($a.= ($b && $c) || !$d)[line 1, column 9]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), after prefix \".\" (in lexical state 8) at *unset*[line 1, column 11]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), after prefix \".\" (in lexical state 8) at #set($a.b.(1) = 1)[line 1, column 11]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \".\" (in lexical state 9) at *unset*[line 1, column 194]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \".\" (in lexical state 9) at #set($d = $date.toDate('yyyy-MM-dd HH:mm:ss', '2007-01-02 03:04:05'))$date.toCalendar($d).class.name|$date.toDate(1000)|$date.toDate(\"x\")|$date.format(\"yyyy\", \"2019-01-01\")|$date.toDate(\"yyyy\". \"2019\")|$date.toLocalizedPattern(\"short\", \"fr\")|$date.toLocalizedPattern(\"intl_tz\", \"fr\")|$date.format[line 1, column 194]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '|' (124), after prefix \".\" (in lexical state 8) at *unset*[line 1, column 22]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '|' (124), after prefix \".\" (in lexical state 8) at #set($m = {})#set($m.||k = 1)$m[line 1, column 22]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '$' (36), after prefix \"|\" (in lexical state 8) at *unset*[line 1, column 20]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '$' (36), after prefix \"|\" (in lexical state 8) at #set($s = \"\\u0041\"|$s[line 1, column 20]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\\"' (34), after prefix \"\\\\\" (in lexical state 8) at *unset*[line 1, column 12]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\\"' (34), after prefix \"\\\\\" (in lexical state 8) at #set($s = \\\"double $name\")$s[line 1, column 12]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'u' (117), after prefix \"\\\\\" (in lexical state 8) at *unset*[line 1, column 12]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'u' (117), after prefix \"\\\\\" (in lexical state 8) at #set($s = \\u0041\")$s[line 1, column 12]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'q' (113), after prefix \"|\" (in lexical state 8) at *unset*[line 1, column 12]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'q' (113), after prefix \"|\" (in lexical state 8) at #set($s = |q\"\"q\")$s[line 1, column 12]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '=' (61), after prefix \"|\" (in lexical state 8) at *unset*[line 1, column 10]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '=' (61), after prefix \"|\" (in lexical state 8) at #set($s |= \"$!missing\")$s[line 1, column 10]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), (in lexical state 7) at *unset*[line 1, column 19]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), (in lexical state 7) at #set($x = $list[10)[line 1, column 19]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), (in lexical state 7) at *unset*[line 1, column 21]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), (in lexical state 7) at #{foreach}($i in $l[)x#{end}[line 1, column 21]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), (in lexical state 7) at *unset*[line 1, column 10]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), (in lexical state 7) at #{if}($a[)x#{end}[line 1, column 10]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'a' (97), after prefix \"|\" (in lexical state 8) at *unset*[line 1, column 9]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'a' (97), after prefix \"|\" (in lexical state 8) at #{set}(|a = 1)[line 1, column 9]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), (in lexical state 7) at *unset*[line 1, column 11]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), (in lexical state 7) at $a.b($c)[0(][line 1, column 11]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \".\\u001c\" (in lexical state 9) at *unset*[line 1, column 10]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \".\\u001c\" (in lexical state 9) at $a.b($c.[line 1, column 10]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ',' (44), after prefix \".\" (in lexical state 9) at *unset*[line 1, column 9]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ',' (44), after prefix \".\" (in lexical state 9) at $a.b($c., [1], {'a': 1})[line 1, column 9]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ':' (58), after prefix \"|\" (in lexical state 9) at *unset*[line 1, column 22]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ':' (58), after prefix \"|\" (in lexical state 9) at $a.b($c.d, [1], {'a'|: 1})[line 1, column 22]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \".\\u001c\" (in lexical state 9) at *unset*[line 1, column 8]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \".\\u001c\" (in lexical state 9) at $a.b(.[line 1, column 8]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\'' (39), after prefix \"|\" (in lexical state 9) at *unset*[line 1, column 8]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\'' (39), after prefix \"|\" (in lexical state 9) at $a.b(1|'x'[line 1, column 8]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), (in lexical state 9) at *unset*[line 1, column 9]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), (in lexical state 9) at $a.b([0](1)[line 1, column 9]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\u00a0' (160), (in lexical state 9) at *unset*[line 1, column 7]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\u00a0' (160), (in lexical state 9) at $a.b([\u00a0)[line 1, column 7]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"|\\u001c\" (in lexical state 9) at *unset*[line 1, column 8]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"|\\u001c\" (in lexical state 9) at $a.b(|[line 1, column 8]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\u00a0' (160), (in lexical state 9) at *unset*[line 1, column 6]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\u00a0' (160), (in lexical state 9) at $a.b(\u00a0[line 1, column 6]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\ud83d' (55357), (in lexical state 9) at *unset*[line 1, column 6]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\ud83d' (55357), (in lexical state 9) at $a.b(\ud83d\ude00.)[line 1, column 6]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ',' (44), (in lexical state 7) at *unset*[line 1, column 10]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ',' (44), (in lexical state 7) at $a.b[$c.d, [1], {'a': 1})[line 1, column 10]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), (in lexical state 7) at *unset*[line 1, column 6]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), (in lexical state 7) at $a.b[(1[line 1, column 6]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), after prefix \"\\\\\" (in lexical state 7) at *unset*[line 1, column 8]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), after prefix \"\\\\\" (in lexical state 7) at $a.b[0\\(1)[line 1, column 8]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \".\" (in lexical state 9) at *unset*[line 1, column 10]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \".\" (in lexical state 9) at $a.b[0](.)[line 1, column 10]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"|\\u001c\" (in lexical state 7) at *unset*[line 1, column 8]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"|\\u001c\" (in lexical state 7) at $a.b[|[line 1, column 8]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ':' (58), (in lexical state 7) at *unset*[line 1, column 6]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ':' (58), (in lexical state 7) at $a[$b:[line 1, column 6]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\'\\u001c\" (in lexical state 7) at *unset*[line 1, column 6]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\'\\u001c\" (in lexical state 7) at $a['[line 1, column 6]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'k' (107), (in lexical state 7) at *unset*[line 1, column 6]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'k' (107), (in lexical state 7) at $a[''k'][line 1, column 6]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\\"]\\u001c\" (in lexical state 7) at *unset*[line 1, column 10]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\\"]\\u001c\" (in lexical state 7) at $a['k'\"][line 1, column 10]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'b' (98), after prefix \".\" (in lexical state 7) at *unset*[line 1, column 5]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'b' (98), after prefix \".\" (in lexical state 7) at $a[.b.c[[line 1, column 5]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '[' (91), (in lexical state 7) at *unset*[line 1, column 6]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '[' (91), (in lexical state 7) at $a[0$[1][line 1, column 6]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), (in lexical state 7) at *unset*[line 1, column 5]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), (in lexical state 7) at $a[0(][line 1, column 5]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ':' (58), (in lexical state 7) at *unset*[line 1, column 5]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ':' (58), (in lexical state 7) at $a[0:][1][line 1, column 5]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '[' (91), (in lexical state 7) at *unset*[line 1, column 5]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '[' (91), (in lexical state 7) at $a[0[1][line 1, column 5]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '[' (91), (in lexical state 7) at *unset*[line 1, column 7]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '[' (91), (in lexical state 7) at $a[0][[1][line 1, column 7]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '{' (123), (in lexical state 7) at *unset*[line 1, column 5]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '{' (123), (in lexical state 7) at $a[0{[1][line 1, column 5]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"|\\u001c\" (in lexical state 7) at *unset*[line 1, column 7]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"|\\u001c\" (in lexical state 7) at $a[0|[line 1, column 7]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '}' (125), (in lexical state 7) at *unset*[line 1, column 5]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '}' (125), (in lexical state 7) at $a[0}.b[1][line 1, column 5]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ':' (58), (in lexical state 7) at *unset*[line 1, column 4]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ':' (58), (in lexical state 7) at $a[:b][line 1, column 4]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\ud83d' (55357), (in lexical state 7) at *unset*[line 1, column 4]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\ud83d' (55357), (in lexical state 7) at $a[\ud83d\ude00][line 1, column 4]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), (in lexical state 7) at *unset*[line 1, column 59]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), (in lexical state 7) at $date.toDate(\"yyyy-MM-dd\", \"2007-01-02\").time|$date.forma[(\"yyyy-MM-dd HH:mm Z\", 0)|$date.format(\"yyyy-MM-dd\", $date.toCalendar(86400000))|$date.toYears(31536000000)|$date.toDays(86400000)|$date.format(\"y-M-d\", null)|$date.format(null, 0)[line 1, column 59]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \".\\u001c\" (in lexical state 9) at *unset*[line 1, column 119]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \".\\u001c\" (in lexical state 9) at $date.toDate(\"yyyy-MM-dd\", \"2007-01-02\").time|$date.format(\"yyyy-MM-dd HH:mm Z\", 0)|$date.format(\"yyyy-MM-dd\", $date.[line 1, column 119]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '$' (36), after prefix \"|\" (in lexical state 9) at *unset*[line 1, column 84]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '$' (36), after prefix \"|\" (in lexical state 9) at $date.toDate(\"yyyy-MM-dd\", \"2007-01-02\").time|$date.format(\"yyyy-MM-dd HH:mm Z\", 0|$date.format(\"yyyy-MM-dd\", $date.toCalendar(86400000))|$date.toYears(31536000000)|$date.toDays(86400000)|$date.format(\"y-M-d\", null)|$date.format(null, 0)[line 1, column 84]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 's' (115), (in lexical state 7) at *unset*[line 1, column 12]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 's' (115), (in lexical state 7) at $display.l[st($list)[line 1, column 12]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\\"ab\\u001c\" (in lexical state 9) at *unset*[line 1, column 240]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\\"ab\\u001c\" (in lexical state 9) at $display.list($collection.split(\"a, b ,c\"))|$collection.sort([\"b\", \"a\", \"C\"])|$json.parse('{\"a\":[1,2]}').a|$esc.velocity(\"$x#y\")|$display.stripTags(\"<b>x</b><i>y</i>\")|$display.cell(\"abc\", 5)|$display.plural(2, \"box\")|$display.measure(\"ab[line 1, column 240]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ',' (44), (in lexical state 7) at *unset*[line 1, column 65]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ',' (44), (in lexical state 7) at $display.list($collection.split(\"a, b ,c\"))|$collection.sort[\"b\", \"a\", \"C\"])|$json.parse('{\"a\":[1,2]}').a|$esc.velocity(\"$x#y\")|$display.stripTags(\"<b>x</b><i>y</i>\")|$display.cell(\"abc\", 5)|$display.plural(2, \"box\")|$display.measure(\"ab\ncde\")[line 1, column 65]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), after prefix \"l\" (in lexical state 7) at *unset*[line 1, column 9]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), after prefix \"l\" (in lexical state 7) at $esc.u[l('a b&c')[line 1, column 9]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'u' (117), after prefix \".\" (in lexical state 7) at *unset*[line 1, column 7]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'u' (117), after prefix \".\" (in lexical state 7) at $esc[.url('a b&c')[line 1, column 7]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '}' (125), (in lexical state 7) at *unset*[line 1, column 8]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '}' (125), (in lexical state 7) at $list[-}][line 1, column 8]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), after prefix \"t\" (in lexical state 7) at *unset*[line 1, column 10]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), after prefix \"t\" (in lexical state 7) at $map.ge[t('k')[line 1, column 10]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\'k\\u001c\" (in lexical state 7) at *unset*[line 1, column 9]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\'k\\u001c\" (in lexical state 7) at $map['k[line 1, column 9]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '$' (36), after prefix \"|\" (in lexical state 9) at *unset*[line 1, column 233]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '$' (36), after prefix \"|\" (in lexical state 9) at $math.add(1, 2.5)|$math.add(\"1\", \"2\")|$math.add(1, \"x\")|$math.sub(10, 3, 2)|$math.mul(2, 2.5)|$math.div(1, 0)|$math.div(7, 2)|$math.div(8, 2)|$math.max(-5, -3)|$math.min(1, 2, 0.5)|$math.pow(2, 10)|$math.pow(2, 0.5)|$math.idiv(7, 2|$math.mod(7, 3)|$math.mod(7, 0)[line 1, column 233]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '$' (36), after prefix \"|\" (in lexical state 9) at *unset*[line 1, column 127]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '$' (36), after prefix \"|\" (in lexical state 9) at $math.add(1, 2.5)|$math.add(\"1\", \"2\")|$math.add(1, \"x\")|$math.sub(10, 3, 2)|$math.mul(2, 2.5)|$math.div(1, 0)|$math.div(7, 2+|$math.div(8, 2)|$math.max(-5, -3)|$math.min(1, 2, 0.5)|$math.pow(2, 10)|$math.pow(2, 0.5)|$math.idiv(7, 2)|$math.mod(7, 3)|$math.mod(7, 0)[line 1, column 127]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ',' (44), (in lexical state 7) at *unset*[line 1, column 165]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ',' (44), (in lexical state 7) at $math.add(2147483647, 1)|$math.mul(100000, 100000)|$math.add(1.0, 2)|$math.add(1E2, 2)|$math.sub(0.3, 0.1)|$math.div(1, 3)|$math.max()|$math.max(1)|$math.getTotal[1, \"x\"])|$math.random(1, 1)|$math.toLong(\"9999999999\")[line 1, column 165]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'g' (103), after prefix \"n\" (in lexical state 7) at *unset*[line 1, column 15]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'g' (103), after prefix \"n\" (in lexical state 7) at $name.substr[ng(10)[line 1, column 15]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), (in lexical state 9) at *unset*[line 1, column 19]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), (in lexical state 9) at $name.toUpperCase(()[line 1, column 19]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'x' (120), after prefix \".\" (in lexical state 7) at *unset*[line 1, column 16]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'x' (120), after prefix \".\" (in lexical state 7) at $nested.inner[.x[2].y[line 1, column 16]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '@' (64), (in lexical state 9) at *unset*[line 2, column 102]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '@' (64), (in lexical state 9) at $xml.parse('<a z=\"1\" b=\"2\" xmlns:p=\"urn:p\"><!--c--><b>x</b>&amp;<![CDATA[<y>]]><p:c p:q=\"1\">t\r\n\"q\"</p:c><e/></a>')$xml.find(\"//p:c\")|$xml.find(\"c\")|$xml.find(\"//*[local-name()='c'])|$xml.find(\"/a/@*\")|$xml.find(\"//text()\")[line 2, column 102]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\\"//processing-ins\\u001c\" (in lexical state 9) at *unset*[line 1, column 70]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\\"//processing-ins\\u001c\" (in lexical state 9) at $xml.parse('<r><?pi data?><a/></r>')$xml|$xml.find(\"//processing-ins[line 1, column 70]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\\"$v\\u001c\" (in lexical state 9) at *unset*[line 1, column 92]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\\"$v\\u001c\" (in lexical state 9) at $xml.parse('<r><a/></r>')$xml.find(\"//a[\")|$xml.find(\"//a[@]\")|$xml.find(\"\")|$xml.find(\"$v[line 1, column 92]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), (in lexical state 9) at *unset*[line 1, column 107]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), (in lexical state 9) at $xml.parse('<r><a/></r>')$xml.find(\"//a[\")|$xml.find(\"//a[@]\")|$xml.find(\"\")|$xml.find(\"$v\")|$xml.find(foo(1)\")[line 1, column 107]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'r' (114), after prefix \"e\" (in lexical state 7) at *unset*[line 1, column 5]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'r' (114), after prefix \"e\" (in lexical state 7) at $z[ero[line 1, column 5]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \"|\" (in lexical state 9) at *unset*[line 1, column 13]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \"|\" (in lexical state 9) at ${a.b[0].c(|)}[line 1, column 13]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '}' (125), (in lexical state 7) at *unset*[line 1, column 5]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '}' (125), (in lexical state 7) at ${a[}0][line 1, column 5]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), (in lexical state 15) at *unset*[line 1, column 8]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), (in lexical state 15) at ${a|'b'([line 1, column 8]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), (in lexical state 15) at *unset*[line 1, column 5]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), (in lexical state 15) at ${a|([line 1, column 5]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), (in lexical state 15) at *unset*[line 1, column 5]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '(' (40), (in lexical state 15) at ${a|(d'}[line 1, column 5]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'd' (100), (in lexical state 15) at *unset*[line 1, column 5]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'd' (100), (in lexical state 15) at ${a|d'}[line 1, column 5]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> (in lexical state 15) at *unset*[line 1, column 10]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> (in lexical state 15) at ${empty|[line 1, column 10]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\'al\\u001c\" (in lexical state 15) at *unset*[line 1, column 13]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\'al\\u001c\" (in lexical state 15) at ${empty|'al[line 1, column 13]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), (in lexical state 15) at *unset*[line 1, column 14]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), (in lexical state 15) at ${empty|'alt')[line 1, column 14]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> (in lexical state 15) at *unset*[line 1, column 12]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> (in lexical state 15) at ${missing|[line 1, column 12]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> (in lexical state 15) at *unset*[line 1, column 18]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> (in lexical state 15) at ${missing|$name+[line 1, column 18]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\'alt\\u001c\" (in lexical state 15) at *unset*[line 1, column 16]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\'alt\\u001c\" (in lexical state 15) at ${missing|'alt[line 1, column 16]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'l' (108), after prefix \"a\" (in lexical state 15) at *unset*[line 1, column 12]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'l' (108), after prefix \"a\" (in lexical state 15) at ${missing|alt'}[line 1, column 12]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'a' (97), after prefix \"n\" (in lexical state 15) at *unset*[line 1, column 12]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'a' (97), after prefix \"n\" (in lexical state 15) at ${missing|name}[line 1, column 12]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'i' (105), (in lexical state 15) at *unset*[line 1, column 7]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'i' (105), (in lexical state 15) at ${mis|ing}[line 1, column 7]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\'al\\u001c\" (in lexical state 15) at *unset*[line 1, column 12]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\'al\\u001c\" (in lexical state 15) at ${zero|'al[line 1, column 12]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'l' (108), after prefix \"a\" (in lexical state 15) at *unset*[line 1, column 9]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'l' (108), after prefix \"a\" (in lexical state 15) at ${zero|alt'}[line 1, column 9]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'i' (105), after prefix \"a\" (in lexical state 7) at *unset*[line 1, column 46]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'i' (105), after prefix \"a\" (in lexical state 7) at <input type=\"text\" name=\"email\" value=\"$!em[ail\">\n[line 1, column 46]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"&\\u001c\" (in lexical state 8) at *unset*[line 9, column 26]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"&\\u001c\" (in lexical state 8) at <table>\n  <tbody>\n#foreach($row in [1..2])\n    <tr>\n  #foreach($col in [1..2])\n      <td>\n    #if( $row == 1 && $col == 1)\n        first cell\n    #elseif( $row == 2 &[line 9, column 26]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \"&\" (in lexical state 8) at *unset*[line 9, column 25]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ' ' (32), after prefix \"&\" (in lexical state 8) at <table>\n  <tbody>\n#foreach($row in [1..2])\n    <tr>\n  #foreach($col in [1..2])\n      <td>\n    #if( $row == 1 && $col == 1)\n        first cell\n    #elseif( $row == 2 & $coll == 2)\n        last cell\n    #else\n        middle cell\n    #end\n      </td>\n  #end\n    </tr>\n#end\n  </tbody>\n</table>\n[line 9, column 25]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\\"/\\u001c\" (in lexical state 8) at *unset*[line 2, column 13]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> after prefix \"\\\"/\\u001c\" (in lexical state 8) at Test File 1\n#include(\"/[line 2, column 13]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\\"' (34), after prefix \".\" (in lexical state 8) at *unset*[line 4, column 9]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\\"' (34), after prefix \".\" (in lexical state 8) at Test File 2\n#include(\"include-b.vm\")\n\n#parse(.\"parse-b.vm\")\n\n#include(\"/include-c.vm\")\n\n#parse(\"/parse-c.vm\")\n[line 4, column 9]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \".\" (in lexical state 8) at *unset*[line 2, column 24]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: ')' (41), after prefix \".\" (in lexical state 8) at Test File 4\n#include(\"include4.vm\".)\n[line 2, column 24]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '}' (125), after prefix \"e\" (in lexical state 7) at *unset*[line 1, column 8]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '}' (125), after prefix \"e\" (in lexical state 7) at \\${na[e}[line 1, column 8]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'x' (120), after prefix \".\" (in lexical state 8) at *unset*[line 3, column 12]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'x' (120), after prefix \".\" (in lexical state 8) at a\rb\r#set($a = .x)[line 3, column 12]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'a' (97), after prefix \".\" (in lexical state 8) at *unset*[line 2, column 6]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'a' (97), after prefix \".\" (in lexical state 8) at x\r\n#if(.a)[line 2, column 6]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> (in lexical state 16) at *unset*[line 2, column 4]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> (in lexical state 16) at x #[[ y\n z[line 2, column 4]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\u00a0' (160), (in lexical state 9) at *unset*[line 1, column 7]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: '\\u00a0' (160), (in lexical state 9) at {$a.b(\u00a0)[line 1, column 7]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> (in lexical state 16) at *unset*[line 1, column 9]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: <EOF> (in lexical state 16) at ||#[[ x[line 1, column 9]"
+	},
+	{
+		"evaluate": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'a' (97), after prefix \".\" (in lexical state 8) at *unset*[line 1, column 10]",
+		"template": "org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: 'a' (97), after prefix \".\" (in lexical state 8) at \ud83d\ude00\ud83d\ude00#if(.a)[line 1, column 10]"
+	}
+]

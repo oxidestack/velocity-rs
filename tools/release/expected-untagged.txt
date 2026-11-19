@@ -1,0 +1,26 @@
+## [0.1.0] - YYYY-MM-DD
+
+### Action required
+
+- `strict_mode` is no longer read. A configuration that sets it sets `strict` to the same value instead. (1a63bb2)
+
+### Features
+
+- Input may come from any `std::io::Read`. (0c8e9c6)
+- The `trim` option drops trailing whitespace from the output. (parser, d8660bb)
+
+### Bug fixes
+
+- An error raised in a nested call names the position of the call, so a caller finds it. (e2a7bd3)
+- Input that is not UTF-8 returns an error instead of a panic. (1972901)
+- An error names the line of the input, as the Java library does. (bd998dc)
+
+### Performance
+
+- An input used twice is parsed once, so using it again is faster. (77524f7)
+
+### Other changes
+
+- The README lists every option with its default. (3c8a7b6)
+
+[0.1.0]: https://github.com/oxidestack/velocity-rs/releases/tag/v0.1.0

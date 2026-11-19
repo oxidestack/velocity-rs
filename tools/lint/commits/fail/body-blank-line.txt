@@ -1,0 +1,4 @@
+docs: describe the options
+The options had no description.
+
+Signed-off-by: Jane Doe <jane@example.org>

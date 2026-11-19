@@ -1,0 +1,7 @@
+feat!: drop the strict_mode alias
+
+```release-note
+`strict_mode` is no longer read: set `strict`.
+```
+
+Signed-off-by: Jane Doe <jane@example.org>

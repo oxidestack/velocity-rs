@@ -1,0 +1,59 @@
+# cargo-deny's policy: `make deny` runs `cargo deny check`. Every section fails the gate on a finding; an accepted
+# one is an entry here with its reason.
+
+[graph]
+targets = [
+    "aarch64-unknown-linux-gnu",
+    "x86_64-unknown-linux-gnu",
+    "aarch64-apple-darwin",
+]
+
+[advisories]
+# RustSec: a vulnerability, an unsound crate, an unmaintained crate or a yanked version fails the gate.
+unmaintained = "all"
+yanked = "deny"
+# Both come in through java-compat (chrono, chrono-tz) and are fixed there, not here; look again when it moves off them
+# (2026-11-17: no safe upgrade exists, the advisories are "unmaintained", not a vulnerability).
+ignore = [
+    { id = "RUSTSEC-2026-0543", reason = "chrono is unmaintained; java-compat's dependency, no upgrade exists" },
+    { id = "RUSTSEC-2026-0555", reason = "chrono-tz is unmaintained; java-compat's dependency, no upgrade exists" },
+]
+
+[licenses]
+# The CNCF allowlist (cncf/foundation policies-guidance/allowed-third-party-license-policy.md) and Apache-2.0: a crate
+# passes when its licence expression is satisfiable from these alone. Nothing joins this list that the CNCF's does not
+# carry; a crate that needs another licence is an exception, scoped to that crate, with its CNCF exception status.
+allow = [
+    "0BSD",
+    "Apache-2.0",
+    "BSD-2-Clause",
+    "BSD-2-Clause-FreeBSD",
+    "BSD-3-Clause",
+    "ISC",
+    "MIT",
+    "MIT-0",
+    "OpenSSL",
+    "OpenSSL-standalone",
+    "PostgreSQL",
+    "PSF-2.0",
+    "Python-2.0",
+    "Python-2.0.1",
+    "SSLeay-standalone",
+    "UPL-1.0",
+    "X11",
+    "Zlib",
+]
+# The list is the CNCF's, not the graph's: an entry no crate uses today is not a finding.
+unused-allowed-license = "allow"
+confidence-threshold = 0.93
+
+[bans]
+multiple-versions = "deny"
+wildcards = "deny"
+# `java-compat` is a path dependency on a sibling checkout: no version to pin.
+allow-wildcard-paths = true
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]

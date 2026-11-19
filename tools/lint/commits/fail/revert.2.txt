@@ -1,0 +1,4 @@
+revert: parse each input once
+
+Refs: 1a2b3c4
+Signed-off-by: Jane Doe <jane@example.org>

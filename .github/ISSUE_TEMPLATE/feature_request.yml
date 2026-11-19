@@ -1,0 +1,31 @@
+name: Feature request
+description: Something the crate does not do yet.
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Not sure yet what you need, or how it should work? Start in
+        [Ideas](https://github.com/oxidestack/velocity-rs/discussions/categories/ideas). Something Apache Velocity
+        Engine 2.4.1 and Velocity Tools 3.1 does that this crate does differently is a bug: please open a bug report
+        instead.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What you are trying to do
+      description: The task, and what stops you today.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would help
+      description: A part of Apache Velocity not ported yet, an API, a feature flag — whatever you have in mind.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What you tried instead
+      description: A workaround, or how another crate does it.

@@ -1,0 +1,5 @@
+fix: keep an error's position after a nested call
+
+An error named the wrong position.
+
+Signed-off-by: Jane Doe <jane@example.org>

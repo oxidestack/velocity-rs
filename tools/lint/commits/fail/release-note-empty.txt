@@ -1,0 +1,7 @@
+fix: keep an error's position after a nested call
+
+```release-note
+
+```
+
+Signed-off-by: Jane Doe <jane@example.org>

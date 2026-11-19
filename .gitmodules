@@ -1,0 +1,7 @@
+[submodule "upstream"]
+	path = upstream
+	url = https://github.com/apache/velocity-engine.git
+	shallow = true
+[submodule "upstream-tools"]
+	path = upstream-tools
+	url = https://github.com/apache/velocity-tools.git

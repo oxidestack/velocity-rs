@@ -1,0 +1,4 @@
+refactor!: rename the strict setting
+
+BREAKING-CHANGE: set strict instead of strict_mode.
+Signed-off-by: Jane Doe <jane@example.org>

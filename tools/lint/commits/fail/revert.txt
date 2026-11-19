@@ -1,0 +1,5 @@
+revert: perf: parse each input once
+
+The cached parse misses a changed include.
+
+Signed-off-by: Jane Doe <jane@example.org>

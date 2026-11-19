@@ -1,0 +1,3 @@
+Revert "perf: parse each input once"
+
+Refs: 1a2b3c4

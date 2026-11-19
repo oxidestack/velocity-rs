@@ -1,0 +1,11 @@
+feat: log one line for every call
+
+Each call now leaves one event when it ends.
+
+Closes #5
+
+```release-note
+Every call leaves one debug line through the log crate.
+```
+
+Signed-off-by: Jane Doe <jane@example.org>

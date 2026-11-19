@@ -1,0 +1,3 @@
+docs: describe every option of the crate in its README and the API documentation
+
+Signed-off-by: Jane Doe <jane@example.org>

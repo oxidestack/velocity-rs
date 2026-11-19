@@ -1,0 +1,55 @@
+name: Bug report
+description: A result that differs from Apache Velocity's, a panic, or an error where Apache Velocity succeeds.
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Thank you for the report. A question rather than a bug belongs in
+        [Discussions](https://github.com/oxidestack/velocity-rs/discussions/categories/q-a), and a vulnerability in a
+        [private report](https://github.com/oxidestack/velocity-rs/security/advisories/new).
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The crate's version (from Cargo.lock), or the commit you build from.
+      placeholder: '0.1.0'
+    validations:
+      required: true
+  - type: input
+    id: rustc
+    attributes:
+      label: Rust toolchain
+      description: The output of `rustc -V`, and the target if it is not the host's.
+  - type: textarea
+    id: code
+    attributes:
+      label: The code
+      description: The smallest Rust program or test that shows it.
+      render: rust
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: The input
+      description: The template and the context it is merged with, if the code above does not hold it.
+      render: text
+  - type: textarea
+    id: result
+    attributes:
+      label: The result
+      description: What the crate returned, or the error or the panic with its backtrace (`RUST_BACKTRACE=1`).
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+      description: >-
+        What Apache Velocity Engine 2.4.1 and Velocity Tools 3.1 answers to the same input, if you can run it: a
+        difference from Apache Velocity is the most useful report there is.
+    validations:
+      required: true

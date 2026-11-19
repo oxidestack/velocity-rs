@@ -1,0 +1,9 @@
+fix: keep an error's position after a nested call
+
+```release-note
+An error names the position of the call.
+
+Upgrade: nothing to change.
+```
+
+Signed-off-by: Jane Doe <jane@example.org>

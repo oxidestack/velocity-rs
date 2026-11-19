@@ -1,0 +1,35 @@
+[package]
+name = "velocity-rs"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.87"
+license = "Apache-2.0"
+description = "Unofficial Rust implementation of the Velocity Template Language, a port of Apache Velocity Engine 2.4.1 and Velocity Tools 3.1"
+repository = "https://github.com/oxidestack/velocity-rs"
+homepage = "https://oxidestack.github.io/velocity-rs/"
+documentation = "https://docs.rs/velocity-rs"
+readme = "README.md"
+keywords = ["velocity", "template", "template-engine", "apache-velocity", "vtl"]
+categories = ["template-engine", "text-processing"]
+# What crates.io gets: the library, its licence and notice, the README and the changelog. The pinned
+# upstream sources, the tests and their recorded vectors, the tools, the docs and the site stay in the
+# repository.
+include = ["/src/**", "/LICENSE", "/NOTICE", "/README.md", "/CHANGELOG.md"]
+
+[lib]
+name = "velocity"
+
+[package.metadata.port]
+upstream = "Apache Velocity Engine, Apache Velocity Tools"
+upstream-versions = ["2.4.1", "3.1"]
+
+[dependencies]
+encoding_rs = "0.8"
+java-compat = { package = "java-compat-rs", path = "../java-compat-rs", version = "0.1.0" }
+num-bigint = "0.4"
+num-integer = "0.1"
+num-traits = "0.2"
+parking_lot = "0.12"
+
+[dev-dependencies]
+serde_json = { version = "1", features = ["preserve_order"] }

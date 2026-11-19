@@ -1,0 +1,7988 @@
+[
+ {
+  "template": "plain text",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "line1\nline2\n",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$name",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "${name}",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$!name",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$!{name}",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$missing",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "${missing}",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$!missing",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$!{missing}",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "\\$name",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "\\$missing",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "\\\\$name",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "\\\\$missing",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "\\\\\\$name",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "\\${name}",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "\\$!name",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$\\!name",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$name.length()",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$name.length",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$name.toUpperCase()",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$name.substring(1, 3)",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$name.nope",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$name.nope()",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$missing.nope",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$list",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$list[0]",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$list[-1]",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$list.get(1)",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$list.size()",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$list.size",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$list.empty",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$map.k",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$map['k']",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$map.get('k')",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$map.size",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$map.empty",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$map.missing",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$nested.inner.x[2].y",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$nested.inner.x.size()",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$n",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$f",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$t",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$big",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$zero",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "${name|'alt'}",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "${missing|'alt'}",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "${empty|'alt'}",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "${zero|'alt'}",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "${missing|$name}",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$ ",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$$",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$$name",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$.",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$[",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$1",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "# ",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "##",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#1",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "a$",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "a#",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$name.",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$name.1",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$name$name",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "${",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "${}",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "${name",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$!",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$!{",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$name#if(true)x#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if(true)$name#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$name.true",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "email@example.com",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "\\#if",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "\\#set",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "\\#foo",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "\\\\#if(true)x#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#foo",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#foo()",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#foo(a)",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#foo($name)",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#{foo}",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#@foo()x#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$name-x",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$map.k-v",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$a-b",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$request.headers.x-l",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "a ## comment\nb",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "a #* multi *# b",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "a #** doc **# b",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#[[ $name #if ]]#",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "x #* unterminated",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$name## c\nd",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "a##",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$##x",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = 1)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = 'x')$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = \"$name!\")$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set( $a = $missing )$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = $name)#set($a = $missing)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($m = {})#set($m.k = 1)$m",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($l = [1, 2])#set($l[0] = 9)$l",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = [1..3])$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = [3..1])$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = {'a': 1, 'b': [1, 2]})$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = true)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = 1.5)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = -1)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = 5 -1)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = 5 - 1)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = 1 + 2)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = 7 / 2)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = 7 % 3)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = 7.0 / 2)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = 2147483647 + 1)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = 1 / 0)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = $str5 - 1)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = $str5 + 1)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = 1 + $str5)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = $missing + 'x')$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = 'x' + $missing)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = $n * $f)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = -$n)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = $str5 * 2)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = 10 / 4.0)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = $big * 1000000000)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = $list + 'x')$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = 5 % 0)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = 1.0E10 + 1)$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if($n == 5)y#else n#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if($n > 4)y#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if($n < 4)y#else n#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if($str5 == 5)y#else n#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if('a' == 'a')y#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if('a' < 'b')y#else n#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if($t && $n)y#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if($missing || $name)y#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if(!$missing)y#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if($empty)y#else n#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if($zero)y#else n#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if($list)y#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if([])y#else n#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if(1 + 1)y#else n#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if([1..2])y#else n#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if({})y#else n#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if($missing == $nothing)y#else n#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if($name == $missing)y#else n#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if(true == 'true')y#else n#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if($n eq 5 and $t)y#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if($n ne 5 or not $t)y#else n#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if($f >= 2.5)y#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if($name != 'value')y#else n#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if(false)a#elseif(true)b#else c#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if(false)a#elseif(false)b#else c#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#{if}(true)x#{end}",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if (true) spaced #end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#foreach($i in $list)$i#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#foreach($i in $list)$foreach.index:$foreach.count:$foreach.hasNext:$foreach.first:$foreach.last;#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#foreach($i in [1..3])$i#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#foreach($i in $map)$i,#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#foreach($i in $missing)x#else none#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#foreach($i in [])x#else none#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#foreach($i in $n)x#else none#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#foreach($i in $list)#if($i == 'b')#break#end$i#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#foreach($i in [1..2])#foreach($j in [1..2])$foreach.parent.index$foreach.index #end#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#foreach($i in [1..3])$i#if($foreach.hasNext),#end#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($i = 'keep')#foreach($i in [1])$i#end$i",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#foreach($i in [1..2])#foreach($j in [1..3])#break($foreach.parent)$j#end$i#end|",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$foreach",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#foreach($i in [1])$foreach#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#foreach($i in $list)$foreach.stop()$i#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#foreach($i in 'abc')x#else none#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "a\n#if(true)\n  b\n#end\nc",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "  #if(true)\n  x\n  #end\n",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a = 1)\n$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "  #set($a = 1)  \n$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "a #set($a = 1) b$a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#foreach($i in [1..2])\n$i\n#end\n",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if(true) x #end y",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if(true)\nx\n#else\ny\n#end\n",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "  #foreach($i in [1])\n    $i\n  #end\ndone",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#macro(m)\nbody\n#end\n#m()\n#m()",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "x\n  #if(true)y#end\nz",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if(true)#end\n",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "\n#set($x = 1)\n\n$x\n",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#macro(greet $who)Hello $who!#end#greet('you')",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#macro(two $a $b)$a-$b#end#two(1 2)#two(1)",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#macro(d $a $b='def')$a $b#end#d('x')#d('x' 'y')",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#macro(outer $x)[#inner($x)]#end#macro(inner $y)<$y>#end#outer('v')",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#macro(bm)<$!bodyContent>#end#@bm()inside#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#undefined('x')",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#undefined( $name )\n",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#macro(rec $n)#if($n > 0)$n#set($m = $n - 1)#rec($m)#end#end#rec(3)",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#macro(setter $a)#set($a = 'changed')#end#set($v = 'orig')#setter($v)$v",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#macro(noargs)x#end#noargs",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#macro(w $a)$a#end#w(word)",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#define($d)defined $name#end$d $d",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#define($d)x#end#if($d)y#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#evaluate('#set($e = 1)$e')",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#evaluate($name)",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#evaluate('#if(')",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "a#stop b",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "a#stop('msg')b",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#foreach($i in [1..3])$i#if($i == 2)#stop#end#end after",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#parse('x.vm')",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#include('x.vm')",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#parse($missing)x",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#ifnull($missing)null#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#ifnull($name)null#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($s = 'single $name')$s",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($s = \"double $name\")$s",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($s = \"q\"\"q\")$s",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($s = 'q''q')$s",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($s = \"\\u0041\")$s",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($s = \"a\\nb\")$s",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($s = \"#if(true)yes#end\")$s",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($s = \"$!missing\")$s",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($s = \"\")#if($s)y#else n#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#if($a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#foreach($i)#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($a)",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$name.substring(10)",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#set($x = $list[10])",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#macro()#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "#define(a)x#end",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$math.add(1, 2)",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$math.div(7, 2)",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$math.max(1, 5, 3)",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$number.format('#0.00', 3.14159)",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$esc.html('<a href=\"x\">&</a>')",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$esc.json('a\"b')",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$esc.url('a b&c')",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$esc.xml('<x>')",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$display.alt($missing, 'dflt')",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$display.list($list)",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$display.truncate('abcdefghijklmnop', 8)",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$display.capitalize('word')",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$collection.sort($list)",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ },
+ {
+  "template": "$json.parse('{\"a\": [1, 2]}').a",
+  "context": {
+   "name": "value",
+   "list": [
+    "a",
+    "b",
+    "c"
+   ],
+   "map": {
+    "k": "v",
+    "n": 1
+   },
+   "n": 5,
+   "empty": "",
+   "zero": 0,
+   "f": 2.5,
+   "t": true,
+   "nested": {
+    "inner": {
+     "x": [
+      1,
+      2,
+      {
+       "y": "z"
+      }
+     ]
+    }
+   },
+   "big": 12345678901,
+   "str5": "5"
+  }
+ }
+]

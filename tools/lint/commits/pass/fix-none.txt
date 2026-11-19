@@ -1,0 +1,11 @@
+fix: close the input file before the parser reads it
+
+The file was closed after the parser started since 4d5e6f7; no
+release has carried it.
+
+```release-note
+NONE
+```
+
+Refs: 4d5e6f7
+Signed-off-by: Jane Doe <jane@example.org>

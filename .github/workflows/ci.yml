@@ -1,0 +1,197 @@
+# The gate for velocity-rs: its CI runs on GitHub Actions alone.
+#
+# One workflow, so one run per push; the jobs run in parallel and none needs another. Every action is pinned by its
+# full commit, its release in a comment; every checkout keeps no credential.
+#
+# While the repository is private a push or a pull request starts no job (every job carries the same `if:`, so such a
+# run is all skipped and bills no minute), and a manual run is the whole CI. Publishing the repository turns the
+# automatic runs on with no edit here.
+
+name: CI
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.event_name }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+# Read-only at the top; a job states what it uses again, `contents: read` for actions/checkout.
+permissions:
+  contents: read
+
+env:
+  CARGO_TERM_COLOR: always
+  CARGO_INCREMENTAL: "0"
+  CARGO_NET_RETRY: "3"
+  # A job container runs as root on a workspace the runner's user owns, which git refuses as a dubious ownership.
+  GIT_CONFIG_COUNT: "1"
+  GIT_CONFIG_KEY_0: safe.directory
+  GIT_CONFIG_VALUE_0: "*"
+
+jobs:
+  test:
+    # cargo test
+    if: ${{ github.event_name == 'workflow_dispatch' || !github.event.repository.private }}
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read  # actions/checkout reads the repository
+    container: rust:1.99.1-trixie@sha256:8a4e90c7946b74626488b1446f712c0fe0ed1a596cbd3d871684bc9c5433ae07
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+          submodules: true
+      # The JDK semantics this crate builds on, a sibling checkout (Cargo.toml's `../java-compat-rs`).
+      - run: git clone --depth 1 https://github.com/oxidestack/java-compat-rs.git ../java-compat-rs
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
+        with:
+          path: |
+            /usr/local/cargo/registry/index
+            /usr/local/cargo/registry/cache
+          key: cargo-${{ hashFiles('Cargo.lock') }}
+      - run: make test
+
+  lint:
+    # clippy, warnings are errors
+    if: ${{ github.event_name == 'workflow_dispatch' || !github.event.repository.private }}
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read  # actions/checkout reads the repository
+    container: rust:1.99.1-trixie@sha256:8a4e90c7946b74626488b1446f712c0fe0ed1a596cbd3d871684bc9c5433ae07
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+          submodules: false
+      # The JDK semantics this crate builds on, a sibling checkout (Cargo.toml's `../java-compat-rs`).
+      - run: git clone --depth 1 https://github.com/oxidestack/java-compat-rs.git ../java-compat-rs
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
+        with:
+          path: |
+            /usr/local/cargo/registry/index
+            /usr/local/cargo/registry/cache
+          key: cargo-${{ hashFiles('Cargo.lock') }}
+      # The rust image carries the minimal profile, without clippy.
+      - run: rustup component add clippy
+      - run: make lint
+
+  deny:
+    # cargo-deny: advisories, licences, bans, sources (deny.toml)
+    if: ${{ github.event_name == 'workflow_dispatch' || !github.event.repository.private }}
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read  # actions/checkout reads the repository
+    container: rust:1.99.1-trixie@sha256:8a4e90c7946b74626488b1446f712c0fe0ed1a596cbd3d871684bc9c5433ae07
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+          submodules: false
+      # The JDK semantics this crate builds on, a sibling checkout (Cargo.toml's `../java-compat-rs`).
+      - run: git clone --depth 1 https://github.com/oxidestack/java-compat-rs.git ../java-compat-rs
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
+        with:
+          path: |
+            /usr/local/cargo/registry/index
+            /usr/local/cargo/registry/cache
+          key: cargo-${{ hashFiles('Cargo.lock') }}
+      - run: cargo install cargo-deny --locked --version 0.20.2 && make deny
+
+  public-check:
+    # the publication gate's built-in half and its own tests; the denylist is never in CI
+    if: ${{ github.event_name == 'workflow_dispatch' || !github.event.repository.private }}
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read  # actions/checkout reads the repository
+    container: rust:1.99.1-trixie@sha256:8a4e90c7946b74626488b1446f712c0fe0ed1a596cbd3d871684bc9c5433ae07
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+          submodules: false
+      - run: apt-get update && apt-get install -y --no-install-recommends ripgrep python3
+      - run: python3 -m unittest discover -s tools/public
+      - run: python3 -m unittest discover -s tools/lint
+      - run: python3 tools/lint/commits.py
+      - run: make public-check PUBLIC_DENYLIST=none
+
+  release-notes:
+    # tools/release's tests with their drafts, which run git-cliff in its pinned container: on the runner itself, where
+    # Docker is. VELOCITY_RS_REQUIRE_DOCKER makes a missing Docker a failure, not a skip.
+    if: ${{ github.event_name == 'workflow_dispatch' || !github.event.repository.private }}
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read  # actions/checkout reads the repository
+    timeout-minutes: 10
+    env:
+      VELOCITY_RS_REQUIRE_DOCKER: "1"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+      - run: python3 -m unittest discover -v -s tools/release
+
+  docs:
+    # the API documentation builds, rustdoc's warnings are errors
+    if: ${{ github.event_name == 'workflow_dispatch' || !github.event.repository.private }}
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read  # actions/checkout reads the repository
+    container: rust:1.99.1-trixie@sha256:8a4e90c7946b74626488b1446f712c0fe0ed1a596cbd3d871684bc9c5433ae07
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+          submodules: false
+      # The JDK semantics this crate builds on, a sibling checkout (Cargo.toml's `../java-compat-rs`).
+      - run: git clone --depth 1 https://github.com/oxidestack/java-compat-rs.git ../java-compat-rs
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
+        with:
+          path: |
+            /usr/local/cargo/registry/index
+            /usr/local/cargo/registry/cache
+          key: cargo-${{ hashFiles('Cargo.lock') }}
+      - run: make doc
+
+  msrv:
+    # the library builds on the oldest Rust Cargo.toml declares (`rust-version = "1.87"`)
+    if: ${{ github.event_name == 'workflow_dispatch' || !github.event.repository.private }}
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read  # actions/checkout reads the repository
+    container: rust:1.99.1-trixie@sha256:8a4e90c7946b74626488b1446f712c0fe0ed1a596cbd3d871684bc9c5433ae07
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+          submodules: false
+      # The JDK semantics this crate builds on, a sibling checkout (Cargo.toml's `../java-compat-rs`).
+      - run: git clone --depth 1 https://github.com/oxidestack/java-compat-rs.git ../java-compat-rs
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
+        with:
+          path: |
+            /usr/local/cargo/registry/index
+            /usr/local/cargo/registry/cache
+          key: cargo-${{ hashFiles('Cargo.lock') }}
+      - run: rustup toolchain install 1.87 --profile minimal && make msrv MSRV=1.87
+
+  site:
+    # The documentation site built (`make site`: the lockfile's licences, the internal links and anchors, then
+    # `make site-versions`), and deployed to GitHub Pages on a push to `main` once public (site.yml). A called workflow
+    # can narrow its caller's permissions and never widen them, so the deploy's are granted here.
+    if: ${{ github.event_name == 'workflow_dispatch' || !github.event.repository.private }}
+    uses: ./.github/workflows/site.yml  # zizmor: ignore[self-repository]
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

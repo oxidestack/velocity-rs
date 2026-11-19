@@ -1,0 +1,11 @@
+fix: keep an error's position after a nested call
+
+An error in a nested call named the inner position.
+
+```release-note
+An error in a nested call names the position of the call.
+```
+
+Refs: 1a2b3c4
+Closes: #8
+Signed-off-by: Jane Doe <jane@example.org>

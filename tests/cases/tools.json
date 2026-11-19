@@ -1,0 +1,98 @@
+[
+ {
+  "template": "$xml.parse('<a z=\"1\" b=\"2\" xmlns:p=\"urn:p\"><!--c--><b>x</b>&amp;<![CDATA[<y>]]><p:c p:q=\"1\">t\r\n\"q\"</p:c><e/></a>')$xml"
+ },
+ {
+  "template": "$xml.parse('<a z=\"1\" b=\"2\" xmlns:p=\"urn:p\"><!--c--><b>x</b>&amp;<![CDATA[<y>]]><p:c p:q=\"1\">t\r\n\"q\"</p:c><e/></a>')$xml.find(\"//p:c\")|$xml.find(\"c\")|$xml.find(\"//*[local-name()='c']\")|$xml.find(\"/a/@*\")|$xml.find(\"//text()\")"
+ },
+ {
+  "template": "$xml.parse('<a z=\"1\" b=\"2\" xmlns:p=\"urn:p\"><!--c--><b>x</b>&amp;<![CDATA[<y>]]><p:c p:q=\"1\">t\r\n\"q\"</p:c><e/></a>')$xml.find(\"//b\").getPath()|$xml.find(\"e\").path|$xml.children().size()|$xml.text|$xml.name"
+ },
+ {
+  "template": "$xml.parse('<r><i n=\"1\">a</i><i n=\"2\">b</i><i>c</i></r>')$xml.find(\"//i[2]\")|$xml.find(\"//i[last()]\").text|$xml.find(\"count(//i)\")|$xml.find(\"//i[@n>1]\")|$xml.get(\"i\")|$xml.get(1)|$xml.get(\"0\")|$xml.children().parents()"
+ },
+ {
+  "template": "$xml.parse('<?xml version=\"1.0\"?><!DOCTYPE r [<!ENTITY e \"ent<b>val</b>\">]><r a=\"x&#10;y\tz\">&e;&#x41;</r>')$xml|$xml.text|$xml.find(\"//b\")"
+ },
+ {
+  "template": "$xml.parse(\"<a><b></a>\").isEmpty()|$xml.parse('<a xmlns=\"urn:d\"><b/></a>')$xml|$xml.find(\"//b\")|$xml.find(\"b\")|$xml.children()"
+ },
+ {
+  "template": "$xml.parse('<r><i>1</i><i>2</i></r>')#foreach($i in $xml.find(\"i\"))[$i]#end|$xml.find(\"i\").iterator().next()|$xml.find(\"sum(//i)\")"
+ },
+ {
+  "template": "$xml.parse('<r>  <!-- x --> <i> a </i>text<![CDATA[cd]]>more</r>')$xml.children().size()|$xml.find(\"//text()\").size()|$xml.find(\"r/text()[2]\")|$xml.node().getTextContent()"
+ },
+ {
+  "template": "$xml.parse('<r><a id=\"7\"><b name=\"n\"/><c/><c/></a></r>')$xml.find(\"//b\").path|$xml.find(\"//c\").last.path|$xml.find(\"//a\").path|$xml.find(\"//c\").size()|$xml.find(\"//c\").parents().size()"
+ },
+ {
+  "template": "$xml.parse('<r x=\"1\"><a>1</a><a>2</a><b>3</b></r>')$xml.find(\"/r/*[position() > 1]\")|$xml.find(\"//a[. = 2]\")|$xml.find(\"//*[starts-with(name(),'b')]\")|$xml.find(\"//a[1]/following-sibling::*\")|$xml.find(\"//b/preceding::a[1]\")|$xml.find(\"//a/ancestor::*\")|$xml.find(\"//a[text()='1']/..\")|$xml.find(\"r/a\")|$xml.find(\"./a\")|$xml.find(\"//@x/..\").name"
+ },
+ {
+  "template": "$xml.parse('<r><a>1</a><b>2</b></r>')$xml.find(\"//a | //b\")|$xml.find(\"//*[not(self::a)]\")|$xml.find(\"//*[contains(concat(name(), 'x'), 'bx')]\")|$xml.find(\"//*[string-length(name()) = 1][2]\")|$xml.find(\"//*[number(.) mod 2 = 0]\")|$xml.find(\"//*[translate(., '12', 'ab') = 'b']\")"
+ },
+ {
+  "template": "$xml.parse('<r><a k=\"v\"/></r>')$xml.attributes()|$xml.find(\"a\").attributes()|$xml.find(\"a\").attr(\"k\")|$xml.find(\"a\").attr(\"z\")|$xml.find(\"a\").get(\"k\")|$xml.find(\"a\").k|$xml.first|$xml.last|$xml.parent|$xml.find(\"a\").parent"
+ },
+ {
+  "template": "$xml.parse('<r><a>&lt;&gt;&amp;&quot;&apos;</a><b c=\"&lt;&amp;&quot;&apos;&gt;\"/></r>')$xml|$xml.find(\"a\").text"
+ },
+ {
+  "template": "$xml.parse('<r><?pi data?><a/></r>')$xml|$xml.find(\"//processing-instruction()\")|$xml.children().size()|$xml.find(\"//node()\").size()"
+ },
+ {
+  "template": "$xml.parse(\"not xml\").isEmpty()|$xml.parse(\"<a/><b/>\").isEmpty()|$xml.parse(\"<a>\").isEmpty()|$xml.parse(\"  <a/>  \").isEmpty()|$xml.parse(\"x<a/>\").isEmpty()"
+ },
+ {
+  "template": "$xml.parse('<r><a/></r>')$xml.find(\"//a[\")|$xml.find(\"//a[@]\")|$xml.find(\"\")|$xml.find(\"$v\")|$xml.find(\"foo(1)\")"
+ },
+ {
+  "template": "#set($d = $date.toDate('yyyy-MM-dd HH:mm:ss', '2007-01-02 03:04:05'))$d|$date.format($d)|$date.format(\"iso\", $d)|$date.format(\"iso_tz\", $d)|$date.format(\"intl_tz\", $d)|$date.format(\"short\", $d)|$date.format(\"long_date\", $d)|$date.format(\"full_time\", $d)|$date.format(\"medium\", \"short\", $d)"
+ },
+ {
+  "template": "#set($d = $date.toDate('yyyy-MM-dd HH:mm:ss', '2007-01-02 03:04:05'))$date.format(\"EEE, d MMM yyyy\", $d)|$date.format(\"yyyy\", $d, \"fr\")|$date.format(\"full_date\", $d, \"fr_FR\")|$date.getYear($d)|$date.getMonth($d)|$date.getDay($d)|$date.getValue(\"DAY_OF_WEEK\", $d)|$date.getValue(7, $d)|$date.getValue(\"nope\", $d)"
+ },
+ {
+  "template": "#set($d = $date.toDate('yyyy-MM-dd HH:mm:ss', '2007-01-02 03:04:05'))$date.toCalendar($d).class.name|$date.toDate(1000)|$date.toDate(\"x\")|$date.format(\"yyyy\", \"2019-01-01\")|$date.toDate(\"yyyy\", \"2019\")|$date.toLocalizedPattern(\"short\", \"fr\")|$date.toLocalizedPattern(\"intl_tz\", \"fr\")|$date.format"
+ },
+ {
+  "template": "#set($a = $date.toDate(\"yyyy-MM-dd\", \"2007-01-02\"))#set($b = $date.toDate(\"yyyy-MM-dd\", \"2007-02-15\"))$date.whenIs($a, $b)|$date.whenIs($b, $a)|$date.difference($a, $b)|$date.timespan($a, $b)|$date.whenIs($a, $b).abbr|$date.whenIs($a, $b).full|$date.whenIs($a, $b).days|$date.whenIs($a, $b).weeks|$date.timespan($a, $b).months|$date.whenIs($a, $a)|$date.difference($a,$a)|$date.whenIs($a, $b).depth(3)"
+ },
+ {
+  "template": "#set($a = $date.toDate(\"yyyy-MM-dd HH:mm\", \"1954-06-26 10:00\"))#set($b = $date.toDate(\"yyyy-MM-dd HH:mm\", \"2019-06-20 09:30\"))$date.timespan($a, $b)|$date.timespan($b, $a)|$date.timespan($a, $b).years|$date.timespan($a, $b).days|$date.timespan($a, $b).hours|$date.whenIs($a, $b)|$date.difference($b, $a)|$date.whenIs(null, $b)|$date.timespan($a, $b).abbr"
+ },
+ {
+  "template": "$date.toDate(\"yyyy-MM-dd\", \"2007-01-02\").time|$date.format(\"yyyy-MM-dd HH:mm Z\", 0)|$date.format(\"yyyy-MM-dd\", $date.toCalendar(86400000))|$date.toYears(31536000000)|$date.toDays(86400000)|$date.format(\"y-M-d\", null)|$date.format(null, 0)"
+ },
+ {
+  "template": "$math.add(1, 2.5)|$math.add(\"1\", \"2\")|$math.add(1, \"x\")|$math.sub(10, 3, 2)|$math.mul(2, 2.5)|$math.div(1, 0)|$math.div(7, 2)|$math.div(8, 2)|$math.max(-5, -3)|$math.min(1, 2, 0.5)|$math.pow(2, 10)|$math.pow(2, 0.5)|$math.idiv(7, 2)|$math.mod(7, 3)|$math.mod(7, 0)"
+ },
+ {
+  "template": "$math.abs(-3)|$math.abs(-3.5)|$math.ceil(2.1)|$math.floor(-2.1)|$math.round(2.5)|$math.round(3.5)|$math.roundTo(2, 3.14159)|$math.roundTo(0, 3.14159)|$math.toInteger(\"12.7\")|$math.toDouble(3)|$math.toNumber(\"1,234.5\")|$math.getTotal([1, 2, 3])|$math.getAverage([1, 2, 3, 4])|$math.getTotal([])|$math.getAverage([])|$math.bitwiseOr(5, 2)|$math.bitwiseAnd(6, 3)|$math.bitwiseXOr(6, 3)"
+ },
+ {
+  "template": "$math.add(2147483647, 1)|$math.mul(100000, 100000)|$math.add(1.0, 2)|$math.add(1E2, 2)|$math.sub(0.3, 0.1)|$math.div(1, 3)|$math.max()|$math.max(1)|$math.getTotal([1, \"x\"])|$math.random(1, 1)|$math.toLong(\"9999999999\")"
+ },
+ {
+  "template": "$number.format(1234567.891)|$number.format(\"currency\", 1234.5)|$number.format(\"percent\", 0.256)|$number.format(\"integer\", 1234.5)|$number.format(\"#0.00\", 3.14159)|$number.format(\"0.###E0\", 12345)|$number.currency(3)|$number.integer(\"12.6\")|$number.percent(\"0.5\")|$number.number(-1234.5)|$number.format(\"x\")|$number.format(null)|$number.toNumber(\"12.5\")|$number.toNumber(\"integer\", \"12.5\")"
+ },
+ {
+  "template": "$number.format(\"number\", 1234.5, \"fr\")|$number.format(\"currency\", 1234.5, \"fr_FR\")|$number.format(\"currency\", 1234.5, \"en_GB\")|$number.format(\"#,##0.0\", 1234.5, \"de\")|$number.toNumber(\"number\", \"1 234,5\", \"fr\")|$number.format(\"'\")|$number.getNumberFormat(\"percent\", \"en\").class.name|$number.locale|$number.toLocale(\"fr_FR\")"
+ },
+ {
+  "template": "$date.format(\"x\", \"y\")"
+ },
+ {
+  "template": "$number.format(\"#0.0#0\", 1)"
+ },
+ {
+  "template": "$number.format(\"number\", 1234.5, \"fr\")|$number.format(\"number\", 1234.5, $number.toLocale(\"fr\"))|$date.format(\"full_date\", $date.toDate(\"yyyy\", \"2007\"), $date.toLocale(\"fr_FR\"))|$number.format(\"currency\", 3, $number.toLocale(\"fr_FR\"))|$number.format(\"currency\", 3, $number.toLocale(\"en_GB\"))|$number.format(\"currency\", 3, $number.toLocale(\"de_DE\"))"
+ },
+ {
+  "template": "$display.configure({\"listDelim\": \";\"})$display.list([1, 2, 3])|$display.isConfigLocked()|$display.isSafeMode()|$math.isConfigLocked()|$json.isConfigLocked()|$esc.key|$display.locale|$number.format|$date.format|$collection.stringsDelimiter|$display.truncate(\"abcdefghijklmnopqrstuvwxyz0123456789\")|$display.message(\"{0} and {1}\", \"a\", 2)|$display.printf(\"%s-%05d\", \"x\", 42)|$display.printf(\"%.2f\", 3.14159)"
+ },
+ {
+  "template": "$display.list($collection.split(\"a, b ,c\"))|$collection.sort([\"b\", \"a\", \"C\"])|$json.parse('{\"a\":[1,2]}').a|$esc.velocity(\"$x#y\")|$display.stripTags(\"<b>x</b><i>y</i>\")|$display.cell(\"abc\", 5)|$display.plural(2, \"box\")|$display.measure(\"ab\ncde\")"
+ }
+]

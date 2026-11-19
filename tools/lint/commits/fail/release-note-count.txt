@@ -1,0 +1,11 @@
+fix: keep an error's position after a nested call
+
+```release-note
+An error names the position of the call.
+```
+
+```release-note
+The column is kept as well.
+```
+
+Signed-off-by: Jane Doe <jane@example.org>

@@ -1,0 +1,8 @@
+feat: drop the strict_mode alias
+
+```release-note
+`strict_mode` is no longer read: set `strict`.
+```
+
+BREAKING-CHANGE: set strict instead of strict_mode.
+Signed-off-by: Jane Doe <jane@example.org>

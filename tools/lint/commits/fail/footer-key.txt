@@ -1,0 +1,4 @@
+docs: describe the options
+
+Reviewed-by: John Roe <john@example.org>
+Signed-off-by: Jane Doe <jane@example.org>

@@ -1,0 +1,12 @@
+fix: keep an error's position after a nested call
+
+An error raised in a nested call named the inner position, so a
+caller looked in the wrong place. It now names the position of the
+call, as the Java library does.
+
+```release-note
+An error raised in a nested call names the position of the call, so
+a caller finds it.
+```
+
+Signed-off-by: Jane Doe <jane@example.org>

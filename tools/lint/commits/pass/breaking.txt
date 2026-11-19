@@ -1,0 +1,13 @@
+feat!: drop the strict_mode alias
+
+The old option name was read after strict; one name too many for one
+setting.
+
+```release-note
+`strict_mode` is no longer read. A configuration that sets it sets
+`strict` to the same value instead.
+```
+
+BREAKING-CHANGE: a configuration that sets strict_mode must set
+ strict instead; the value is unchanged.
+Signed-off-by: Jane Doe <jane@example.org>

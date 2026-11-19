@@ -1,0 +1,7 @@
+feat(parser): add an option to trim trailing whitespace
+
+```release-note
+The `trim` option drops trailing whitespace from the output.
+```
+
+Signed-off-by: Jane Doe <jane@example.org>

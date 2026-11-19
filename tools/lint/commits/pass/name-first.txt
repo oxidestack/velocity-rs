@@ -1,0 +1,8 @@
+perf: UTF-8 input is read without a copy
+
+```release-note
+UTF-8 input is read without a copy, so a large input loads in
+half the time.
+```
+
+Signed-off-by: Jane Doe <jane@example.org>

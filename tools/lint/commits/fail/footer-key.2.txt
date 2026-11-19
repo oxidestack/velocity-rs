@@ -1,0 +1,4 @@
+docs: describe the options
+
+Fixes: #8
+Signed-off-by: Jane Doe <jane@example.org>

@@ -1,0 +1,5 @@
+docs: describe the options
+
+The options had no description in the README, so a user read the source code.
+
+Signed-off-by: Jane Doe <jane@example.org>

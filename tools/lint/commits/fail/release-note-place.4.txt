@@ -1,0 +1,9 @@
+fix: keep an error's position after a nested call
+
+Note: the retry is bounded.
+
+```release-note
+An error names the position of the call.
+```
+
+Signed-off-by: Jane Doe <jane@example.org>

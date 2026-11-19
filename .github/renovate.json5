@@ -1,0 +1,69 @@
+// Renovate (https://docs.renovatebot.com/), the GitHub app on this repository: pull requests that keep what the
+// repository pins current — the GitHub Actions (by commit, the release in the comment), the crates, and the images the
+// CI jobs run in (by digest, the tag beside it).
+//
+// Every commit is held to the commit gate (tools/lint/commits.py, CONTRIBUTING.md): a `build(deps)` Conventional
+// Commit, no release note, and the author's DCO sign-off last. The sign-off below names the hosted app's bot; a
+// self-hosted Renovate signs off as its own git author instead.
+//
+// Not here, on purpose: the submodules, the pinned Apache Velocity Engine 2.4.1 and Velocity Tools 3.1 sources this
+// crate ports (a re-pin is a decision, never an update), and the sibling crates Cargo.toml reaches by path (each is
+// this organisation's own and moves by hand).
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: ['config:recommended', ':disableRateLimiting'],
+  enabledManagers: ['github-actions', 'cargo'],
+  ignorePaths: ['upstream-tools/**', 'upstream/**'],
+  timezone: 'Etc/UTC',
+  // Monday mornings: one batch a week rather than a pull request whenever something is published.
+  schedule: ['* 0-6 * * 1'],
+  // A release younger than three days is often replaced by a fix; a pin waits for that.
+  minimumReleaseAge: '3 days',
+  semanticCommits: 'enabled',
+  commitBody: 'Signed-off-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>',
+  rebaseWhen: 'behind-base-branch',
+  // No Cargo.lock is committed (a library's consumers resolve their own), so there is no lock file to maintain.
+  packageRules: [
+    {
+      // After config:recommended's own rules: every update is `build(deps)`, never a `fix`, which would ask for a
+      // release note.
+      matchPackageNames: ['*'],
+      semanticCommitType: 'build',
+      semanticCommitScope: 'deps',
+    },
+    {
+      // A runner label (ubuntu-24.04) is a decision about where the jobs run.
+      matchDatasources: ['github-runners'],
+      enabled: false,
+    },
+    {
+      matchManagers: ['github-actions'],
+      matchDepTypes: ['action'],
+      groupName: 'github actions',
+      pinDigests: true,
+    },
+    {
+      // The toolchain of the CI jobs: one pull request for every file that names it.
+      matchDatasources: ['docker'],
+      matchPackageNames: ['rust'],
+      groupName: 'rust image',
+    },
+    {
+      // The CI jobs' images stay pinned by digest.
+      matchManagers: ['github-actions'],
+      matchDepTypes: ['container', 'service'],
+      pinDigests: true,
+    },
+    {
+      matchManagers: ['cargo'],
+      matchUpdateTypes: ['minor', 'patch'],
+      groupName: 'rust crates',
+    },
+    {
+      // The crates of this family that Cargo.toml reaches by path: each moves with its own release, by hand.
+      matchManagers: ['cargo'],
+      matchPackageNames: ['java-compat-rs'],
+      enabled: false,
+    },
+  ],
+}

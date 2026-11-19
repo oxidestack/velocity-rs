@@ -1,0 +1,4355 @@
+[
+	{
+		"template": "\t\t#set($a = "
+	},
+	{
+		"template": "\t\t#set($a }= "
+	},
+	{
+		"template": "\t#if("
+	},
+	{
+		"template": "\t#if==("
+	},
+	{
+		"template": "\n#evaluate()"
+	},
+	{
+		"template": "\n#macro(arrayError)\n  #set($foo = [)\n  $foo.get(2)\n#end\n\n#macro(nullMethod)\n  #set($foo = $NULL)\n  $foo.bar\n#end\n\n#macro(badRef)\n  $bar\n#end\n\n#macro(forloop)\n  #set($val = 1)\n  #foreach($i in $val)\n  #end\n#end\n"
+	},
+	{
+		"template": "\n#macro(arrayError)\n  #set($foo = [])\n  $foo.get(2)\n#end\n\n#macro(nullMethod)\n  #set($foo = $NULL)\n  $foo.bar\n#end\n\n#macro(badRef)\n  $bar\n#end\n\n#macro(forloop)\n  #set($val = &&1)\n  #foreach($i in $val)\n  #end\n#end\n"
+	},
+	{
+		"template": "\n#macro(arrayError)\n  #set($foo = [])\n  $foo.get(2)\n#end\n\n#macro(nullMethod)\n  #set($foo = $NULL)\n  $foo.bar\n#end\n\n#macro(badRef)\n  $bar\n#end\n\n#macro(forloop)\n  #set($val = 1)\n  #foreach$i in $val)\n  #end\n#end\n"
+	},
+	{
+		"template": "\n#macro(arrayError)\n  #set($foo = [])\n  $foo.get(2)\n#end\n\n#macro(nullMethod)\n  #set($foo = $NULL)\n  $foo.bar\n#end\n\n#macro(badRef)\n  $bar\n#end\n\n#macro(forloop)\n  #set($val = 1)\n  #foreach(#endi in $val)\n  #end\n#end\n"
+	},
+	{
+		"template": "\n#macro(arrayError)\n  #set($foo = [])\n  $foo.get(2)\n#end\n\n#macro(nullMethod)\n  #set($foo = $NULL)\n  $foo.bar\n#end\n\n#macro(badRef)\n  $bar\n#end\n\n#macro(forloop)\n  #set($val = 1)\n  #foreach($i in val)\n  #end\n#end\n"
+	},
+	{
+		"template": "\n#macro(arrayError)\n  #set($foo = [])\n  $foo.get(2)\n#end\n\n#macro(nullMethod)\n  #set($foo = $NULL)\n  $foo.bar\n#end\n\n#macro(badRef)\n  $bar\n#end\n\n#macro(forloop)\n  #set(val = 1)\n  #foreach($i in $val)\n  #end\n#end\n"
+	},
+	{
+		"template": "\n#macro(arrayError)\n  #set($foo = [])\n  $foo.get(2)\n#end\n\n#macro(nullMethod)\n  #set(foo = $NULL)\n  $foo.bar\n#end\n\n#macro(badRef)\n  $bar\n#end\n\n#macro(forloop)\n  #set($val = 1)\n  #foreach($i in $val)\n  #end\n#end\n"
+	},
+	{
+		"template": "\n#set($x / 1)\n\n$x\n"
+	},
+	{
+		"template": "\n#set($x = 1\n\n$x\n"
+	},
+	{
+		"template": "\n#set(*$x = 1)\n\n$x\n"
+	},
+	{
+		"template": "\n#set(x = 1)\n\n$x\n"
+	},
+	{
+		"template": "  #for${each($i in [1])\n    $i\n  #end\ndone"
+	},
+	{
+		"template": "  #foreach($i in 1])\n    $i\n  #end\ndone"
+	},
+	{
+		"template": "  #foreach($i in{[1])\n    $i\n  #end\ndone"
+	},
+	{
+		"template": "  #if(true\n  x\n  #end\n"
+	},
+	{
+		"template": "  #set(##a = 1)\n  #if($a)\n  x\n  #end\n"
+	},
+	{
+		"template": "  #set($a }= 1)  \n$a"
+	},
+	{
+		"template": "  #set($a!= 1)\n  #if($a)\n  x\n  #end\n"
+	},
+	{
+		"template": "  #set($a|| = 1)\n  #if($a)\n  x\n  #end\n"
+	},
+	{
+		"template": "\"#set()"
+	},
+	{
+		"template": "##\n## tests a difficult introspection problem -\n## the iterator is a private inner class\n##\n\n#set($array = [1..10"
+	},
+	{
+		"template": "##\n## tests a difficult introspection problem -\n## the iterator is a private inner class\n##\n\n#set($array = [1..10])\n#set($it = $array.iterat=or())\n\n#foreach($num in [21..30])\n   $num $it.next()\n#end\n\n\n"
+	},
+	{
+		"template": "##\n## tests a difficult introspection problem -\n## the iterator is a private inner class\n##\n\n#set($array = [1..10])\n#set($it = $array.iterator())\n\n#foreach(num in [21..30])\n   $num $it.next()\n#end\n\n\n"
+	},
+	{
+		"template": "##\n## tests a difficult introspection problem -\n## the iterator is a private inner class\n##\n\n#set($array = [1..10])\n#set($it = $arrayiterator())\n\n#foreach($num in [21..30])\n   $num $it.next()\n#end\n\n\n"
+	},
+	{
+		"template": "##\n## tests a difficult introspection problem -\n## the iterator is a private inner class\n##\n\n#set($array = [1..10])\n#set(it = $array.iterator())\n\n#foreach($num in [21..30])\n   $num $it.next()\n#end\n\n\n"
+	},
+	{
+		"template": "##\n## tests a difficult introspection problem -\n## the iterator is a private inner class\n##\n\n#set($array = [1..1=0])\n#set($it = $array.iterator())\n\n#foreach($num in [21..30])\n   $num $it.next()\n#end\n\n\n"
+	},
+	{
+		"template": "##\n## tests a difficult introspection problem -\n## the iterator is a private inner class\n##\n\n#set($arr||y = [1..10])\n#set($it = $array.iterator())\n\n#foreach($num in [21..30])\n   $num $it.next()\n#end\n\n\n"
+	},
+	{
+		"template": "## This file has a Velocity error.\n## It's intentionally not saved with a 'vm' suffix\n## to avoid errors in IDE\n\n## Note: text directly from VELOCITY-96\n\n#macro (myMacro $arg1 $lis})\nThis is text from velPTest2.vm\n#myMacro('name', ['apples', 'oranges']\nMore text\n"
+	},
+	{
+		"template": "## This file has a Velocity error.\n## It's intentionally not saved with a 'vm' suffix\n## to avoid errors in IDE\n\n## Note: text directly from VELOCITY-96\n\n#macro (myMacro $arg1 list)\nThis is text from velPTest2.vm\n#myMacro('name', ['apples', 'oranges']\nMore text\n"
+	},
+	{
+		"template": "## This file has a Velocity error.\n## It's intentionally not saved with a 'vm' suffix\n## to avoid errors in IDE\n\n## Note: text directly from VELOCITY-96\n\n#macro myMacro $arg1 $list)\nThis is text from velPTest2.vm\n#myMacro('name', ['apples', 'oranges']\nMore text\n"
+	},
+	{
+		"template": "## This file has a Velocity error.\n## It's intentionally not saved with a 'vm' suffix\n## to avoid errors in IDE\n\n#foreach($i in (..10)\n\n$i"
+	},
+	{
+		"template": "## This file has a Velocity error.\n## It's intentionally not saved with a 'vm' suffix\n## to avoid errors in IDE\n\n#foreach($i in (1..10\n\n$i"
+	},
+	{
+		"template": "## This file has a Velocity error.\n## It's intentionally not saved with a 'vm' suffix\n## to avoid errors in IDE\n\n#foreach($i in 1..10)\n\n$i"
+	},
+	{
+		"template": "## This file has a Velocity error.\n##It's intentionally not saved with a 'vm' suffix\n## to avoid errors in IDE\n\n#foreach($i in (1..10)\n\n$i"
+	},
+	{
+		"template": "## This file has aVelocity error.\n## It's intentionally not saved with a 'vm' suffix\n## to avoid errors in IDE\n\n## Note: text directly from VELOCITY-96\n\n#macro (myMacro $arg1 $list)\nThis is text from velPTest2.vm\n#myMacro('name', ['apples', 'oranges']\nMore text\n"
+	},
+	{
+		"template": "## This template is used for the case in which #set with a null\n## is not accepted\nset1\n\n#set ($abc = \"123\")\n$abc\n#set\t($abc = $boohoo)\n$abc\n\n#set    ($map = {})\n#set($map.foo = \"foo\")\n#set($ma!.bar = \"bar\")\n$map.foo\n$map.bar\n#set($map.bar = $boohoo)\n$map.foo\n$map.bar\n"
+	},
+	{
+		"template": "## This template is used for the case in which #set with a null\n## is not accepted\nset1\n\n#set ($abc = \"123\")\n$abc\n#set\t($abc = $boohoo)\n$abc\n\n#set    ($map = {})\n#set($map.foo = \"foo\")\n#set($map.bar = \"bar\")\n$map.foo\n$map.bar\n#set($map"
+	},
+	{
+		"template": "## This template is used for the case in which #set with a null\n## is not accepted\nset1\n\n#set ($abc = \"123\")\n$abc\n#set\t($abc = $boohoo)\n$abc\n\n#set    ($map = {})\n#set($map.foo = \"foo\")\n#set($map.bar = \"bar\")\n$map.foo\n$map.bar\n#set($map.bar =} $boohoo)\n$map.foo\n$map.bar\n"
+	},
+	{
+		"template": "## This template is used for the case in which #set with a null\n## is not accepted\nset1\n\n#set ($abc = \"123\")\n$abc\n#set\t($abc = $boohoo)\n$abc\n\n#set    ($map = {})\n#set($map.foo = \"foo\")\n#set($map.bar = \"bar\")\n$map.foo\n$map.bar\n#set(map.bar = $boohoo)\n$map.foo\n$map.bar\n"
+	},
+	{
+		"template": "## This template is used for the case in which #set with a null\n## is not accepted\nset1\n\n#set ($abc = \"123\")\n$abc\n#set\t($abc = $boohoo)\n$abc\n\n#set    ($map = {})\n#set($map.foo = \"foo\")\n#set($map.bar = bar\")\n$map.foo\n$map.bar\n#set($map.bar = $boohoo)\n$map.foo\n$map.bar\n"
+	},
+	{
+		"template": "## This template is used for the case in which #set with a null\n## is not accepted\nset1\n\n#set ($abc = \"123\")\n$abc\n#set\t($abc = $boohoo)\n$abc\n\n#set    ($map = {})\n#set($map.foo = \"foo\")\n#set(map.bar = \"bar\")\n$map.foo\n$map.bar\n#set($map.bar = $boohoo)\n$map.foo\n$map.bar\n"
+	},
+	{
+		"template": "## This template is used for the case in which #set with a null\n## is not accepted\nset1\n\n#set ($abc = \"123\")\n$abc\n#set\t($abc = $boohoo)\n$abc\n\n#set    ($map = {})\n#set($map.foo = \"foo)\n#set($map.bar = \"bar\")\n$map.foo\n$map.bar\n#set($map.bar = $boohoo)\n$map.foo\n$map.bar\n"
+	},
+	{
+		"template": "## This template is used for the case in which #set with a null\n## is not accepted\nset1\n\n#set ($abc = \"123\")\n$abc\n#set\t($abc = $boohoo)\n$abc\n\n#set    ($map = {})\n#set($map.foo = foo\")\n#set($map.bar = \"bar\")\n$map.foo\n$map.bar\n#set($map.bar = $boohoo)\n$map.foo\n$map.bar\n"
+	},
+	{
+		"template": "## This template is used for the case in which #set with a null\n## is not accepted\nset1\n\n#set ($abc = \"123\")\n$abc\n#set\t($abc = $boohoo)\n$abc\n\n#set    (map = {})\n#set($map.foo = \"foo\")\n#set($map.bar = \"bar\")\n$map.foo\n$map.bar\n#set($map.bar = $boohoo)\n$map.foo\n$map.bar\n"
+	},
+	{
+		"template": "## This template is used for the case in which #set with a null\n## is not accepted\nset1\n\n#set ($abc = \"123\")\n$abc\n#set\t(abc = $boohoo)\n$abc\n\n#set    ($map = {})\n#set($map.foo = \"foo\")\n#set($map.bar = \"bar\")\n$map.foo\n$map.bar\n#set($map.bar = $boohoo)\n$map.foo\n$map.bar\n"
+	},
+	{
+		"template": "## This template is used for the case in which #set with a null\n## is not accepted\nset1\n\n#set (abc = \"123\")\n$abc\n#set\t($abc = $boohoo)\n$abc\n\n#set    ($map = {})\n#set($map.foo = \"foo\")\n#set($map.bar = \"bar\")\n$map.foo\n$map.bar\n#set($map.bar = $boohoo)\n$map.foo\n$map.bar\n"
+	},
+	{
+		"template": "## ambiguous method -- should not be processed\n$test.overloadedMethod($nullValue\n\n## is the correct method cached after null parameter\n$test.overloadedMethod2( $nullValue )\n$test.overloadedMethod2( \"a string\" )\n$test.overloadedMethod2( 1234 )"
+	},
+	{
+		"template": "## ambiguous method -- should not be processed\n$test.overloadedMethod($nullValue)\n\n## is the correct method cached after null parameter\n$test.overloadedMethod2( \"$nullValue )\n$test.overloadedMethod2( \"a string\" )\n$test.overloadedMethod2( 1234 )"
+	},
+	{
+		"template": "## test of evaluate in a macro context whith local refs (foreach refs)\n\n#macro(testEval $ex%r)\n#foreach($value in [\"val1\", \"val2\"])value is : #evaluate( $expr );#end\n#end\n\n#testEval( \"${value}\" )\n"
+	},
+	{
+		"template": "## test of evaluate in a macro context whith local refs (foreach refs)\n\n#macro(testEval $expr)\n#foreach($value in [\"val1\", \"val2\"])value is : #evaluate $expr );#end\n#end\n\n#testEval( \"${value}\" )\n"
+	},
+	{
+		"template": "## test of evaluate in a macro context whith local refs (foreach refs)\n\n#macro(testEval $expr)\n#foreach($value in [\"val1\", \"val2\"])value is : #evaluate( $\nxpr );#end\n#end\n\n#testEval( \"${value}\" )\n"
+	},
+	{
+		"template": "## test of evaluate in a macro context whith local refs (foreach refs)\n\n#macro(testEval $expr)\n#foreach($value in [\"val1\", \"val2\"])value is : #evaluate( expr );#end\n#end\n\n#testEval( \"${value}\" )\n"
+	},
+	{
+		"template": "## test of evaluate in a macro context whith local refs (foreach refs)\n\n#macro(testEval $expr)\n#foreach($value in [\"val1\", \"val2\"]value is : #evaluate( $expr );#end\n#end\n\n#testEval( \"${value}\" )\n"
+	},
+	{
+		"template": "## test of evaluate in a macro context whith local refs (foreach refs)\n\n#macro(testEval $expr)\n#foreach($value in [\"val1\", \"val2])value is : #evaluate( $expr );#end\n#end\n\n#testEval( \"${value}\" )\n"
+	},
+	{
+		"template": "#${set( $a = $missing )$a"
+	},
+	{
+		"template": "#*\n\n@test method.vm\n\nThis template is used for Velocity regression testing.\nIf you alter this template make sure you change the\ncorresponding comparison file so that the regression \ntest doesn't fail incorrectly.\n\n*#\n\n$provider.concat(\"I\", \"am\", \"a\", $provider.concat([\"running\", \"man\"])])\n\n"
+	},
+	{
+		"template": "#*\n\n@test method.vm\n\nThis template is used for Velocity regression testing.\nIf you alter this template make sure you change the\ncorresponding comparison file so that the regression \ntest doesn't fail incorrectly.\n\n*#\n\n$provider.concat([\"I\","
+	},
+	{
+		"template": "#*\n\n@test method.vm\n\nThis template is used for Velocity regression testing.\nIf you alter this template make sure you change the\ncorresponding comparison file so that the regression \ntest doesn't fail incorrectly.\n\n*#\n\n$provider.concat([\"I\", \"am\", \"a\", $prov"
+	},
+	{
+		"template": "#*\n\n@test method.vm\n\nThis template is used for Velocity regression testing.\nIf you alter this template make sure you change the\ncorresponding comparison file so that the regression \ntest doesn't fail incorrectly.\n\n*#\n\n$provider.concat([\"I\", \"am\", \"a\", $provi/er.concat([\"running\", \"man\"])])\n\n"
+	},
+	{
+		"template": "#*\n\n@test method.vm\n\nThis template is used for Velocity regression testing.\nIf you alter this template make sure you change the\ncorresponding comparison file so that the regression \ntest doesn't fail incorrectly.\n\n*#\n\n$provider.concat([\"I\", \"am\", \"a\", $provider.co"
+	},
+	{
+		"template": "#*\n\n@test method.vm\n\nThis template is used for Velocity regression testing.\nIf you alter this template make sure you change the\ncorresponding comparison file so that the regression \ntest doesn't fail incorrectly.\n\n*#\n\n$provider.concat([\"I\", \"am\", \"a\", $provider.concat("
+	},
+	{
+		"template": "#*\n\n@test method.vm\n\nThis template is used for Velocity regression testing.\nIf you alter this template make sure you change the\ncorresponding comparison file so that the regression \ntest doesn't fail incorrectly.\n\n*#\n\n$provider.concat([\"I\", \"am\", \"a\", $provider.concat([\"running\", \"man\"]))\n\n"
+	},
+	{
+		"template": "#*\n\n@test method.vm\n\nThis template is used for Velocity regression testing.\nIf you alter this template make sure you change the\ncorresponding comparison file so that the regression \ntest doesn't fail incorrectly.\n\n*#\n\n$provider.concat([\"I\", \"am\", \"a\", $provider.concat([\"running, \"man\"])])\n\n"
+	},
+	{
+		"template": "#*\n\n@test method.vm\n\nThis template is used for Velocity regression testing.\nIf you alter this template make sure you change the\ncorresponding comparison file so that the regression \ntest doesn't fail incorrectly.\n\n*#\n\n$provider.concat([\"I\", \"am\", \"a\", $provider.concat([running\", \"man\"])])\n\n"
+	},
+	{
+		"template": "#*\n\n@test method.vm\n\nThis template is used for Velocity regression testing.\nIf you alter this template make sure you change the\ncorresponding comparison file so that the regression \ntest doesn't fail incorrectly.\n\n*#\n\n$provider.concat([\"I\", \"am\",+ \"a\", $provider.concat([\"running\", \"man\"])])\n\n"
+	},
+	{
+		"template": "#*\n\n@test method.vm\n\nThis template is used for Velocity regression testing.\nIf you alter this template make sure you change the\ncorresponding comparison file so that the regression \ntest doesn't fail incorrectly.\n\n*#\n\n$provider.concat([\"I\", \"am, \"a\", $provider.concat([\"running\", \"man\"])])\n\n"
+	},
+	{
+		"template": "#*\n\n@test method.vm\n\nThis template is used for Velocity regression testing.\nIf you alter this template make sure you change the\ncorresponding comparison file so that the regression \ntest doesn't fail incorrectly.\n\n*#\n\n$provider.concat([\"I, \"am\", \"a\", $provider.concat([\"running\", \"man\"])])\n\n"
+	},
+	{
+		"template": "#*\n\n@test method.vm\n\nThis template is used for Velocity regression testing.\nIf you alter this template make sure you change the\ncorresponding comparison file so that the regression \ntest doesn't fail incorrectly.\n\n*#\n\n$provider.concat([I\", \"am\", \"a\", $provider.concat([\"running\", \"man\"])])\n\n"
+	},
+	{
+		"template": "#**\n\n@test foreach-map.vm\n\nThis template is used for Velocity regression testing.\nIf you alter this template make sure you change the\ncorresponding comparison file so that the regression \ntest doesn't fail incorrectly.\n\n*#\n\n#foreach ($element in $prov=der.Hashtable)\n    $element\n#end    \n"
+	},
+	{
+		"template": "#**\n\n@test foreach-map.vm\n\nThis template is used for Velocity regression testing.\nIf you alter this template make sure you change the\ncorresponding comparison file so that the regression \ntest doesn't fail incorrectly.\n\n*#\n\n#foreach (element in $provider.Hashtable)\n    $element\n#end    \n"
+	},
+	{
+		"template": "#@"
+	},
+	{
+		"template": "#@"
+	},
+	{
+		"template": "#@f${oo()x#end"
+	},
+	{
+		"template": "#@m"
+	},
+	{
+		"template": "#@m"
+	},
+	{
+		"template": "#@m("
+	},
+	{
+		"template": "#@m("
+	},
+	{
+		"template": "#@m($a)x"
+	},
+	{
+		"template": "#[# $name #if ]]#"
+	},
+	{
+		"template": "#[#if($a) $name #if ]]#"
+	},
+	{
+		"template": "#[%[ $name #if ]]#"
+	},
+	{
+		"template": "#acro(d $a $b='def')$a $b#end#d('x')#d('x' 'y')"
+	},
+	{
+		"template": "#acro(two $a $b)$a-$b#end#two(1 2)#two(1)"
+	},
+	{
+		"template": "#break("
+	},
+	{
+		"template": "#break("
+	},
+	{
+		"template": "#break($a"
+	},
+	{
+		"template": "#define"
+	},
+	{
+		"template": "#define"
+	},
+	{
+		"template": "#define$b)x#end$b"
+	},
+	{
+		"template": "#define$d)defined $name#end$d $d"
+	},
+	{
+		"template": "#define$d)x#end#if($d)y#end"
+	},
+	{
+		"template": "#define($)defined $name#end$d $d"
+	},
+	{
+		"template": "#define($a"
+	},
+	{
+		"template": "#define($b${)x#end$b"
+	},
+	{
+		"template": "#define($d)x#end#if$d)y#end"
+	},
+	{
+		"template": "#define($d)x#end#if,($d)y#end"
+	},
+	{
+		"template": "#define($d==x#end#if($d)y#end"
+	},
+	{
+		"template": "#define($d{)x#end#if($d)y#end"
+	},
+	{
+		"template": "#define()"
+	},
+	{
+		"template": "#define()$!#end"
+	},
+	{
+		"template": "#define()x"
+	},
+	{
+		"template": "#define()x#"
+	},
+	{
+		"template": "#define()x#ed"
+	},
+	{
+		"template": "#define()x#end"
+	},
+	{
+		"template": "#define()x#end"
+	},
+	{
+		"template": "#define(a##x#end"
+	},
+	{
+		"template": "#define(a)"
+	},
+	{
+		"template": "#define(a)#end"
+	},
+	{
+		"template": "#define(a)x#"
+	},
+	{
+		"template": "#define(a)x#e"
+	},
+	{
+		"template": "#define(a)x#en"
+	},
+	{
+		"template": "#define(a)x#end"
+	},
+	{
+		"template": "#define(a)x#end}"
+	},
+	{
+		"template": "#define(a)x#nd"
+	},
+	{
+		"template": "#define(a)xend"
+	},
+	{
+		"template": "#define(b)x#end$b"
+	},
+	{
+		"template": "#define(d)defined $name#end$d $d"
+	},
+	{
+		"template": "#define)x#end"
+	},
+	{
+		"template": "#define|$d)x#end#if($d)y#end"
+	},
+	{
+		"template": "#else"
+	},
+	{
+		"template": "#else"
+	},
+	{
+		"template": "#elseif($a)"
+	},
+	{
+		"template": "#end"
+	},
+	{
+		"template": "#end"
+	},
+	{
+		"template": "#evaluate"
+	},
+	{
+		"template": "#evaluate#*()"
+	},
+	{
+		"template": "#evaluate$a('#set($e = 1)$e')"
+	},
+	{
+		"template": "#evaluate$name)"
+	},
+	{
+		"template": "#evaluate'#set($e = 1)$e')"
+	},
+	{
+		"template": "#evaluate'#set($x = 1)')"
+	},
+	{
+		"template": "#evaluate("
+	},
+	{
+		"template": "#evaluate("
+	},
+	{
+		"template": "#evaluate($n#endme)"
+	},
+	{
+		"template": "#evaluate($na+me)"
+	},
+	{
+		"template": "#evaluate($na:e)"
+	},
+	{
+		"template": "#evaluate('#set($e = 1$e')"
+	},
+	{
+		"template": "#evaluate('#set($x  1)')"
+	},
+	{
+		"template": "#evaluate('#set(e = 1)$e')"
+	},
+	{
+		"template": "#evaluate('#set(x = 1)')"
+	},
+	{
+		"template": "#evaluate()"
+	},
+	{
+		"template": "#evaluate(:#set($e = 1)$e')"
+	},
+	{
+		"template": "#evaluate(name)"
+	},
+	{
+		"template": "#evaluate({)"
+	},
+	{
+		"template": "#evaluate)"
+	},
+	{
+		"template": "#f(!$a)x#end"
+	},
+	{
+		"template": "#f($f >= 2.5)y#end"
+	},
+	{
+		"template": "#f($n > 4)y#end"
+	},
+	{
+		"template": "#f($n eq 5 and $t)y#end"
+	},
+	{
+		"template": "#f($n ne 5 or not $t)y#else n#end"
+	},
+	{
+		"template": "#f($name != 'value')y#else n#end"
+	},
+	{
+		"template": "#f(1 + 1)y#else n#end"
+	},
+	{
+		"template": "#foo("
+	},
+	{
+		"template": "#foo("
+	},
+	{
+		"template": "#foo(\n  $\n  $b\n)"
+	},
+	{
+		"template": "#foo(\n  $a\n  $b]\n)"
+	},
+	{
+		"template": "#foo(\n  $a${\n  $b\n)"
+	},
+	{
+		"template": "#foo(\n  $a}  $b\n)"
+	},
+	{
+		"template": "#foo(\n{ $a\n  $b\n)"
+	},
+	{
+		"template": "#foo( $${a , $b )"
+	},
+	{
+		"template": "#foo( $a , $ )"
+	},
+	{
+		"template": "#foo( $a , $- )"
+	},
+	{
+		"template": "#foo( $a ,.. $b )"
+	},
+	{
+		"template": "#foo( $a ,== $b )"
+	},
+	{
+		"template": "#foo(\"x#end\")"
+	},
+	{
+		"template": "#foo(#ba%r)"
+	},
+	{
+		"template": "#foo(#{ar)"
+	},
+	{
+		"template": "#foo($==a)\n#end"
+	},
+	{
+		"template": "#foo($a"
+	},
+	{
+		"template": "#foo($a"
+	},
+	{
+		"template": "#foo($a)\n#end"
+	},
+	{
+		"template": "#foo($a,)"
+	},
+	{
+		"template": "#foo($a|)"
+	},
+	{
+		"template": "#foo($n%ame)"
+	},
+	{
+		"template": "#foo($n==ame)"
+	},
+	{
+		"template": "#foo($n==me)"
+	},
+	{
+		"template": "#foo($nam]e)"
+	},
+	{
+		"template": "#foo(${)\n#end"
+	},
+	{
+		"template": "#foo(&&$a,)"
+	},
+	{
+		"template": "#foo(,)"
+	},
+	{
+		"template": "#foo(,)*"
+	},
+	{
+		"template": "#foo(-)"
+	},
+	{
+		"template": "#foo([1.."
+	},
+	{
+		"template": "#foo([1.{.3])"
+	},
+	{
+		"template": "#foo([[1..3])"
+	},
+	{
+		"template": "#foo([a'])"
+	},
+	{
+		"template": "#foo([x')"
+	},
+	{
+		"template": "#foo(a*)"
+	},
+	{
+		"template": "#foo(tru/ false)"
+	},
+	{
+		"template": "#foo(true f&&alse)"
+	},
+	{
+		"template": "#foo(true fa"
+	},
+	{
+		"template": "#foo({'a':1$a})"
+	},
+	{
+		"template": "#foo({'a':1)"
+	},
+	{
+		"template": "#foo({'a':1}||"
+	},
+	{
+		"template": "#foo({'a':})"
+	},
+	{
+		"template": "#foo({(a':1})"
+	},
+	{
+		"template": "#foo({a"
+	},
+	{
+		"template": "#foo({a':1})"
+	},
+	{
+		"template": "#foo({bar)"
+	},
+	{
+		"template": "#foo(}x\")"
+	},
+	{
+		"template": "#foreac($i in $list)#if($i == 'b')#break#end$i#end"
+	},
+	{
+		"template": "#foreach$i in $n)x#else none#end"
+	},
+	{
+		"template": "#foreach($ in $missing)x#else none#end"
+	},
+	{
+		"template": "#foreach($ in [1..3])$i#if($foreach.hasNext),#end#end"
+	},
+	{
+		"template": "#foreach($/i)#end"
+	},
+	{
+		"template": "#foreach($a in vector)\n $a\n#end\n"
+	},
+	{
+		"template": "#foreach($i %n $list)\n  $i\n#end\n"
+	},
+	{
+		"template": "#foreach($i [in $list)$foreach.stop()$i#end"
+	},
+	{
+		"template": "#foreach($i in ##abc')x#else none#end"
+	},
+	{
+		"template": "#foreach($i in $${issing)x#else none#end"
+	},
+	{
+		"template": "#foreach($i in $l)x"
+	},
+	{
+		"template": "#foreach($i in $li(st)$i#end"
+	},
+	{
+		"template": "#foreach($i in $list#if($i == 'b')#break#end$i#end"
+	},
+	{
+		"template": "#foreach($i in $list$foreach.index:$foreach.count:$foreach.hasNext:$foreach.first:$foreach.last;#end"
+	},
+	{
+		"template": "#foreach($i in $list)#i($i == 'b')#break#end$i#end"
+	},
+	{
+		"template": "#foreach($i in $list)#if$i == 'b')#break#end$i#end"
+	},
+	{
+		"template": "#foreach($i in $list)#if($i == 'b')#bre"
+	},
+	{
+		"template": "#foreach($i in $list)#if($i ==#if($a)'b')#break#end$i#end"
+	},
+	{
+		"template": "#foreach($i in $list)#if(i == 'b')#break#end$i#end"
+	},
+	{
+		"template": "#foreach($i in $map$i,#end"
+	},
+	{
+		"template": "#foreach($i in $mis"
+	},
+	{
+		"template": "#foreach($i in $n)x#else #*none#end"
+	},
+	{
+		"template": "#foreach($i in 1..3])$i#if($i == 2)#stop#end#end after"
+	},
+	{
+		"template": "#foreach($i in ["
+	},
+	{
+		"template": "#foreach($i in [)x#else none#end"
+	},
+	{
+		"template": "#foreach($i in [..2])#foreach($j in [1..2])$foreach.parent.index$foreach.index #end#end"
+	},
+	{
+		"template": "#foreach($i in [1$!)$foreach#end"
+	},
+	{
+		"template": "#foreach($i in [1..-])$i#if($i == 2)#stop#end#end after"
+	},
+	{
+		"template": "#foreach($i in [1....3])$i#if($i == 2)#stop#end#end after"
+	},
+	{
+		"template": "#foreach($i in [1..2)#foreach($j in [1..3])#break($foreach.parent)$j#end$i#end|"
+	},
+	{
+		"template": "#foreach($i in [1..2])#foreach($j in 1..2])$foreach.parent.index$foreach.index #end#end"
+	},
+	{
+		"template": "#foreach($i in [1..2])#foreach($j in [1..2##])$foreach.parent.index$foreach.index #end#end"
+	},
+	{
+		"template": "#foreach($i in [1..2])#foreach($j in [1..3"
+	},
+	{
+		"template": "#foreach($i in [1..2])#foreach($j in [1..])#break($foreach.parent)$j#end$i#end|"
+	},
+	{
+		"template": "#foreach($i in [1..2])#foreach($jin [1..2])$foreach.parent.index$foreach.index #end#end"
+	},
+	{
+		"template": "#foreach($i in [1..2])foreach($j in [1..3])#break($foreach.parent)$j#end$i#end|"
+	},
+	{
+		"template": "#foreach($i in [1..3"
+	},
+	{
+		"template": "#foreach($i in [1..3]$i#if($foreach.hasNext),#end#end"
+	},
+	{
+		"template": "#foreach($i in [1..3])$i#if"
+	},
+	{
+		"template": "#foreach($i in [1..3])$i#if$i == 2)#stop#end#end after"
+	},
+	{
+		"template": "#foreach($i in [1..3])$i#if($fore!ach.hasNext),#end#end"
+	},
+	{
+		"template": "#foreach($i in [1..3])$i#if($foreach.has,Next),#end#end"
+	},
+	{
+		"template": "#foreach($i in [1..3])$i#if($foreach.hasNext,#end#end"
+	},
+	{
+		"template": "#foreach($i in [1..3])$i#if($i == 2"
+	},
+	{
+		"template": "#foreach($i in [1..3])$i#if($i == 2)#sto"
+	},
+	{
+		"template": "#foreach($i in [1..3])$i#if(i == 2)#stop#end#end after"
+	},
+	{
+		"template": "#foreach($i in [1..])$i#end"
+	},
+	{
+		"template": "#foreach($i in [==..3])$i#if($i == 2)#stop#end#end after"
+	},
+	{
+		"template": "#foreach($i in l)x"
+	},
+	{
+		"template": "#foreach($i in list)\n  $i\n#end\n"
+	},
+	{
+		"template": "#foreach($i in list)#if($i == 'b')#break#end$i#end"
+	},
+	{
+		"template": "#foreach($i in list)$foreach.index:$foreach.count:$foreach.hasNext:$foreach.first:$foreach.last;#end"
+	},
+	{
+		"template": "#foreach($i in list)$foreach.stop()$i#end"
+	},
+	{
+		"template": "#foreach($i in list)$i#end"
+	},
+	{
+		"template": "#foreach($i in map)$i,#end"
+	},
+	{
+		"template": "#foreach($i in)x#end"
+	},
+	{
+		"template": "#foreach($i i}n $list)$i#end"
+	},
+	{
+		"template": "#foreach($i of $)x#end"
+	},
+	{
+		"template": "#foreach($i of l)x#end"
+	},
+	{
+		"template": "#foreach($i {in $l)x"
+	},
+	{
+		"template": "#foreach($i)x#end"
+	},
+	{
+		"template": "#foreach($i..in)x#end"
+	},
+	{
+		"template": "#foreach($i|in [1])$foreach#end"
+	},
+	{
+		"template": "#foreach($i||in)x#end"
+	},
+	{
+		"template": "#foreach($} in [1..3])$i#between,#else none#end"
+	},
+	{
+		"template": "#foreach()x#e#if($a)d"
+	},
+	{
+		"template": "#foreach()x#en"
+	},
+	{
+		"template": "#foreach()x#end"
+	},
+	{
+		"template": "#foreach([i in [1..2])\n$i\n#end\n"
+	},
+	{
+		"template": "#foreach(i in $list)\n  $i\n#end\n"
+	},
+	{
+		"template": "#foreach(i in $list)#if($i == 'b')#break#end$i#end"
+	},
+	{
+		"template": "#foreach(i in $list)$foreach.index:$foreach.count:$foreach.hasNext:$foreach.first:$foreach.last;#end"
+	},
+	{
+		"template": "#foreach(i in $list)$i#end"
+	},
+	{
+		"template": "#foreach(i in [1..3])$i#if($i == 2)#stop#end#end after"
+	},
+	{
+		"template": "#foreach(i in)x#end"
+	},
+	{
+		"template": "#foreach(i of $l)x#end"
+	},
+	{
+		"template": "#foreah($i in $list)#if($i == 'b')#break#end$i#end"
+	},
+	{
+		"template": "#i(!$missing)y#end"
+	},
+	{
+		"template": "#i($f >= 2.5)y#end"
+	},
+	{
+		"template": "#i($n < 4)y#else n#end"
+	},
+	{
+		"template": "#i($n eq 5 and $t)y#end"
+	},
+	{
+		"template": "#i($n ne 5 or not $t)y#else n#end"
+	},
+	{
+		"template": "#i($name != 'value')y#else n#end"
+	},
+	{
+		"template": "#i($t && $n)y#end"
+	},
+	{
+		"template": "#i('a' < 'b')y#else n#end"
+	},
+	{
+		"template": "#if\t$a"
+	},
+	{
+		"template": "#if ${true) spaced #end"
+	},
+	{
+		"template": "#if (t"
+	},
+	{
+		"template": "#if!$a)x#end"
+	},
+	{
+		"template": "#if!(\t$a"
+	},
+	{
+		"template": "#if$a)\r\nx\r\n#else"
+	},
+	{
+		"template": "#if$f >= 2.5)y#end"
+	},
+	{
+		"template": "#if$n > 4)y#end"
+	},
+	{
+		"template": "#if$n eq 5 and $t)y#end"
+	},
+	{
+		"template": "#if$n ne 5 or not $t)y#else n#end"
+	},
+	{
+		"template": "#if$t && $n)y#end"
+	},
+	{
+		"template": "#if${(false)a#elseif(false)b#else c#end"
+	},
+	{
+		"template": "#if%(\"x\""
+	},
+	{
+		"template": "#if%($a"
+	},
+	{
+		"template": "#if&&($a)x#elseif"
+	},
+	{
+		"template": "#if(\t$a"
+	},
+	{
+		"template": "#if(\ta"
+	},
+	{
+		"template": "#if( n eq 5 and $t)y#end"
+	},
+	{
+		"template": "#if(!$:)x#end"
+	},
+	{
+		"template": "#if(!$miss/ng)y#end"
+	},
+	{
+		"template": "#if(\"x\""
+	},
+	{
+		"template": "#if(##true)\nx\n#else\ny\n#end\n"
+	},
+	{
+		"template": "#if($\na)\nx\n#else\ny\n#end"
+	},
+	{
+		"template": "#if($ && $n)y#end"
+	},
+	{
+		"template": "#if($ < 4)y#else n#end"
+	},
+	{
+		"template": "#if($ > 4)y#end"
+	},
+	{
+		"template": "#if($ >= 2.5)y#end"
+	},
+	{
+		"template": "#if($ eq 5 and $t)y#end"
+	},
+	{
+		"template": "#if($ ne 5 or not $t)y#else n#end"
+	},
+	{
+		"template": "#if($# == 1)x#elseif($b)y#else z#end"
+	},
+	{
+		"template": "#if($( eq 5 and $t)y#end"
+	},
+	{
+		"template": "#if($-ame != 'value')y#else n#end"
+	},
+	{
+		"template": "#if($:n eq 5 and $t)y#end"
+	},
+	{
+		"template": "#if($a\nx\n#else\ny\n#end"
+	},
+	{
+		"template": "#if($a && $b || c)x#end"
+	},
+	{
+		"template": "#if($a && $b ||1$c)x#end"
+	},
+	{
+		"template": "#if($a &&[$b || $c)x#end"
+	},
+	{
+		"template": "#if($a == 1)x#elseif$b)y#else z#end"
+	},
+	{
+		"template": "#if($a == 1)x#elseif($"
+	},
+	{
+		"template": "#if($a == 1)x#elseif($}b)y#else z#end"
+	},
+	{
+		"template": "#if($a == 1)x#elseif(b)y#else z#end"
+	},
+	{
+		"template": "#if($a x#"
+	},
+	{
+		"template": "#if($a x#end"
+	},
+	{
+		"template": "#if($a#endx#elseif()y#end"
+	},
+	{
+		"template": "#if($a)\r\nx\r\n#else"
+	},
+	{
+		"template": "#if($a)x#else"
+	},
+	{
+		"template": "#if($a)x#else"
+	},
+	{
+		"template": "#if($a)x#else#else y#ed"
+	},
+	{
+		"template": "#if($a)x#else#else y#end"
+	},
+	{
+		"template": "#if($a)x#elseif"
+	},
+	{
+		"template": "#if($a)x#elseif"
+	},
+	{
+		"template": "#if($a)x#elseif()y#end"
+	},
+	{
+		"template": "#if($a)x#elseif(y#end"
+	},
+	{
+		"template": "#if($a)x#elseif)y#end"
+	},
+	{
+		"template": "#if($empty})y#else n#end"
+	},
+	{
+		"template": "#if($missi+g || $name)y#end"
+	},
+	{
+		"template": "#if($missing == $noth|ing)y#else n#end"
+	},
+	{
+		"template": "#if($missing || $\nname)y#end"
+	},
+	{
+		"template": "#if($missing ||..$name)y#end"
+	},
+	{
+		"template": "#if($missing }|| $name)y#end"
+	},
+	{
+		"template": "#if($n  4)y#else n#end"
+	},
+	{
+		"template": "#if($n  4)y#end"
+	},
+	{
+		"template": "#if($n &&= 5)y#else n#end"
+	},
+	{
+		"template": "#if($n < 4/y#else n#end"
+	},
+	{
+		"template": "#if($n == 5y#else n#end"
+	},
+	{
+		"template": "#if($n == {5)y#else n#end"
+	},
+	{
+		"template": "#if($n ==eq 5 and $t)y#end"
+	},
+	{
+		"template": "#if($n >${ 4)y#end"
+	},
+	{
+		"template": "#if($n e"
+	},
+	{
+		"template": "#if($n e 5 and $t)y#end"
+	},
+	{
+		"template": "#if($n e 5 or not $t)y#else n#end"
+	},
+	{
+		"template": "#if($n eq  and $t)y#end"
+	},
+	{
+		"template": "#if($n eq 5 a"
+	},
+	{
+		"template": "#if($n eq 5 ad $t)y#end"
+	},
+	{
+		"template": "#if($n eq 5 an"
+	},
+	{
+		"template": "#if($n eq 5 an $t)y#end"
+	},
+	{
+		"template": "#if($n eq 5 and t)y#end"
+	},
+	{
+		"template": "#if($n eq 5 nd $t)y#end"
+	},
+	{
+		"template": "#if($n eq5 and $t)y#end"
+	},
+	{
+		"template": "#if($n eq||5 and $t)y#end"
+	},
+	{
+		"template": "#if($n n"
+	},
+	{
+		"template": "#if($n n 5 or not $t)y#else n#end"
+	},
+	{
+		"template": "#if($n n' 5 or not $t)y#else n#end"
+	},
+	{
+		"template": "#if($n ne  or not $t)y#else n#end"
+	},
+	{
+		"template": "#if($n ne 5 #if($a)or not $t)y#else n#end"
+	},
+	{
+		"template": "#if($n ne 5 *r not $t)y#else n#end"
+	},
+	{
+		"template": "#if($n ne 5 o"
+	},
+	{
+		"template": "#if($n ne 5 o not $t)y#else n#end"
+	},
+	{
+		"template": "#if($n ne 5 or n"
+	},
+	{
+		"template": "#if($n ne 5 or no"
+	},
+	{
+		"template": "#if($n ne 5 or no $t)y#else n#end"
+	},
+	{
+		"template": "#if($n ne 5 or nt $t)y#else n#end"
+	},
+	{
+		"template": "#if($n ne 5 or ot $t)y#else n#end"
+	},
+	{
+		"template": "#if($n ne 5 r not $t)y#else n#end"
+	},
+	{
+		"template": "#if($n ne5 or not $t)y#else n#end"
+	},
+	{
+		"template": "#if($n q 5 and $t)y#end"
+	},
+	{
+		"template": "#if($n## < 4)y#else n#end"
+	},
+	{
+		"template": "#if($nam$!e != 'value')y#else n#end"
+	},
+	{
+		"template": "#if($nam== != 'value')y#else n#end"
+	},
+	{
+		"template": "#if($name ! 'value')y#else n#end"
+	},
+	{
+		"template": "#if($name != 'value'y#else n#end"
+	},
+	{
+		"template": "#if($name ="
+	},
+	{
+		"template": "#if($name = $missing)y#else n#end"
+	},
+	{
+		"template": "#if($name == $missin#if($a))y#else n#end"
+	},
+	{
+		"template": "#if($name == $missing)y#${else n#end"
+	},
+	{
+		"template": "#if($neq 5 and $t)y#end"
+	},
+	{
+		"template": "#if($nne 5 or not $t)y#else n#end"
+	},
+	{
+		"template": "#if($st\nr5 == 5)y#else n#end"
+	},
+	{
+		"template": "#if($str5 == 5/y#else n#end"
+	},
+	{
+		"template": "#if($t 1&& $n)y#end"
+	},
+	{
+		"template": "#if(${$missing)y#end"
+	},
+	{
+		"template": "#if(%$a)x#elseif"
+	},
+	{
+		"template": "#if(%a)\r\nx\r\n#else"
+	},
+	{
+		"template": "#if(''a' == 'a')y#end"
+	},
+	{
+		"template": "#if('a < 'b')y#else n#end"
+	},
+	{
+		"template": "#if('a == 'a')y#end"
+	},
+	{
+		"template": "#if('a' ]< 'b')y#else n#end"
+	},
+	{
+		"template": "#if('a'[ < 'b')y#else n#end"
+	},
+	{
+		"template": "#if()x#end"
+	},
+	{
+		"template": "#if(*a x#end"
+	},
+	{
+		"template": "#if(1 + 1[y#else n#end"
+	},
+	{
+		"template": "#if(1!$missing)y#end"
+	},
+	{
+		"template": "#if(["
+	},
+	{
+		"template": "#if([##)y#else n#end"
+	},
+	{
+		"template": "#if([1.."
+	},
+	{
+		"template": "#if([1..2${])y#else n#end"
+	},
+	{
+		"template": "#if(])y#else n#end"
+	},
+	{
+		"template": "#if(false)a#elseif(f"
+	},
+	{
+		"template": "#if(false)a#elseif(fa"
+	},
+	{
+		"template": "#if(false)a#elseif(fa]se)b#else c#end"
+	},
+	{
+		"template": "#if(false)a#elseif(tre)b#else c#end"
+	},
+	{
+		"template": "#if(false)a#elseif(tru)b#else c#end"
+	},
+	{
+		"template": "#if(n eq 5 and $t)y#end"
+	},
+	{
+		"template": "#if(rue) x #end y"
+	},
+	{
+		"template": "#if(rue)#end\n"
+	},
+	{
+		"template": "#if(tru==e)$name#end"
+	},
+	{
+		"template": "#if(true == 'true'y#else n#end"
+	},
+	{
+		"template": "#if(true [== 'true')y#else n#end"
+	},
+	{
+		"template": "#if(true)#en\n"
+	},
+	{
+		"template": "#if(tue)$name#end"
+	},
+	{
+		"template": "#if(x\""
+	},
+	{
+		"template": "#if(x#end"
+	},
+	{
+		"template": "#if({:)y#else n#end"
+	},
+	{
+		"template": "#if(||n > 4)y#end"
+	},
+	{
+		"template": "#if)(true) x #end y"
+	},
+	{
+		"template": "#if)x#end"
+	},
+	{
+		"template": "#if+\t$a"
+	},
+	{
+		"template": "#if+$a)x#else"
+	},
+	{
+		"template": "#if..null($name)null#end"
+	},
+	{
+		"template": "#if/($name == $missing)y#else n#end"
+	},
+	{
+		"template": "#if:)x#end"
+	},
+	{
+		"template": "#if=($n == 5)y#else n#end"
+	},
+	{
+		"template": "#if[1..2])y#else n#end"
+	},
+	{
+		"template": "#if[])y#else n#end"
+	},
+	{
+		"template": "#ifnull($mis/sing)null#end"
+	},
+	{
+		"template": "#ifnull($na:e)null#end"
+	},
+	{
+		"template": "#if{})y#else n#end"
+	},
+	{
+		"template": "#if}($a)x#{end}"
+	},
+	{
+		"template": "#include("
+	},
+	{
+		"template": "#include("
+	},
+	{
+		"template": "#include('a', 'b'"
+	},
+	{
+		"template": "#include('a', ('b'"
+	},
+	{
+		"template": "#include('a', /b'"
+	},
+	{
+		"template": "#include('x.vm'##)"
+	},
+	{
+		"template": "#m\ncro(m $a $b)$a$b#end#m(1 2)"
+	},
+	{
+		"template": "#m${acro()x#end"
+	},
+	{
+		"template": "#m(##$a, $b)"
+	},
+	{
+		"template": "#m($a $)"
+	},
+	{
+		"template": "#m($a [$b)"
+	},
+	{
+		"template": "#m($a, $b=)"
+	},
+	{
+		"template": "#m($a, %b)"
+	},
+	{
+		"template": "#m($a, =$b)"
+	},
+	{
+		"template": "#m($a|, $b)"
+	},
+	{
+		"template": "#m($}a $b)"
+	},
+	{
+		"template": "#mac,ro(rec $n)#if($n > 0)$n#set($m = $n - 1)#rec($m)#end#end#rec(3)"
+	},
+	{
+		"template": "#macr(two $a $b)$a-$b#end#two(1 2)#two(1)"
+	},
+	{
+		"template": "#macro"
+	},
+	{
+		"template": "#macro"
+	},
+	{
+		"template": "#macro  Test1 )This is from Test1 macro of two.vm#end#Test1"
+	},
+	{
+		"template": "#macro ( T:st1 )This is from Test1 macro of two.vm#end#Test1"
+	},
+	{
+		"template": "#macro test )#*\na*#b#end\n#test()"
+	},
+	{
+		"template": "#macro$!"
+	},
+	{
+		"template": "#macro$asetter $a)#set($a = 'changed')#end#set($v = 'orig')#setter($v)$v"
+	},
+	{
+		"template": "#macro${"
+	},
+	{
+		"template": "#macro("
+	},
+	{
+		"template": "#macro("
+	},
+	{
+		"template": "#macro( $a)$a#end#w(word)"
+	},
+	{
+		"template": "#macro( 1)x#end"
+	},
+	{
+		"template": "#macro( bar $a\n#if($a)#set($a = $a + $a + $a)$a#end\n#end\n\n#macro( foo $a)\n#if($a)#set($a = $a * 8)$a#end\n#end\n"
+	},
+	{
+		"template": "#macro( bar $a)\n#if($a)#set($a  $a + $a + $a)$a#end\n#end\n\n#macro( foo $a)\n#if($a)#set($a = $a * 8)$a#end\n#end\n"
+	},
+	{
+		"template": "#macro( bar $a)\n#if($a)#set($a = $a + $a + $a)$a#end\n#end\n\n#macro( foo $a)\n#if"
+	},
+	{
+		"template": "#macro( bar $a)\n#if($a)#set($a = $a + $a + $a)$a#end\n#end\n\n#macro( foo $a)\n#if($a)#set($a = $a  8)$a#end\n#end\n"
+	},
+	{
+		"template": "#macro( bar $a)\n#if($a)#set($a = $a + $a + $a)$a#end\n#end\n\n#macro( foo $a)\n#if($a)#set(a = $a * 8)$a#end\n#end\n"
+	},
+	{
+		"template": "#macro( test #*\n*##end\n#test()"
+	},
+	{
+		"template": "#macro( test #*\na*#b#end\n#test()"
+	},
+	{
+		"template": "#macro( tes{ )#*\n*##end\n#test()"
+	},
+	{
+		"template": "#macro(#if($a)someMacro )\nbefore#*\n    *#after\n#end\n#someMacro()\n"
+	},
+	{
+		"template": "#macro($m)#end"
+	},
+	{
+		"template": "#macro($m)x#"
+	},
+	{
+		"template": "#macro($m)x#==nd"
+	},
+	{
+		"template": "#macro($m)x#ed"
+	},
+	{
+		"template": "#macro($m)x#en"
+	},
+	{
+		"template": "#macro($m)x#en%d"
+	},
+	{
+		"template": "#macro($m)x#end"
+	},
+	{
+		"template": "#macro($m)x#en|"
+	},
+	{
+		"template": "#macro($m)x(#end"
+	},
+	{
+		"template": "#macro($m)xend"
+	},
+	{
+		"template": "#macro(%m)<$!bodyContent>#end#@bm()inside#end"
+	},
+	{
+		"template": "#macro()x#$!nd"
+	},
+	{
+		"template": "#macro()x#en"
+	},
+	{
+		"template": "#macro()x#end"
+	},
+	{
+		"template": "#macro(]"
+	},
+	{
+		"template": "#macro(bar $a)\n#if$a)#set($a = $a + $a)$a#end\n#end\n\n#macro(foo $a)\n#if($a)#set($a = $a + 1)$a#end\n#end\n"
+	},
+	{
+		"template": "#macro(bar $a)\n#if($a)#set($a = $ + $a)$a#end\n#end\n\n#macro(foo $a)\n#if($a)#set($a = $a + 1)$a#end\n#end\n"
+	},
+	{
+		"template": "#macro(bar $a)\n#if($a)#set($a = $a + $a$a#end\n#end\n\n#macro(foo $a)\n#if($a)#set($a = $a + 1)$a#end\n#end\n"
+	},
+	{
+		"template": "#macro(bar $a)\n#if($a)#set($a = $a + $a)$a#end\n#end\n\n#macro(foo $a)\n#if($a)#se($a = $a + 1)$a#end\n#end\n"
+	},
+	{
+		"template": "#macro(bar $a)\n#if($a)#set($a = $a + $a)$a#end\n#end\n\n#macro(foo $a)\n#if($a)#set($a  $a + 1)$a#end\n#end\n"
+	},
+	{
+		"template": "#macro(bar $a)\n#if($a)#set($a = $a + $a)$a#end\n#end\n\n#macro(foo $a)\n#if($a)#set($a * $a + 1)$a#end\n#end\n"
+	},
+	{
+		"template": "#macro(bar $a)\n#if($a)#set($a = $a + $a)$a#end\n#end\n\n#macro(foo $a)\n#if($a)#set($a == $a + 1)$a#end\n#end\n"
+	},
+	{
+		"template": "#macro(bar $a)\n#if($a)#set($a = $a + $a)$a#end\n#end\n\n#macro(foo a)\n#if($a)#set($a = $a + 1)$a#end\n#end\n"
+	},
+	{
+		"template": "#macro(bar $a)\n#if($a)#set($a = a + $a)$a#end\n#end\n\n#macro(foo $a)\n#if($a)#set($a = $a + 1)$a#end\n#end\n"
+	},
+	{
+		"template": "#macro(bar $a)\n#if(a)#set($a = $a + $a)$a#end\n#end\n\n#macro(foo $a)\n#if($a)#set($a = $a + 1)$a#end\n#end\n"
+	},
+	{
+		"template": "#macro(d $a $b'def')$a $b#end#d('x')#d('x' 'y')"
+	},
+	{
+		"template": "#macro(d $a $b="
+	},
+	{
+		"template": "#macro(d $a${ $b='def')$a $b#end#d('x')#d('x' 'y')"
+	},
+	{
+		"template": "#macro(fl*oog $foo $bar)Hello $foo! Nice $bar!#{end}#floog($name $Floog)"
+	},
+	{
+		"template": "#macro(floog $foo $ba,r)Hello $foo! Nice $bar!#{end}#floog($name $Floog)"
+	},
+	{
+		"template": "#macro(floog $foo $barHello $foo! Nice $bar!#{end}#floog($name $Floog)"
+	},
+	{
+		"template": "#macro(floog $foo bar)Hello $foo! Nice $bar!#{end}#floog($name $Floog)"
+	},
+	{
+		"template": "#macro(foo $+xt)hop_$txt#{end}\n"
+	},
+	{
+		"template": "#macro(fo}o $txt)hop_$txt#{end}\n"
+	},
+	{
+		"template": "#macro(g+eet $who)Hello $who!#end#greet('you')"
+	},
+	{
+		"template": "#macro(greet $who##)Hello $who!#end#greet('you')"
+	},
+	{
+		"template": "#macro(greet $whoHello $who!#end#greet('you')"
+	},
+	{
+		"template": "#macro(m"
+	},
+	{
+		"template": "#macro(m"
+	},
+	{
+		"template": "#macro(m $]a $b)$a$b#end#m(1 2)"
+	},
+	{
+		"template": "#macro(m $a"
+	},
+	{
+		"template": "#macro(m $a"
+	},
+	{
+		"template": "#macro(m $a $b  1)x#end"
+	},
+	{
+		"template": "#macro(m $a $b ="
+	},
+	{
+		"template": "#macro(m $a $b = "
+	},
+	{
+		"template": "#macro(m $a $b = )x#end"
+	},
+	{
+		"template": "#macro(m $a $b =## 1)x#end"
+	},
+	{
+		"template": "#macro(m $a b)$a$b#end#m(1 2)"
+	},
+	{
+		"template": "#macro(m $a)x"
+	},
+	{
+		"template": "#macro(m $a, b)x#end"
+	},
+	{
+		"template": "#macro(m $a,: $b)x#end"
+	},
+	{
+		"template": "#macro(m 1)"
+	},
+	{
+		"template": "#macro(m 1)x#en"
+	},
+	{
+		"template": "#macro(m 1)x#end"
+	},
+	{
+		"template": "#macro(m 1)x#nd"
+	},
+	{
+		"template": "#macro(m a $b = 1)x#end"
+	},
+	{
+		"template": "#macro(m a, $b)x#end"
+	},
+	{
+		"template": "#macro(m! 1)x#end"
+	},
+	{
+		"template": "#macro(m)x#else#end #m()"
+	},
+	{
+		"template": "#macro(o uter $x)[#inner($x)]#end#macro(inner $y)<$y>#end#outer('v')"
+	},
+	{
+		"template": "#macro(outer $)[#inner($x)]#end#macro(inner $y)<$y>#end#outer('v')"
+	},
+	{
+		"template": "#macro(outer $x)[#inner($x!)]#end#macro(inner $y)<$y>#end#outer('v')"
+	},
+	{
+		"template": "#macro(outer $x)[#inner($x)]#end#macro(i"
+	},
+	{
+		"template": "#macro(outer $x)[#inner($x)]#end#macro(inner $y)<$y#else>#end#outer('v')"
+	},
+	{
+		"template": "#macro(outer $x)[#inner($x)]#end#macro(inner $y<$y>#end#outer('v')"
+	},
+	{
+		"template": "#macro(outer $x)[#inner($x]#end#macro(inner $y)<$y>#end#outer('v')"
+	},
+	{
+		"template": "#macro(rec $n)#f($n > 0)$n#set($m = $n - 1)#rec($m)#end#end#rec(3)"
+	},
+	{
+		"template": "#macro(rec $n)#i($n > 0)$n#set($m = $n - 1)#rec($m)#end#end#rec(3)"
+	},
+	{
+		"template": "#macro(rec $n)#if($n  0)$n#set($m = $n - 1)#rec($m)#end#end#rec(3)"
+	},
+	{
+		"template": "#macro(rec $n)#if($n > 0$n#set($m = $n - 1)#rec($m)#end#end#rec(3)"
+	},
+	{
+		"template": "#macro(rec $n)#if($n > 0)$n#set($"
+	},
+	{
+		"template": "#macro(rec $n)#if($n > 0)$n#set($m  $n - 1)#rec($m)#end#end#rec(3)"
+	},
+	{
+		"template": "#macro(rec $n)#if($n > 0)$n#set($m && $n - 1)#rec($m)#end#end#rec(3)"
+	},
+	{
+		"template": "#macro(rec $n)#if($n > 0)$n#set($m = $n  1)#rec($m)#end#end#rec(3)"
+	},
+	{
+		"template": "#macro(rec $n)#if($n > 0)$n#set($m = $n - 1)#rec($m||#end#end#rec(3)"
+	},
+	{
+		"template": "#macro(rec $n)#if($n > 0)$n#set(m = $n - 1)#rec($m)#end#end#rec(3)"
+	},
+	{
+		"template": "#macro(rec n)#if($n > 0)$n#set($m = $n - 1)#rec($m)#end#end#rec(3)"
+	},
+	{
+		"template": "#macro(setter $a)#set($a = 'changed')#end#set($v "
+	},
+	{
+		"template": "#macro(setter $a)#set($a = 'changed')#end#set($v .. 'orig')#setter($v)$v"
+	},
+	{
+		"template": "#macro(setter $a)#set($a = 'changed')#end#set(v = 'orig')#setter($v)$v"
+	},
+	{
+		"template": "#macro(someMacro \nbefore#*\n    *#after\n#end\n#someMacro()\n"
+	},
+	{
+		"template": "#macro(te#endst)value#end\n-----\n#test\n-----\n\n-----\n#test()\n-----\n"
+	},
+	{
+		"template": "#macro(test $a $b)\n\ta: $a\n\tb: $b\n#end\n#macro(test2 $a, $,$c,$d)\n\ta2: $a\n\tb2: $b\n\tc2: $c\n\td2: $d\n#end\n\n#test(\"1\",\"2\")\n#test(\"1\" , \"2\")\n#test(\"1\" \"2\")\n#test2(\"1\",\"2\",\"3\",\"4\")\n"
+	},
+	{
+		"template": "#macro(test $a $b)\n\ta: $a\n\tb: $b\n#end\n#macro(test2 $a, $b,$,$d)\n\ta2: $a\n\tb2: $b\n\tc2: $c\n\td2: $d\n#end\n\n#test(\"1\",\"2\")\n#test(\"1\" , \"2\")\n#test(\"1\" \"2\")\n#test2(\"1\",\"2\",\"3\",\"4\")\n"
+	},
+	{
+		"template": "#macro(test $a $b)\n\ta: $a\n\tb: $b\n#end\n#macro(test2 $a, $b,$c,$d)\n\ta2: $a\n\tb2: $b\n\tc2: $c\n\td2: $d\n#end\n\n#test(\"1\",\"2\")\n#test(\"1\" , \"2\")\n#test(\"1\" \"2\")\n#test2(\"1\",\"2\","
+	},
+	{
+		"template": "#macro(test $a $b)\n\ta: $a\n\tb: $b\n#end\n#macro(test2 $a, $b,$c,$d)\n\ta2:#else$a\n\tb2: $b\n\tc2: $c\n\td2: $d\n#end\n\n#test(\"1\",\"2\")\n#test(\"1\" , \"2\")\n#test(\"1\" \"2\")\n#test2(\"1\",\"2\",\"3\",\"4\")\n"
+	},
+	{
+		"template": "#macro(test $a $b)\n\ta: $a\n\tb: $b\n#end\n#macro(test2 $a, $b,$c,d)\n\ta2: $a\n\tb2: $b\n\tc2: $c\n\td2: $d\n#end\n\n#test(\"1\",\"2\")\n#test(\"1\" , \"2\")\n#test(\"1\" \"2\")\n#test2(\"1\",\"2\",\"3\",\"4\")\n"
+	},
+	{
+		"template": "#macro(test $a $b)\n\ta: $a\n\tb: $b\n#end\n#macro(test2 $a, $b,c,$d)\n\ta2: $a\n\tb2: $b\n\tc2: $c\n\td2: $d\n#end\n\n#test(\"1\",\"2\")\n#test(\"1\" , \"2\")\n#test(\"1\" \"2\")\n#test2(\"1\",\"2\",\"3\",\"4\")\n"
+	},
+	{
+		"template": "#macro(test $a $b)\n\ta: $a\n\tb: $b\n#end\n#macro(test2 $a, b,$c,$d)\n\ta2: $a\n\tb2: $b\n\tc2: $c\n\td2: $d\n#end\n\n#test(\"1\",\"2\")\n#test(\"1\" , \"2\")\n#test(\"1\" \"2\")\n#test2(\"1\",\"2\",\"3\",\"4\")\n"
+	},
+	{
+		"template": "#macro(test $a b)\n\ta: $a\n\tb: $b\n#end\n#macro(test2 $a, $b,$c,$d)\n\ta2: $a\n\tb2: $b\n\tc2: $c\n\td2: $d\n#end\n\n#test(\"1\",\"2\")\n#test(\"1\" , \"2\")\n#test(\"1\" \"2\")\n#test2(\"1\",\"2\",\"3\",\"4\")\n"
+	},
+	{
+		"template": "#macro(two $a b)$a-$b#end#two(1 2)#two(1)"
+	},
+	{
+		"template": "#macro(two a $b)$a-$b#end#two(1 2)#two(1)"
+	},
+	{
+		"template": "#macro(w $a}$a#end#w(word)"
+	},
+	{
+		"template": "#macro(w $||a)$a#end#w(word)"
+	},
+	{
+		"template": "#macro(woogie $a)\nThis is $a\n#end\n\n#woogie(\n\"a strin#[[g\"\n)\n\n#macro(\n   name \n   $thing\n)\nCall $thing\n#end\n\n#name(\"woog\")\n\n#set($foo = \n\"hello there\")\n\n$foo\n\n#set($list = \n\t[1..10])\n\n#foreach($item \nin $list)\n$item\n#end\n"
+	},
+	{
+		"template": "#macro(woogie $a)\nThis is $a\n#end\n\n#woogie(\n\"a string\"\n)\n\n#macro"
+	},
+	{
+		"template": "#macro(woogie $a)\nThis is $a\n#end\n\n#woogie(\n\"a string\"\n)\n\n#macro\n   name \n   $thing\n)\nCall $thing\n#end\n\n#name(\"woog\")\n\n#set($foo = \n\"hello there\")\n\n$foo\n\n#set($list = \n\t[1..10])\n\n#foreach($item \nin $list)\n$item\n#end\n"
+	},
+	{
+		"template": "#macro(woogie $a)\nThis is $a\n#end\n\n#woogie(\n\"a string\"\n)\n\n#macro(\n   name \n   $thing\n)\nCall $thing\n#end\n\n#name(\"woog\")\n\n#set($foo = \n"
+	},
+	{
+		"template": "#macro(woogie $a)\nThis is $a\n#end\n\n#woogie(\n\"a string\"\n)\n\n#macro(\n   name \n   $thing\n)\nCall $thing\n#end\n\n#name(\"woog\")\n\n#set($foo = \n\"hello there\")\n\n$foo\n\n#se($list = \n\t[1..10])\n\n#foreach($item \nin $list)\n$item\n#end\n"
+	},
+	{
+		"template": "#macro(woogie $a)\nThis is $a\n#end\n\n#woogie(\n\"a string\"\n)\n\n#macro(\n   name \n   $thing\n)\nCall $thing\n#end\n\n#name(\"woog\")\n\n#set($foo = \n\"hello there\")\n\n$foo\n\n#set($list = \n\t[..10])\n\n#foreach($item \nin $list)\n$item\n#end\n"
+	},
+	{
+		"template": "#macro(woogie $a)\nThis is $a\n#end\n\n#woogie(\n\"a string\"\n)\n\n#macro(\n   name \n   $thing\n)\nCall $thing\n#end\n\n#name(\"woog\")\n\n#set($foo = \n\"hello there\")\n\n$foo\n\n#set($list = \n\t[1..10)\n\n#foreach($item \nin $list)\n$item\n#end\n"
+	},
+	{
+		"template": "#macro(woogie $a)\nThis is $a\n#end\n\n#woogie(\n\"a string\"\n)\n\n#macro(\n   name \n   $thing\n)\nCall $thing\n#end\n\n#name(\"woog\")\n\n#set($foo = \n\"hello there\")\n\n$foo\n\n#set($list = \n\t[1..10])\n\n#foreach($item \nin $list"
+	},
+	{
+		"template": "#macro(woogie $a)\nThis is $a\n#end\n\n#woogie(\n\"a string\"\n)\n\n#macro(\n   name \n   $thing\n)\nCall $thing\n#end\n\n#name(\"woog\")\n\n#set($foo = \n\"hello there\")\n\n$foo\n\n#set($list = \n\t[1..10])\n\n#foreach($item \nin list)\n$item\n#end\n"
+	},
+	{
+		"template": "#macro(woogie $a)\nThis is $a\n#end\n\n#woogie(\n\"a string\"\n)\n\n#macro(\n   name \n   $thing\n)\nCall $thing\n#end\n\n#name(\"woog\")\n\n#set(foo = \n\"hello there\")\n\n$foo\n\n#set($list = \n\t[1..10])\n\n#foreach($item \nin $list)\n$item\n#end\n"
+	},
+	{
+		"template": "#macro(woogie $a)\nThis is $a\n#end\n\n#woogie(\n\"a string\"\n)\n\n#macro(\n   name \n   thing\n)\nCall $thing\n#end\n\n#name(\"woog\")\n\n#set($foo = \n\"hello there\")\n\n$foo\n\n#set($list = \n\t[1..10])\n\n#foreach($item \nin $list)\n$item\n#end\n"
+	},
+	{
+		"template": "#macro(woogie a)\nThis is $a\n#end\n\n#woogie(\n\"a string\"\n)\n\n#macro(\n   name \n   $thing\n)\nCall $thing\n#end\n\n#name(\"woog\")\n\n#set($foo = \n\"hello there\")\n\n$foo\n\n#set($list = \n\t[1..10])\n\n#foreach($item \nin $list)\n$item\n#end\n"
+	},
+	{
+		"template": "#macro)x#end"
+	},
+	{
+		"template": "#macro=("
+	},
+	{
+		"template": "#oreach($i in [1..3])$i#if($foreach.hasNext),#end#end"
+	},
+	{
+		"template": "#parse$includefile)\n#foo(1) #bar(2)\n\n\n"
+	},
+	{
+		"template": "#parse(\"vm_library1.vm\")\n#parse(\"vm${_library2.vm\")\n#foo(1) #bar(2)\n\n"
+	},
+	{
+		"template": "#parse($ includefile)\n#foo(1) #bar(2)\n\n\n"
+	},
+	{
+		"template": "#parse($incl||defile)\n#foo(1) #bar(2)\n\n\n"
+	},
+	{
+		"template": "#parse($missi"
+	},
+	{
+		"template": "#parse($missin+)x"
+	},
+	{
+		"template": "#parse()"
+	},
+	{
+		"template": "#parse(includefile)\n#foo(1) #bar(2)\n\n\n"
+	},
+	{
+		"template": "#parse(missing)x"
+	},
+	{
+		"template": "#parse['a.vm')"
+	},
+	{
+		"template": "#set( $a = $mis==ing )$a"
+	},
+	{
+		"template": "#set( $a = $miss..ng )$a"
+	},
+	{
+		"template": "#set( $a = $missing $$a"
+	},
+	{
+		"template": "#set( $a = $miss||ing )$a"
+	},
+	{
+		"template": "#set(!$a = 1 +)"
+	},
+	{
+		"template": "#set(#if($a)a =\r\n"
+	},
+	{
+		"template": "#set(#if($a)a = \"x $b y\")"
+	},
+	{
+		"template": "#set($\n = -$n)$a"
+	},
+	{
+		"template": "#set($\na = true)"
+	},
+	{
+		"template": "#set($ = 1.0E10 + 1)$a"
+	},
+	{
+		"template": "#set($ == 1)"
+	},
+	{
+		"template": "#set($## = 2147483647 + 1)$a"
+	},
+	{
+		"template": "#set($## = {'k'"
+	},
+	{
+		"template": "#set($##a = true)"
+	},
+	{
+		"template": "#set($#a = {'k'"
+	},
+	{
+		"template": "#set($$ = 7 % 3)$a"
+	},
+	{
+		"template": "#set($&&a =\r\n"
+	},
+	{
+		"template": "#set($&&a = {'k' 1})"
+	},
+	{
+		"template": "#set($(a = {"
+	},
+	{
+		"template": "#set($* = 7.0 / 2)$a"
+	},
+	{
+		"template": "#set($+ = ((1))"
+	},
+	{
+		"template": "#set($+ = {})#set($m.k = 1)$m"
+	},
+	{
+		"template": "#set($, = \""
+	},
+	{
+		"template": "#set($,a =\r\n"
+	},
+	{
+		"template": "#set($..a = 5 - 1)$a"
+	},
+	{
+		"template": "#set($==a.b = 1)"
+	},
+	{
+		"template": "#set($[0] = 1)"
+	},
+	{
+		"template": "#set($] = ((1))"
+	},
+	{
+		"template": "#set($]a = $missing + 'x')$a"
+	},
+	{
+		"template": "#set($a\n0] = 1)"
+	},
+	{
+		"template": "#set($a  !)"
+	},
+	{
+		"template": "#set($a  $b < $c && $d >= $e && $f > $g && $h <= $i)"
+	},
+	{
+		"template": "#set($a  $b ||)"
+	},
+	{
+		"template": "#set($a  $b.c($d, 'e'))"
+	},
+	{
+		"template": "#set($a  $n * $f)$a"
+	},
+	{
+		"template": "#set($a  ($b && $c) || !$d)"
+	},
+	{
+		"template": "#set($a  ((1))"
+	},
+	{
+		"template": "#set($a  (1)"
+	},
+	{
+		"template": "#set($a  -$n)$a"
+	},
+	{
+		"template": "#set($a  -1)"
+	},
+	{
+		"template": "#set($a  -1)$a"
+	},
+	{
+		"template": "#set($a  1)\n$a"
+	},
+	{
+		"template": "#set($a  1.5)"
+	},
+	{
+		"template": "#set($a  1.5)$a"
+	},
+	{
+		"template": "#set($a  10 / 4.0)$a"
+	},
+	{
+		"template": "#set($a  2147483647 + 1)$a"
+	},
+	{
+		"template": "#set($a  5 % 0)$a"
+	},
+	{
+		"template": "#set($a  5 - 1)$a"
+	},
+	{
+		"template": "#set($a  5 -1)$a"
+	},
+	{
+		"template": "#set($a  7 % 3)$a"
+	},
+	{
+		"template": "#set($a  7 / 2)$a"
+	},
+	{
+		"template": "#set($a  7.0 / 2)$a"
+	},
+	{
+		"template": "#set($a  [..2])"
+	},
+	{
+		"template": "#set($a  [1 2])"
+	},
+	{
+		"template": "#set($a  [1..5])"
+	},
+	{
+		"template": "#set($a  {'a': 1, 'b': [1, 2]})$a"
+	},
+	{
+		"template": "#set($a != 1 +)"
+	},
+	{
+		"template": "#set($a #if($a) 1 + $str5)$a"
+	},
+	{
+		"template": "#set($a #if($a) 1 / 0)$a"
+	},
+	{
+		"template": "#set($a #if($a)= [1..])"
+	},
+	{
+		"template": "#set($a $! 1.5)$a"
+	},
+	{
+		"template": "#set($a ${= {"
+	},
+	{
+		"template": "#set($a % 1 + 2)$a"
+	},
+	{
+		"template": "#set($a %= 5 % 0)$a"
+	},
+	{
+		"template": "#set($a %= {"
+	},
+	{
+		"template": "#set($a && $big * 1000000000)$a"
+	},
+	{
+		"template": "#set($a && [1,2,3])"
+	},
+	{
+		"template": "#set($a + 1 +)"
+	},
+	{
+		"template": "#set($a + [..2])"
+	},
+	{
+		"template": "#set($a += \"$name!\")$a"
+	},
+	{
+		"template": "#set($a , $b &&)"
+	},
+	{
+		"template": "#set($a - ((1))"
+	},
+	{
+		"template": "#set($a -= $big * 1000000000)$a"
+	},
+	{
+		"template": "#set($a .. 7 / 2)$a"
+	},
+	{
+		"template": "#set($a ..= [1..])"
+	},
+	{
+		"template": "#set($a /= {'k' 1})"
+	},
+	{
+		"template": "#set($a /= {k: 1})"
+	},
+	{
+		"template": "#set($a := -$n)$a"
+	},
+	{
+		"template": "#set($a =\r\n"
+	},
+	{
+		"template": "#set($a =  'k': 'v', 'n': [1, 2]})"
+	},
+	{
+		"template": "#set($a =  + 2)$a"
+	},
+	{
+		"template": "#set($a = !)"
+	},
+	{
+		"template": "#set($a = \"$name!\"$a"
+	},
+	{
+		"template": "#set($a = $ < $c && $d >= $e && $f > $g && $h <= $i)"
+	},
+	{
+		"template": "#set($a = $* == $c || $d != $e)"
+	},
+	{
+		"template": "#set($a = $==list + 'x')$a"
+	},
+	{
+		"template": "#set($a = $ak: 1})"
+	},
+	{
+		"template": "#set($a = $b  $c && $d >= $e && $f > $g && $h <= $i)"
+	},
+	{
+		"template": "#set($a = $b &&)"
+	},
+	{
+		"template": "#set($a = $b < $c && $ >= $e && $f > $g && $h <= $i)"
+	},
+	{
+		"template": "#set($a = $b < $c && $d >= $e && $f  $g && $h <= $i)"
+	},
+	{
+		"template": "#set($a = $b < $c && $d >= $e && $f > $g && $ <= $i)"
+	},
+	{
+		"template": "#set($a = $b < $c && $d >= $e && $f > $g && $a$h <= $i)"
+	},
+	{
+		"template": "#set($a = $b < $c && $d >= $e && $f > $g && $h <= i)"
+	},
+	{
+		"template": "#set($a = $b < $c && $d >= $e && $f > $g && h <= $i)"
+	},
+	{
+		"template": "#set($a = $b < $c && $d >= $e && $f > g && $h <= $i)"
+	},
+	{
+		"template": "#set($a = $b < $c && $d >= $e && f > $g && $h <= $i)"
+	},
+	{
+		"template": "#set($a = $b < $c && $d >= $e =& $f > $g && $h <= $i)"
+	},
+	{
+		"template": "#set($a = $b < $c && $d >= e && $f > $g && $h <= $i)"
+	},
+	{
+		"template": "#set($a = $b < $c && d >= $e && $f > $g && $h <= $i)"
+	},
+	{
+		"template": "#set($a = $b == $c || $ != $e)"
+	},
+	{
+		"template": "#set($a = $b == $c || $d != $e"
+	},
+	{
+		"template": "#set($a = $b == $c || $d != e)"
+	},
+	{
+		"template": "#set($a = $b == $c || ${$d != $e)"
+	},
+	{
+		"template": "#set($a = $b == $c || d != $e)"
+	},
+	{
+		"template": "#set($a = $b == c || $d != $e)"
+	},
+	{
+		"template": "#set($a = $b ==)"
+	},
+	{
+		"template": "#set($a = $b ||)"
+	},
+	{
+		"template": "#set($a = $b.c$d, 'e'))"
+	},
+	{
+		"template": "#set($a = $b.c("
+	},
+	{
+		"template": "#set($a = $b] &&)"
+	},
+	{
+		"template": "#set($a = $b] ||)"
+	},
+	{
+		"template": "#set($a = $bc($d, 'e'))"
+	},
+	{
+		"template": "#set($a = $b} ==)"
+	},
+	{
+		"template": "#set($a = $li$st + 'x')$a"
+	},
+	{
+		"template": "#set($a = $missing + x')$a"
+	},
+	{
+		"template": "#set($a = $missing, + 'x')$a"
+	},
+	{
+		"template": "#set($a = $m}issing + 'x')$a"
+	},
+	{
+		"template": "#set($a = $n  $f)$a"
+	},
+	{
+		"template": "#set($a = $n * $f$a"
+	},
+	{
+		"template": "#set($a = $n * f)$a"
+	},
+	{
+		"template": "#set($a = $name!\")$a"
+	},
+	{
+		"template": "#set($a = $name)#set($a = $miss%ng)$a"
+	},
+	{
+		"template": "#set($a = $name)#set($a = $missing##$a"
+	},
+	{
+		"template": "#set($a = $st:r5 - 1)$a"
+	},
+	{
+		"template": "#set($a = $str5  1)$a"
+	},
+	{
+		"template": "#set($a = $str5 + 1}$a"
+	},
+	{
+		"template": "#set($a = $s{tr5 - 1)$a"
+	},
+	{
+		"template": "#set($a = ${1 +)"
+	},
+	{
+		"template": "#set($a = 'k':"
+	},
+	{
+		"template": "#set($a = 'k': 'v', 'n': [1, 2]})"
+	},
+	{
+		"template": "#set($a = 'x' + $missi ng)$a"
+	},
+	{
+		"template": "#set($a = 'x' + $missing$a"
+	},
+	{
+		"template": "#set($a = ($b && $c) || !d)"
+	},
+	{
+		"template": "#set($a = ($b && c) || !$d)"
+	},
+	{
+		"template": "#set($a = ((1)!)"
+	},
+	{
+		"template": "#set($a = ((1))"
+	},
+	{
+		"template": "#set($a = (([1))"
+	},
+	{
+		"template": "#set($a = (1)"
+	},
+	{
+		"template": "#set($a = (1),"
+	},
+	{
+		"template": "#set($a = -"
+	},
+	{
+		"template": "#set($a = -!)"
+	},
+	{
+		"template": "#set($a = -$"
+	},
+	{
+		"template": "#set($a = -$/n)$a"
+	},
+	{
+		"template": "#set($a = -)"
+	},
+	{
+		"template": "#set($a = -)$a"
+	},
+	{
+		"template": "#set($a = -/)"
+	},
+	{
+		"template": "#set($a = -1()$a"
+	},
+	{
+		"template": "#set($a = -b ==)"
+	},
+	{
+		"template": "#set($a = -n)$a"
+	},
+	{
+		"template": "#set($a = ..2])"
+	},
+	{
+		"template": "#set($a = ..[1..5])"
+	},
+	{
+		"template": "#set($a = 1  0)$a"
+	},
+	{
+		"template": "#set($a = 1  2)$a"
+	},
+	{
+		"template": "#set($a = 1 +  * 3 - 4 / 5 % 6)"
+	},
+	{
+		"template": "#set($a = 1 + $s#r5)$a"
+	},
+	{
+		"template": "#set($a = 1 + 2  3 - 4 / 5 % 6)"
+	},
+	{
+		"template": "#set($a = 1 + 2 * 3  4 / 5 % 6)"
+	},
+	{
+		"template": "#set($a = 1 + 2 * 3 -  / 5 % 6)"
+	},
+	{
+		"template": "#set($a = 1 + 2 * 3 - 4  5 % 6)"
+	},
+	{
+		"template": "#set($a = 1 + 2 * 3 - 4 /  % 6)"
+	},
+	{
+		"template": "#set($a = 1 + 2 * 3 - 4 / 5  6)"
+	},
+	{
+		"template": "#set($a = 1 + 2 * 3 -4 / 5 % 6)"
+	},
+	{
+		"template": "#set($a = 1 + 2 * [ - 4 / 5 % 6)"
+	},
+	{
+		"template": "#set($a = 1 + 2])$a"
+	},
+	{
+		"template": "#set($a = 1 +)"
+	},
+	{
+		"template": "#set($a = 1 ..+)"
+	},
+	{
+		"template": "#set($a = 1 2])"
+	},
+	{
+		"template": "#set($a = 1${"
+	},
+	{
+		"template": "#set($a = 1${\n$a"
+	},
+	{
+		"template": "#set($a = 1)#set($b = "
+	},
+	{
+		"template": "#set($a = 1)#set($b }= "
+	},
+	{
+		"template": "#set($a = 1)#set(b = "
+	},
+	{
+		"template": "#set($a = 1,"
+	},
+	{
+		"template": "#set($a = 1..3])$a"
+	},
+	{
+		"template": "#set($a = 1.0E"
+	},
+	{
+		"template": "#set($a = 1.0E10 + 1#$a"
+	},
+	{
+		"template": "#set($a = 1.2])"
+	},
+	{
+		"template": "#set($a = 10  4.0)$a"
+	},
+	{
+		"template": "#set($a = 10 / 4.0$a"
+	},
+	{
+		"template": "#set($a = 11 2])"
+	},
+	{
+		"template": "#set($a = 1{$a"
+	},
+	{
+		"template": "#set($a = 21474836 7 + 1)$a"
+	},
+	{
+		"template": "#set($a = 2}147483647 + 1)$a"
+	},
+	{
+		"template": "#set($a = 5  0)$a"
+	},
+	{
+		"template": "#set($a = 5 (- 1)$a"
+	},
+	{
+		"template": "#set($a = 5 -1)$"
+	},
+	{
+		"template": "#set($a = 5-1)$a"
+	},
+	{
+		"template": "#set($a = 7  3)$a"
+	},
+	{
+		"template": "#set($a = 7 /&& 2)$a"
+	},
+	{
+		"template": "#set($a = 7.0 / 2$a"
+	},
+	{
+		"template": "#set($a = 7.0${ / 2)$a"
+	},
+	{
+		"template": "#set($a = ==[1..3])$a"
+	},
+	{
+		"template": "#set($a = ["
+	},
+	{
+		"template": "#set($a = ["
+	},
+	{
+		"template": "#set($a = [\n,"
+	},
+	{
+		"template": "#set($a = [$b.c($d, 'e'))"
+	},
+	{
+		"template": "#set($a = [)1,2,3])"
+	},
+	{
+		"template": "#set($a = [,"
+	},
+	{
+		"template": "#set($a = [..2])"
+	},
+	{
+		"template": "#set($a = [1 2]"
+	},
+	{
+		"template": "#set($a = [1 2])"
+	},
+	{
+		"template": "#set($a = [1 :2])"
+	},
+	{
+		"template": "#set($a = [1,"
+	},
+	{
+		"template": "#set($a = [1,"
+	},
+	{
+		"template": "#set($a = [1,,3])"
+	},
+	{
+		"template": "#set($a = [1,2,3%)"
+	},
+	{
+		"template": "#set($a = [1,2,])"
+	},
+	{
+		"template": "#set($a = [1.\n5])"
+	},
+	{
+		"template": "#set($a = [1.#.3])$a"
+	},
+	{
+		"template": "#set($a = [1.%.])"
+	},
+	{
+		"template": "#set($a = [1.%2])"
+	},
+	{
+		"template": "#set($a = [1.*5])"
+	},
+	{
+		"template": "#set($a = [1..)"
+	},
+	{
+		"template": "#set($a = [1..3]"
+	},
+	{
+		"template": "#set($a = [1..5[)"
+	},
+	{
+		"template": "#set($a = [1..[])"
+	},
+	{
+		"template": "#set($a = [1..])"
+	},
+	{
+		"template": "#set($a = [1..])"
+	},
+	{
+		"template": "#set($a = [1.2]#if($a))"
+	},
+	{
+		"template": "#set($a = [10 / 4.0)$a"
+	},
+	{
+		"template": "#set($a = [1=.3])$a"
+	},
+	{
+		"template": "#set($a = [3"
+	},
+	{
+		"template": "#set($a = [3${..1])$a"
+	},
+	{
+		"template": "#set($a = [3.(1])$a"
+	},
+	{
+		"template": "#set($a = [3..])$a"
+	},
+	{
+		"template": "#set($a = [:,"
+	},
+	{
+		"template": "#set($a = [||3..1])$a"
+	},
+	{
+		"template": "#set($a = b &&)"
+	},
+	{
+		"template": "#set($a = b.c($d, 'e'))"
+	},
+	{
+		"template": "#set($a = big * 1000000000)$a"
+	},
+	{
+		"template": "#set($a = fal"
+	},
+	{
+		"template": "#set($a = fal:se)"
+	},
+	{
+		"template": "#set($a = k: 1})"
+	},
+	{
+		"template": "#set($a = rue)$a"
+	},
+	{
+		"template": "#set($a = t$ue)"
+	},
+	{
+		"template": "#set($a = tre)$a"
+	},
+	{
+		"template": "#set($a = tru+e)$a"
+	},
+	{
+		"template": "#set($a = {"
+	},
+	{
+		"template": "#set($a = {"
+	},
+	{
+		"template": "#set($a = {##'k': 1,"
+	},
+	{
+		"template": "#set($a = {'a': +, 'b': [1, 2]})$a"
+	},
+	{
+		"template": "#set($a = {'a': , 'b': [1, 2]})$a"
+	},
+	{
+		"template": "#set($a = {'a': 1"
+	},
+	{
+		"template": "#set($a = {'a': 1 'b': [1, 2]})$a"
+	},
+	{
+		"template": "#set($a = {'a': 1, 'b'"
+	},
+	{
+		"template": "#set($a = {'a': 1, 'b' [1, 2]})$a"
+	},
+	{
+		"template": "#set($a = {'a': 1, 'b': 1, 2]})$a"
+	},
+	{
+		"template": "#set($a = {'a': 1, 'b': [, 2]})$a"
+	},
+	{
+		"template": "#set($a = {'a': 1, 'b': [1, 2$a})$a"
+	},
+	{
+		"template": "#set($a = {'a': 1, 'b': [1, 2] )$a"
+	},
+	{
+		"template": "#set($a = {'a': 1, 'b': [1, 2])$a"
+	},
+	{
+		"template": "#set($a = {'a': 1, 'b': [1, 2})$a"
+	},
+	{
+		"template": "#set($a = {'a': 1, 'b': [1, ||2]})$a"
+	},
+	{
+		"template": "#set($a = {'a': 1, 'b': [1,% 2]})$a"
+	},
+	{
+		"template": "#set($a = {'a': 1, b': [1, 2]})$a"
+	},
+	{
+		"template": "#set($a = {'a':#if($a) 1, 'b': [1, 2]})$a"
+	},
+	{
+		"template": "#set($a = {'k'"
+	},
+	{
+		"template": "#set($a = {'k'"
+	},
+	{
+		"template": "#set($a = {'k' 'v', 'n': [1, 2]})"
+	},
+	{
+		"template": "#set($a = {'k' 1})"
+	},
+	{
+		"template": "#set($a = {'k'!: 1,"
+	},
+	{
+		"template": "#set($a = {'k'#if($a)"
+	},
+	{
+		"template": "#set($a = {'k':"
+	},
+	{
+		"template": "#set($a = {'k':"
+	},
+	{
+		"template": "#set($a = {'k': 'v' 'n': [1, 2]})"
+	},
+	{
+		"template": "#set($a = {'k': 'v', 'n'"
+	},
+	{
+		"template": "#set($a = {'k': 'v', 'n' [1, 2]})"
+	},
+	{
+		"template": "#set($a = {'k': 'v', 'n': 1, 2]})"
+	},
+	{
+		"template": "#set($a = {'k': 'v', 'n': [1 2]})"
+	},
+	{
+		"template": "#set($a = {'k': 'v', 'n': [1, 2})"
+	},
+	{
+		"template": "#set($a = {'k': 'v', 'n': [1, ==2]})"
+	},
+	{
+		"template": "#set($a = {'k': 'v', 'n': [1, ]})"
+	},
+	{
+		"template": "#set($a = {'k': 'v', 'n'{: [1, 2]})"
+	},
+	{
+		"template": "#set($a = {'k': 'v', n': [1, 2]})"
+	},
+	{
+		"template": "#set($a = {'k': 'v',&& 'n': [1, 2]})"
+	},
+	{
+		"template": "#set($a = {'k': 'v',-'n': [1, 2]})"
+	},
+	{
+		"template": "#set($a = {'k': 'v, 'n': [1, 2]})"
+	},
+	{
+		"template": "#set($a = {'k': ,"
+	},
+	{
+		"template": "#set($a = {'k': 1,"
+	},
+	{
+		"template": "#set($a = {'k': ==,"
+	},
+	{
+		"template": "#set($a = {'k': v', 'n': [1, 2]})"
+	},
+	{
+		"template": "#set($a = {+'k' 1})"
+	},
+	{
+		"template": "#set($a = {1)$a"
+	},
+	{
+		"template": "#set($a = {1k':"
+	},
+	{
+		"template": "#set($a = {: 1})"
+	},
+	{
+		"template": "#set($a = {a': 1, 'b': [1, 2]})$a"
+	},
+	{
+		"template": "#set($a = {k' 1})"
+	},
+	{
+		"template": "#set($a = {k': 1,"
+	},
+	{
+		"template": "#set($a = {k: 1"
+	},
+	{
+		"template": "#set($a = {k: 1})"
+	},
+	{
+		"template": "#set($a = ||1)\n$a"
+	},
+	{
+		"template": "#set($a =##$list + 'x')$a"
+	},
+	{
+		"template": "#set($a =#if($a) 5 - 1)$a"
+	},
+	{
+		"template": "#set($a =${ 5 % 0)$a"
+	},
+	{
+		"template": "#set($a =${'x' + $missing)$a"
+	},
+	{
+		"template": "#set($a =1 $b < $c && $d >= $e && $f > $g && $h <= $i)"
+	},
+	{
+		"template": "#set($a =5 -1)$a"
+	},
+	{
+		"template": "#set($a =: 'x')"
+	},
+	{
+		"template": "#set($a == )"
+	},
+	{
+		"template": "#set($a == 1)"
+	},
+	{
+		"template": "#set($a == {)"
+	},
+	{
+		"template": "#set($a =[ -$n)$a"
+	},
+	{
+		"template": "#set($a =[ [1..5])"
+	},
+	{
+		"template": "#set($a =[1,"
+	},
+	{
+		"template": "#set($a ={ {'k':"
+	},
+	{
+		"template": "#set($a =} [1,"
+	},
+	{
+		"template": "#set($a ] $str5 * 2)$a"
+	},
+	{
+		"template": "#set($a ]= \"x $b y\")"
+	},
+	{
+		"template": "#set($a {= ["
+	},
+	{
+		"template": "#set($a!= 1.5)$a"
+	},
+	{
+		"template": "#set($a##= $b ==)"
+	},
+	{
+		"template": "#set($a##= false)"
+	},
+	{
+		"template": "#set($a#if($a)[0] = 1)"
+	},
+	{
+		"template": "#set($a${ = ["
+	},
+	{
+		"template": "#set($a${= $b.c($d, 'e'))"
+	},
+	{
+		"template": "#set($a${= 2147483647 + 1)$a"
+	},
+	{
+		"template": "#set($a%= \""
+	},
+	{
+		"template": "#set($a&& = $str5 - 1)$a"
+	},
+	{
+		"template": "#set($a&&= 5 -1)$a"
+	},
+	{
+		"template": "#set($a(= $list + 'x')$a"
+	},
+	{
+		"template": "#set($a)"
+	},
+	{
+		"template": "#set($a+ = 'x')"
+	},
+	{
+		"template": "#set($a..= true)"
+	},
+	{
+		"template": "#set($a.b ## 1)"
+	},
+	{
+		"template": "#set($a.b )= 1)"
+	},
+	{
+		"template": "#set($a.b("
+	},
+	{
+		"template": "#set($a.b(1 = 1)"
+	},
+	{
+		"template": "#set($a/ = 1 + 2)$a"
+	},
+	{
+		"template": "#set($a/ = [1..5])"
+	},
+	{
+		"template": "#set($a/= (1)"
+	},
+	{
+		"template": "#set($a0] = 1)"
+	},
+	{
+		"template": "#set($a== 1)"
+	},
+	{
+		"template": "#set($a== = $b ||)"
+	},
+	{
+		"template": "#set($a[0 = 1)"
+	},
+	{
+		"template": "#set($a[01 = 1)"
+	},
+	{
+		"template": "#set($a[0] $a= 1)"
+	},
+	{
+		"template": "#set($a[0]{= 1)"
+	},
+	{
+		"template": "#set($ab(1) = 1)"
+	},
+	{
+		"template": "#set($a{ = [3..1])$a"
+	},
+	{
+		"template": "#set($a{ = {"
+	},
+	{
+		"template": "#set($a| = [3..1])$a"
+	},
+	{
+		"template": "#set($a|= $missing + 'x')$a"
+	},
+	{
+		"template": "#set($a||= !)"
+	},
+	{
+		"template": "#set($a}"
+	},
+	{
+		"template": "#set($a}= \""
+	},
+	{
+		"template": "#set($a}= 5 - 1)$a"
+	},
+	{
+		"template": "#set($d = $d&&ate.toDate('yyyy-MM-dd HH:mm:ss', '2007-01-02 03:04:05'))$d|$date.format($d)|$date.format(\"iso\", $d)|$date.format(\"iso_tz\", $d)|$date.format(\"intl_tz\", $d)|$date.format(\"short\", $d)|$date.format(\"long_date\", $d)|$date.format(\"full_time\", $d)|$date.format(\"medium\", \"short\", $d)"
+	},
+	{
+		"template": "#set($d = $date.toDate('yyyy-MM-dd HH:mm:ss', '2007-01-02 03:04:05')$d|$date.format($d)|$date.format(\"iso\", $d)|$date.format(\"iso_tz\", $d)|$date.format(\"intl_tz\", $d)|$date.format(\"short\", $d)|$date.format(\"long_date\", $d)|$date.format(\"full_time\", $d)|$date.format(\"medium\", \"short\", $d)"
+	},
+	{
+		"template": "#set($d = $date.toDate('yyyy-MM-dd HH:mm:ss', '2007-01-02 03:04:05'))$${ate.toCalendar($d).class.name|$date.toDate(1000)|$date.toDate(\"x\")|$date.format(\"yyyy\", \"2019-01-01\")|$date.toDate(\"yyyy\", \"2019\")|$date.toLocalizedPattern(\"short\", \"fr\")|$date.toLocalizedPattern(\"intl_tz\", \"fr\")|$date.format"
+	},
+	{
+		"template": "#set($d = $date.toDate('yyyy-MM-dd HH:mm:ss', '2007-01-02 03:04:05'))$date.toCalendar($d).class.name|$date.toDate(1000)|$date.toDate(\"x\")|$date.format(\"yyyy\", \"2019-01-01\")|$date.toDate(\"yyyy\", \"2019\")|$date.toLocalizedPattern(\"short\", \"fr\")|$date.toLocalizedPattern(\"intl_tz, \"fr\")|$date.format"
+	},
+	{
+		"template": "#set($d = $date.toDate('yyyy-MM-dd HH:mm:ss', '2007-01-02 03:04:05'))$date.toCalendar($d).class.name|$date.toDate(1000)|$date.toDate(\"x\")|$date.format(\"yyyy\", \"2019-01-01\")|$date.toDate(\"yyyy\", \"2019\")|$date.toLocalizedPattern(\"short\", \"fr\")|$dat{.toLocalizedPattern(\"intl_tz\", \"fr\")|$date.format"
+	},
+	{
+		"template": "#set($d = $date.toDate('yyyy-MM-dd HH:mm:ss', '2007-01-02 03:04:05'))$date.toCalendar($d).class.name|$date.toDate(1000)|$date.toDate(\"x\")|$date.format(\"yyyy\", \"2019-01-01\")|$date.toDate(\"yyyy\", \"2019\")|$date.toLocalizedPattern(\"short, \"fr\")|$date.toLocalizedPattern(\"intl_tz\", \"fr\")|$date.format"
+	},
+	{
+		"template": "#set($d = $date.toDate('yyyy-MM-dd HH:mm:ss', '2007-01-02 03:04:05'))$date.toCalendar($d).class.name|$date.toDate(1000)|$date.toDate(\"x\")|$date.format(\"yyyy\", 2019-01-01\")|$date.toDate(\"yyyy\", \"2019\")|$date.toLocalizedPattern(\"short\", \"fr\")|$date.toLocalizedPattern(\"intl_tz\", \"fr\")|$date.format"
+	},
+	{
+		"template": "#set($d = $date.toDate('yyyy-MM-dd HH:mm:ss', '2007-01-02 03:04:05'))$d|$date.format($d)|$date.format(\"iso\", $d)|$date.format(\"iso_tz\" $d)|$date.format(\"intl_tz\", $d)|$date.format(\"short\", $d)|$date.format(\"long_date\", $d)|$date.format(\"full_time\", $d)|$date.format(\"medium\", \"short\", $d)"
+	},
+	{
+		"template": "#set($d = $date.toDate('yyyy-MM-dd HH:mm:ss', '2007-01-02 03:04:05'))$d|$date.format($d)|$date.format(\"iso\", $d)|$date.format(\"iso_tz\", $d)|$date.format(\"intl_tz\" $d)|$date.format(\"short\", $d)|$date.format(\"long_date\", $d)|$date.format(\"full_time\", $d)|$date.format(\"medium\", \"short\", $d)"
+	},
+	{
+		"template": "#set($d = $date.toDate('yyyy-MM-dd HH:mm:ss', '2007-01-02 03:04:05'))$d|$date.format($d)|$date.format(\"iso\", $d)|$date.format(\"iso_tz\", $d)|$date.format(\"intl_tz\", $d)|$date.format(\"short\", $d)|$date.format(\"long_date\", $d)|$date.format(\"full_time\", $d)|$date.format(\"medium\", "
+	},
+	{
+		"template": "#set($d = $date.toDate('yyyy-MM-dd HH:mm:ss', '2007-01-02 03:04:05'))$d|$date.format($d)|$date.format(\"iso\", $d)|$date.format(\"iso_tz\", $d)|$date.format(\"intl_tz\", $d)|$date.format(\"short\", $d)|$date.format(\"long_date\", $d)|$date.format(\"full_time\", $d)|$date.format(\"medium\", \"short\" $d)"
+	},
+	{
+		"template": "#set($d = $date.toDate('yyyy-MM-dd HH:mm:ss', '2007-01-02 03:04:05'))$d|$date.format($d)|$date.format(\"iso\", $d)|$date.format(\"iso_tz\", $d)|$date.format(\"intl_tz\", $d)|$date.format(\"short\", $d)|$date.format(\"long_date\", $d)|$date.format(\"full_time\", $d)|$date.format(\"medium\", \"short\", $)"
+	},
+	{
+		"template": "#set($d = $date.toDate('yyyy-MM-dd HH:mm:ss', '2007-01-02 03:04:05'))$d|$date.format($d)|$date.format(\"iso\", $d)|$date.format(\"iso_tz\", $d)|$date.format(\"intl_tz\", $d)|$date.format(\"short\", $d)|$date.format(\"long_date\", $d|$date.format(\"full_time\", $d)|$date.format(\"medium\", \"short\", $d)"
+	},
+	{
+		"template": "#set($d = $date.toDate('yyyy-MM-dd HH:mm:ss', '2007-01-02 03:04:05'))$d|$date.format($d|$date.format(\"iso\", $d)|$date.format(\"iso_tz\", $d)|$date.format(\"intl_tz\", $d)|$date.format(\"short\", $d)|$date.format(\"long_date\", $d)|$date.format(\"full_time\", $d)|$date.format(\"medium\", \"short\", $d)"
+	},
+	{
+		"template": "#set($d = $date.toDate('yyyy-MM-dd HH:mm:ss', 2007-01-02 03:04:05'))$date.toCalendar($d).class.name|$date.toDate(1000)|$date.toDate(\"x\")|$date.format(\"yyyy\", \"2019-01-01\")|$date.toDate(\"yyyy\", \"2019\")|$date.toLocalizedPattern(\"short\", \"fr\")|$date.toLocalizedPattern(\"intl_tz\", \"fr\")|$date.format"
+	},
+	{
+		"template": "#set($d = $date.toDate(yyyy-MM-dd HH:mm:ss', '2007-01-02 03:04:05'))$date.toCalendar($d).class.name|$date.toDate(1000)|$date.toDate(\"x\")|$date.format(\"yyyy\", \"2019-01-01\")|$date.toDate(\"yyyy\", \"2019\")|$date.toLocalizedPattern(\"short\", \"fr\")|$date.toLocalizedPattern(\"intl_tz\", \"fr\")|$date.format"
+	},
+	{
+		"template": "#set($d = $date.toDate(yyyy-MM-dd HH:mm:ss', '2007-01-02 03:04:05'))$d|$date.format($d)|$date.format(\"iso\", $d)|$date.format(\"iso_tz\", $d)|$date.format(\"intl_tz\", $d)|$date.format(\"short\", $d)|$date.format(\"long_date\", $d)|$date.format(\"full_time\", $d)|$date.format(\"medium\", \"short\", $d)"
+	},
+	{
+		"template": "#set($foo = 'foo')\n #set($foo = 'foo')\n#set($foo = 'foo') postfix\n #set($fo!o = 'foo') postfix\nprefix #set($foo = 'foo')\nprefix #set($foo = 'foo') postfix\n"
+	},
+	{
+		"template": "#set($foo = 'foo')\n #set($foo = 'foo')\n#set($foo = 'foo') postfix\n #set($foo = 'foo'"
+	},
+	{
+		"template": "#set($foo = 'foo')\n #set($foo = 'foo')\n#set($foo = 'foo') postfix\n #set($foo = 'foo') postfix\nprefix #set($foo = 'foo')\nprefix #set($foo = foo') postfix\n"
+	},
+	{
+		"template": "#set($foo = 'foo')\n #set($foo = 'foo')\n#set($foo = 'foo') postfix\n #set($foo = 'foo') postfix\nprefix #set($foo = 'foo)\nprefix #set($foo = 'foo') postfix\n"
+	},
+	{
+		"template": "#set($foo = 'foo')\n #set($foo = 'foo')\n#set($foo = 'foo') postfix\n #set($foo = 'foo') postfix\nprefix #set($foo+ = 'foo')\nprefix #set($foo = 'foo') postfix\n"
+	},
+	{
+		"template": "#set($foo = 'foo')\n #set($foo = 'foo')\n#set($foo = 'foo') postfix\n #set($foo = 'foo') postfix\nprefix #set(foo = 'foo')\nprefix #set($foo = 'foo') postfix\n"
+	},
+	{
+		"template": "#set($foo = 'foo')\n #set($foo = 'foo')\n#set($foo = foo') postfix\n #set($foo = 'foo') postfix\nprefix #set($foo = 'foo')\nprefix #set($foo = 'foo') postfix\n"
+	},
+	{
+		"template": "#set($foo = 'foo')\n #set($foo = 'foo)\n#set($foo = 'foo') postfix\n #set($foo = 'foo') postfix\nprefix #set($foo = 'foo')\nprefix #set($foo = 'foo') postfix\n"
+	},
+	{
+		"template": "#set($foo = 'foo)\n #set($foo = 'foo')\n#set($foo = 'foo') postfix\n #set($foo = 'foo') postfix\nprefix #set($foo = 'foo')\nprefix #set($foo = 'foo') postfix\n"
+	},
+	{
+		"template": "#set($i = 'keep')#foreach($i in [1)$i#end$i"
+	},
+	{
+		"template": "#set($l = -1, 2])#set($l[0] = 9)$l"
+	},
+	{
+		"template": "#set($l = [, 2])#set($l[0] = 9)$l"
+	},
+	{
+		"template": "#set($l = [1,"
+	},
+	{
+		"template": "#set($l = [1, 2)#set($l[0] = 9)$l"
+	},
+	{
+		"template": "#set($l = [1, 2])#set($[0] = 9)$l"
+	},
+	{
+		"template": "#set($l = [1, 2])#set($l0] = 9)$l"
+	},
+	{
+		"template": "#set($l = [1, 2])#set($l[0 = 9)$l"
+	},
+	{
+		"template": "#set($l = [1, 2])#set($l[0]  9)$l"
+	},
+	{
+		"template": "#set($l = [1, 2])#set($l[0] = 9$l"
+	},
+	{
+		"template": "#set($l = [1, 2])#set($l[0]+= 9)$l"
+	},
+	{
+		"template": "#set($l = [1, 2])#set(%l[0] = 9)$l"
+	},
+	{
+		"template": "#set($l = [1, 2])#set(*$l[0] = 9)$l"
+	},
+	{
+		"template": "#set($l = [1, 2])#set(l[0] = 9)$l"
+	},
+	{
+		"template": "#set($l = [1, ])#set($l[0] = 9)$l"
+	},
+	{
+		"template": "#set($l = [1,#if($a) 2])#set($l[0] = 9)$l"
+	},
+	{
+		"template": "#set($m"
+	},
+	{
+		"template": "#set($m  {})#set($m.k = 1)$m"
+	},
+	{
+		"template": "#set($m = {)#set($m.k = 1)$m"
+	},
+	{
+		"template": "#set($m = {})#set($"
+	},
+	{
+		"template": "#set($m = {})#set($m.k = 1$m"
+	},
+	{
+		"template": "#set($m = {})#set($m.k = 1..)$m"
+	},
+	{
+		"template": "#set($m = {})#set(m.k = 1)$m"
+	},
+	{
+		"template": "#set($param = $nullObject)\n#parse "
+	},
+	{
+		"template": "#set($param = $nullObject)\n#parse ( \"sub.vm\" )\n#set($p"
+	},
+	{
+		"template": "#set($param = $nullObject)\n#parse ( \"sub.vm\" )\n#set($param = \"string\")\n#parse ( \"sub.vm\" )\n#set($param = 1234)\n#parse ( )\"sub.vm\" )\n"
+	},
+	{
+		"template": "#set($param = $nullObject)\n#parse ( \"sub.vm\" )\n#set($param = \"string\")\n#parse (* \"sub.vm\" )\n#set($param = 1234)\n#parse ( \"sub.vm\" )\n"
+	},
+	{
+		"template": "#set($param = $nullObject)\n#parse ( \"sub.vm\" )\n#set($param = \"string)\n#parse ( \"sub.vm\" )\n#set($param = 1234)\n#parse ( \"sub.vm\" )\n"
+	},
+	{
+		"template": "#set($param = $nullObj|ct)\n#parse ( \"sub.vm\" )\n#set($param = \"string\")\n#parse ( \"sub.vm\" )\n#set($param = 1234)\n#parse ( \"sub.vm\" )\n"
+	},
+	{
+		"template": "#set($s  \"double $name\")$s"
+	},
+	{
+		"template": "#set($s : \"double $name\")$s"
+	},
+	{
+		"template": "#set($s : 'q''q')$s"
+	},
+	{
+		"template": "#set($s = \"\")#if$s)y#else n#end"
+	},
+	{
+		"template": "#set($s = \"\")#if($ s)y#else n#end"
+	},
+	{
+		"template": "#set($s = \"\")#if(s)y#else n#end"
+	},
+	{
+		"template": "#set($s = \"#i((true)yes#end\")$s"
+	},
+	{
+		"template": "#set($s = \"#if(=rue)yes#end\")$s"
+	},
+	{
+		"template": "#set($s = \"#if(true)yes#ed\")$s"
+	},
+	{
+		"template": "#set($s = \"#if(true)yes#en|\")$s"
+	},
+	{
+		"template": "#set($s = \"#if(true)yes#nd\")$s"
+	},
+	{
+		"template": "#set($s = \"#if(trueyes#end\")$s"
+	},
+	{
+		"template": "#set($s = \"#if|true)yes#end\")$s"
+	},
+	{
+		"template": "#set($s = \"&&if(true)yes#end\")$s"
+	},
+	{
+		"template": "#set($s = \"\\u0041\"$s"
+	},
+	{
+		"template": "#set($s = \"a\\nb\"$s"
+	},
+	{
+		"template": "#set($s = \"dou\"ble $name\")$s"
+	},
+	{
+		"template": "#set($s = \"q\"q\")$s"
+	},
+	{
+		"template": "#set($s = 'q'q')$s"
+	},
+	{
+		"template": "#set($s = 'single $name'$s"
+	},
+	{
+		"template": "#set($s = q\"\"q\")$s"
+	},
+	{
+		"template": "#set($s = q''q')$s"
+	},
+	{
+		"template": "#set($s ]= \"a\\nb\")$s"
+	},
+	{
+		"template": "#set($s..= \"#if(true)yes#end\")$s"
+	},
+	{
+		"template": "#set($x = $li:t[10])"
+	},
+	{
+		"template": "#set($x = $list10])"
+	},
+	{
+		"template": "#set($x = $list[10${])"
+	},
+	{
+		"template": "#set($x = $list[10]=)"
+	},
+	{
+		"template": "#set(${a)"
+	},
+	{
+		"template": "#set($|| =\r\n"
+	},
+	{
+		"template": "#set($|| = 1.0E10 + 1)$a"
+	},
+	{
+		"template": "#set($}a = [1.2])"
+	},
+	{
+		"template": "#set($}x = $list[10])"
+	},
+	{
+		"template": "#set(%a = $str5 * 2)$a"
+	},
+	{
+		"template": "#set(%a = 1)"
+	},
+	{
+		"template": "#set(($a = $str5 - 1)$a"
+	},
+	{
+		"template": "#set(($a = 1.5)"
+	},
+	{
+		"template": "#set()"
+	},
+	{
+		"template": "#set(+a = {'k': 1,"
+	},
+	{
+		"template": "#set(,foo = 'foo')\n #set($foo = 'foo')\n#set($foo = 'foo') postfix\n #set($foo = 'foo') postfix\nprefix #set($foo = 'foo')\nprefix #set($foo = 'foo') postfix\n"
+	},
+	{
+		"template": "#set(- = 1)"
+	},
+	{
+		"template": "#set(-$a = $b < $c && $d >= $e && $f > $g && $h <= $i)"
+	},
+	{
+		"template": "#set(-a = [1.2])"
+	},
+	{
+		"template": "#set(..a = {'k':"
+	},
+	{
+		"template": "#set(/$a = [1,"
+	},
+	{
+		"template": "#set(/$a = [1,2,3])"
+	},
+	{
+		"template": "#set(/a = [1,2,3])"
+	},
+	{
+		"template": "#set(:a = 7.0 / 2)$a"
+	},
+	{
+		"template": "#set(:a = [1.2])"
+	},
+	{
+		"template": "#set(:s = 'q''q')$s"
+	},
+	{
+		"template": "#set(=$a = {"
+	},
+	{
+		"template": "#set([$a = 1 / 0)$a"
+	},
+	{
+		"template": "#set(]s = \"\\u0041\")$s"
+	},
+	{
+		"template": "#set(a = ($b && $c) || !$d)"
+	},
+	{
+		"template": "#set(a = 1)"
+	},
+	{
+		"template": "#set(a = 1)"
+	},
+	{
+		"template": "#set(a = [1 2])"
+	},
+	{
+		"template": "#set(d = $date.toDate('yyyy-MM-dd HH:mm:ss', '2007-01-02 03:04:05'))$date.toCalendar($d).class.name|$date.toDate(1000)|$date.toDate(\"x\")|$date.format(\"yyyy\", \"2019-01-01\")|$date.toDate(\"yyyy\", \"2019\")|$date.toLocalizedPattern(\"short\", \"fr\")|$date.toLocalizedPattern(\"intl_tz\", \"fr\")|$date.format"
+	},
+	{
+		"template": "#set(d = $date.toDate('yyyy-MM-dd HH:mm:ss', '2007-01-02 03:04:05'))$d|$date.format($d)|$date.format(\"iso\", $d)|$date.format(\"iso_tz\", $d)|$date.format(\"intl_tz\", $d)|$date.format(\"short\", $d)|$date.format(\"long_date\", $d)|$date.format(\"full_time\", $d)|$date.format(\"medium\", \"short\", $d)"
+	},
+	{
+		"template": "#set(i = 'keep')#foreach($i in [1])$i#end$i"
+	},
+	{
+		"template": "#set(l = [1, 2])#set($l[0] = 9)$l"
+	},
+	{
+		"template": "#set(m = {})#set($m.k = 1)$m"
+	},
+	{
+		"template": "#set(s = \"\")#if($s)y#else n#end"
+	},
+	{
+		"template": "#set(s = \"\\u0041\")$s"
+	},
+	{
+		"template": "#set(x = $list[10])"
+	},
+	{
+		"template": "#set({$a = \"x $b y\")"
+	},
+	{
+		"template": "#set({a = 1 +)"
+	},
+	{
+		"template": "#set({a = [1.2])"
+	},
+	{
+		"template": "#set(||a = 5 -1)$a"
+	},
+	{
+		"template": "#set(}$a = 'x"
+	},
+	{
+		"template": "#set(}s = 'q''q')$s"
+	},
+	{
+		"template": "#st($a = 5 % 0)$a"
+	},
+	{
+		"template": "#stop("
+	},
+	{
+		"template": "#stop(#if($a)"
+	},
+	{
+		"template": "#{end}"
+	},
+	{
+		"template": "#{foreach}($i in l)x#{end}"
+	},
+	{
+		"template": "#{if}"
+	},
+	{
+		"template": "#{if}"
+	},
+	{
+		"template": "#{if}!"
+	},
+	{
+		"template": "#{if}("
+	},
+	{
+		"template": "#{if}("
+	},
+	{
+		"template": "#{if}(true##x#{end}"
+	},
+	{
+		"template": "#{if}(true{x#{end}"
+	},
+	{
+		"template": "#{if}-"
+	},
+	{
+		"template": "#{set}($== = 1)"
+	},
+	{
+		"template": "$!${a b}"
+	},
+	{
+		"template": "$!${a.}"
+	},
+	{
+		"template": "$!{a$a"
+	},
+	{
+		"template": "$!{m##issing}"
+	},
+	{
+		"template": "$!{missin{g}"
+	},
+	{
+		"template": "$!{na(e}"
+	},
+	{
+		"template": "$!{nam==}"
+	},
+	{
+		"template": "$#macro(foo)bar#end$\n$#set($foo = 'bar'$\n$#if(true)true$#{else}false$#end$\n$#if(false)false$#{else}true$#end$\n---\n $\n #\n $$foo$\n $$foo#\n $#foo \n $#foo$\n $#foo#\n $#foo \n #$foo$\n #$foo#\n #$foo \n $#@foo()hop#end$\n $#@foo()hop#end#\n $#@foo()hop#end \n---\n"
+	},
+	{
+		"template": "$#macro(foo)bar#end$\n$#set($foo = 'bar')$\n$#if(tr"
+	},
+	{
+		"template": "$#macro(foo)bar#end$\n$#set($foo = 'bar')$\n$#if(true)true$#{else}false$#end$\n$#if(fa"
+	},
+	{
+		"template": "$#macro(foo)bar#end$\n$#set($foo = 'bar')$\n$#if(true)true$#{else}false$#end$\n$#if(fal"
+	},
+	{
+		"template": "$#macro(foo)bar#end$\n$#set($foo = 'bar')$\n$#if(tue)true$#{else}false$#end$\n$#if(false)false$#{else}true$#end$\n---\n $\n #\n $$foo$\n $$foo#\n $#foo \n $#foo$\n $#foo#\n $#foo \n #$foo$\n #$foo#\n #$foo \n $#@foo()hop#end$\n $#@foo()hop#end#\n $#@foo()hop#end \n---\n"
+	},
+	{
+		"template": "$#macro(foo)bar#end$\n$#set($foo = bar')$\n$#if(true)true$#{else}false$#end$\n$#if(false)false$#{else}true$#end$\n---\n $\n #\n $$foo$\n $$foo#\n $#foo \n $#foo$\n $#foo#\n $#foo \n #$foo$\n #$foo#\n #$foo \n $#@foo()hop#end$\n $#@foo()hop#end#\n $#@foo()hop#end \n---\n"
+	},
+	{
+		"template": "$$!a.b(}"
+	},
+	{
+		"template": "$a${$b]"
+	},
+	{
+		"template": "$a${b(,)"
+	},
+	{
+		"template": "$a.#elseb(1,"
+	},
+	{
+		"template": "$a.${b[0](1)"
+	},
+	{
+		"template": "$a.b($c)[#]"
+	},
+	{
+		"template": "$a.b($c.d"
+	},
+	{
+		"template": "$a.b($c.d [1], {'a': 1})"
+	},
+	{
+		"template": "$a.b($c.d, 1], {'a': 1})"
+	},
+	{
+		"template": "$a.b($c.d, [1] {'a': 1})"
+	},
+	{
+		"template": "$a.b($c.d, [1], 'a': 1})"
+	},
+	{
+		"template": "$a.b($c.d, [1], {'a': ==})"
+	},
+	{
+		"template": "$a.b($c.d, [1], {'a': })"
+	},
+	{
+		"template": "$a.b(${1"
+	},
+	{
+		"template": "$a.b(${x"
+	},
+	{
+		"template": "$a.b(,)"
+	},
+	{
+		"template": "$a.b(,)1"
+	},
+	{
+		"template": "$a.b(/"
+	},
+	{
+		"template": "$a.b(1"
+	},
+	{
+		"template": "$a.b(1"
+	},
+	{
+		"template": "$a.b(1,"
+	},
+	{
+		"template": "$a.b(1,"
+	},
+	{
+		"template": "$a.b(1, )"
+	},
+	{
+		"template": "$a.b(1, 2${)"
+	},
+	{
+		"template": "$a.b(1, 2=)"
+	},
+	{
+		"template": "$a.b(1,##"
+	},
+	{
+		"template": "$a.b(1,,"
+	},
+	{
+		"template": "$a.b(1,,2)"
+	},
+	{
+		"template": "$a.b(1/, 2)"
+	},
+	{
+		"template": "$a.b(1:,2)"
+	},
+	{
+		"template": "$a.b(]"
+	},
+	{
+		"template": "$a.b(||1"
+	},
+	{
+		"template": "$a.b(}"
+	},
+	{
+		"template": "$a.b.c["
+	},
+	{
+		"template": "$a.b[\n](1)"
+	},
+	{
+		"template": "$a.b[0#if($a)]"
+	},
+	{
+		"template": "$a.b[0]#end"
+	},
+	{
+		"template": "$a.b[0]()"
+	},
+	{
+		"template": "$a.b[0](1)"
+	},
+	{
+		"template": "$a.b{[0]"
+	},
+	{
+		"template": "$a["
+	},
+	{
+		"template": "$a["
+	},
+	{
+		"template": "$a[$\n]"
+	},
+	{
+		"template": "$a[$b"
+	},
+	{
+		"template": "$a[-]"
+	},
+	{
+		"template": "$a[0!"
+	},
+	{
+		"template": "$a[0]#else"
+	},
+	{
+		"template": "$a[0].b[#if($a)]"
+	},
+	{
+		"template": "$a[0][=]"
+	},
+	{
+		"template": "$a[1"
+	},
+	{
+		"template": "$a[=0]|"
+	},
+	{
+		"template": "$a[]"
+	},
+	{
+		"template": "$a[]"
+	},
+	{
+		"template": "$ame.true"
+	},
+	{
+		"template": "$a{[0]"
+	},
+	{
+		"template": "$collection.sort($*list)"
+	},
+	{
+		"template": "$collection.sort($list$a)"
+	},
+	{
+		"template": "$date.for$!at(\"x\", \"y\")"
+	},
+	{
+		"template": "$date.format(\"x#[[\", \"y\")"
+	},
+	{
+		"template": "$date.format(\"x, \"y\")"
+	},
+	{
+		"template": "$date.format{(\"x\", \"y\")"
+	},
+	{
+		"template": "$date.toDate(\"yyyy-MM-dd\", \"2007-01-02\").time|$da${e.format(\"yyyy-MM-dd HH:mm Z\", 0)|$date.format(\"yyyy-MM-dd\", $date.toCalendar(86400000))|$date.toYears(31536000000)|$date.toDays(86400000)|$date.format(\"y-M-d\", null)|$date.format(null, 0)"
+	},
+	{
+		"template": "$date.toDate(\"yyyy-MM-dd\", \"2007-01-02\").time|$date.format(\"yyyy-MM-dd HH:mm Z\", 0)|$date.format(\"yyyy-MM-dd\", $date.toCalendar("
+	},
+	{
+		"template": "$date.toDate(\"yyyy-MM-dd\", \"2007-01-02\").time|$date.format(\"yyyy-MM-dd HH:mm Z\", 0)|$date.format(\"yyyy-MM-dd\", $date.toCalendar(8640 000))|$date.toYears(31536000000)|$date.toDays(86400000)|$date.format(\"y-M-d\", null)|$date.format(null, 0)"
+	},
+	{
+		"template": "$date.toDate(\"yyyy-MM-dd\", \"2007-01-02\").time|$date.format(\"yyyy-MM-dd HH:mm Z\", 0)|$date.format(\"yyyy-MM-dd\", $date.toCalendar(86400000))|$date.toYears(31536000000)|$date.toDays(86400000)|$date.format(\"y-M-d\""
+	},
+	{
+		"template": "$date.toDate(\"yyyy-MM-dd\", \"2007-01-02\").time|$date.format(\"yyyy-MM-dd HH:mm Z\", 0)|$date.format(\"yyyy-MM-dd\", date.toCalendar(86400000))|$date.toYears(31536000000)|$date.toDays(86400000)|$date.format(\"y-M-d\", null)|$date.format(null, 0)"
+	},
+	{
+		"template": "$date.toDate(\"yyyy-MM-dd\", \"2007-01-02\").time|$date.format(\"yyyy-MM-dd HH:mm Z\", 0)|$date.format(\"yyyy-MM-dd, $date.toCalendar(86400000))|$date.toYears(31536000000)|$date.toDays(86400000)|$date.format(\"y-M-d\", null)|$date.format(null, 0)"
+	},
+	{
+		"template": "$date.toDate(\"yyyy-MM-dd\", \"2007-01-02\").time|$date.format(yyyy-MM-dd HH:mm Z\", 0)|$date.format(\"yyyy-MM-dd\", $date.toCalendar(86400000))|$date.toYears(31536000000)|$date.toDays(86400000)|$date.format(\"y-M-d\", null)|$date.format(null, 0)"
+	},
+	{
+		"template": "$date.toDate(\"yyyy-MM-dd\", 2007-01-02\").time|$date.format(\"yyyy-MM-dd HH:mm Z\", 0)|$date.format(\"yyyy-MM-dd\", $date.toCalendar(86400000))|$date.toYears(31536000000)|$date.toDays(86400000)|$date.format(\"y-M-d\", null)|$date.format(null, 0)"
+	},
+	{
+		"template": "$display.alt($m"
+	},
+	{
+		"template": "$display.alt($missing, 'dflt'{"
+	},
+	{
+		"template": "$display.capitalize('word'!"
+	},
+	{
+		"template": "$display.list($collect"
+	},
+	{
+		"template": "$display.list($collection.split("
+	},
+	{
+		"template": "$display.list($collection.split(\"a, b ,c\"))|$collection.sort(\"b\", \"a\", \"C\"])|$json.parse('{\"a\":[1,2]}').a|$esc.velocity(\"$x#y\")|$display.stripTags(\"<b>x</b><i>y</i>\")|$display.cell(\"abc\", 5)|$display.plural(2, \"box\")|$display.measure(\"ab\ncde\")"
+	},
+	{
+		"template": "$display.list($collection.split(\"a, b ,c\"))|$collection.sort([\"b\""
+	},
+	{
+		"template": "$display.list($collection.split(\"a, b ,c\"))|$collection.sort([\"b\", \"a\", \"C\""
+	},
+	{
+		"template": "$display.list($collection.split(\"a, b ,c\"))|$collection.sort([\"b\", \"a\", \"C\"])|$json.parse('{\"a\":[1,2]}').a|$esc.velocity(\"$x#y\")|$display.stripTags(\"<b>x</b><i>y</i>\")|$display.cell(\"abc\" 5)|$display.plural(2, \"box\")|$display.measure(\"ab\ncde\")"
+	},
+	{
+		"template": "$display.list($collection.split(\"a, b ,c\"))|$collection.sort([\"b\", \"a\", \"C\"])|$json.parse('{\"a\":[1,2]}').a|$esc.velocity(\"$x#y\")|$display.stripTags(\"<b>x</b><i>y</i>\")|$display.cell(\"abc\", 5)|$display.plural(2, \"box\")|$display.measure(ab\ncde\")"
+	},
+	{
+		"template": "$display.list($collection.split(\"a, b ,c\"))|$collection.sort([\"b\", \"a\", \"C\"])|$json.parse('{\"a\":[1,2]}').a|$esc.velocity(\"$x#y\")|$display.stripTags(\"<b>x</b><i>y</i>\")|$display.cell(\"abc\", 5)|$display.plural(2, \"box)|$display.measure(\"ab\ncde\")"
+	},
+	{
+		"template": "$display.list($collection.split(\"a, b ,c\"))|$collection.sort([\"b\", \"a\", \"C\"])|$json.parse('{\"a\":[1,2]}').a|$esc.velocity(\"$x#y\")|$display.stripTags(\"<b>x</b><i>y</i>\")|$display.cell(\"abc, 5)|$display.plural(2, \"box\")|$display.measure(\"ab\ncde\")"
+	},
+	{
+		"template": "$display.list($collection.split(\"a, b ,c\"))|$collection.sort([\"b\", \"a\", \"C\"])|$json.parse('{\"a\":[1,2]}').a|$esc.velocity(\"$x#y\")|$display.stripTags(\"<b>x</b><i>y</i>)|$display.cell(\"abc\", 5)|$display.plural(2, \"box\")|$display.measure(\"ab\ncde\")"
+	},
+	{
+		"template": "$display.list($collection.split(\"a, b ,c\"))|$collection.sort([\"b\", \"a\", \"C\"])|$json.parse('{\"a\":[1,2]}').a|$esc.velocity($x#y\")|$display.stripTags(\"<b>x</b><i>y</i>\")|$display.cell(\"abc\", 5)|$display.plural(2, \"box\")|$display.measure(\"ab\ncde\")"
+	},
+	{
+		"template": "$display.list($collection.split(\"a, b ,c\"))|$collection.sort([\"b\", \"a\", \"C])|$json.parse('{\"a\":[1,2]}').a|$esc.velocity(\"$x#y\")|$display.stripTags(\"<b>x</b><i>y</i>\")|$display.cell(\"abc\", 5)|$display.plural(2, \"box\")|$display.measure(\"ab\ncde\")"
+	},
+	{
+		"template": "$display.list($collection.split(\"a, b ,c\"))|$collection.sort([\"b\", \"a\", C\"])|$json.parse('{\"a\":[1,2]}').a|$esc.velocity(\"$x#y\")|$display.stripTags(\"<b>x</b><i>y</i>\")|$display.cell(\"abc\", 5)|$display.plural(2, \"box\")|$display.measure(\"ab\ncde\")"
+	},
+	{
+		"template": "$display.list($collection.split(\"a, b ,c\"))|$collection.sort([\"b\", \"a, \"C\"])|$json.parse('{\"a\":[1,2]}').a|$esc.velocity(\"$x#y\")|$display.stripTags(\"<b>x</b><i>y</i>\")|$display.cell(\"abc\", 5)|$display.plural(2, \"box\")|$display.measure(\"ab\ncde\")"
+	},
+	{
+		"template": "$display.list($collection.split(\"a, b ,c\"))|$collection.sort([\"b, \"a\", \"C\"])|$json.parse('{\"a\":[1,2]}').a|$esc.velocity(\"$x#y\")|$display.stripTags(\"<b>x</b><i>y</i>\")|$display.cell(\"abc\", 5)|$display.plural(2, \"box\")|$display.measure(\"ab\ncde\")"
+	},
+	{
+		"template": "$display.list($collection.split(\"a, b ,c\"))|$collection.sort([b\", \"a\", \"C\"])|$json.parse('{\"a\":[1,2]}').a|$esc.velocity(\"$x#y\")|$display.stripTags(\"<b>x</b><i>y</i>\")|$display.cell(\"abc\", 5)|$display.plural(2, \"box\")|$display.measure(\"ab\ncde\")"
+	},
+	{
+		"template": "$display.list($collection.split(\"a, b ,c))|$collection.sort([\"b\", \"a\", \"C\"])|$json.parse('{\"a\":[1,2]}').a|$esc.velocity(\"$x#y\")|$display.stripTags(\"<b>x</b><i>y</i>\")|$display.cell(\"abc\", 5)|$display.plural(2, \"box\")|$display.measure(\"ab\ncde\")"
+	},
+	{
+		"template": "$display.list($l##ist)"
+	},
+	{
+		"template": "$display.list($lis t)"
+	},
+	{
+		"template": "$display.list(:list)"
+	},
+	{
+		"template": "$display.list(collection.split(\"a, b ,c\"))|$collection.sort([\"b\", \"a\", \"C\"])|$json.parse('{\"a\":[1,2]}').a|$esc.velocity(\"$x#y\")|$display.stripTags(\"<b>x</b><i>y</i>\")|$display.cell(\"abc\", 5)|$display.plural(2, \"box\")|$display.measure(\"ab\ncde\")"
+	},
+	{
+		"template": "$display.truncate('abcdefghijklmnop' 8)"
+	},
+	{
+		"template": "$esc.url(a b&c')"
+	},
+	{
+		"template": "$esc.xml(<x>')"
+	},
+	{
+		"template": "$json.parse('{\"a\": [1, 2]}')#end.a"
+	},
+	{
+		"template": "$json.parse('{\"a\": [1, 2]}'.a"
+	},
+	{
+		"template": "$list.${size()"
+	},
+	{
+		"template": "$list.size(]"
+	},
+	{
+		"template": "$list[-"
+	},
+	{
+		"template": "$list[-*1]"
+	},
+	{
+		"template": "$list[-1"
+	},
+	{
+		"template": "$list[-]"
+	},
+	{
+		"template": "$list[0"
+	},
+	{
+		"template": "$main.unkno$nMethod()"
+	},
+	{
+		"template": "$map.get('k'!"
+	},
+	{
+		"template": "$map['k'"
+	},
+	{
+		"template": "$map['k'!"
+	},
+	{
+		"template": "$math.add(1 2.5)|$math.add(\"1\", \"2\")|$math.add(1, \"x\")|$math.sub(10, 3, 2)|$math.mul(2, 2.5)|$math.div(1, 0)|$math.div(7, 2)|$math.div(8, 2)|$math.max(-5, -3)|$math.min(1, 2, 0.5)|$math.pow(2, 10)|$math.pow(2, 0.5)|$math.idiv(7, 2)|$math.mod(7, 3)|$math.mod(7, 0)"
+	},
+	{
+		"template": "$math.add(1, 2.5)|$math.add(\"1\", \"2\")|$math.add(1, \"x\")|$math.sub(10, 3 2)|$math.mul(2, 2.5)|$math.div(1, 0)|$math.div(7, 2)|$math.div(8, 2)|$math.max(-5, -3)|$math.min(1, 2, 0.5)|$math.pow(2, 10)|$math.pow(2, 0.5)|$math.idiv(7, 2)|$math.mod(7, 3)|$math.mod(7, 0)"
+	},
+	{
+		"template": "$math.add(1, 2.5)|$math.add(\"1\", \"2\")|$math.add(1, \"x\")|$math.sub(10, 3, 2)|$math.mul(2 2.5)|$math.div(1, 0)|$math.div(7, 2)|$math.div(8, 2)|$math.max(-5, -3)|$math.min(1, 2, 0.5)|$math.pow(2, 10)|$math.pow(2, 0.5)|$math.idiv(7, 2)|$math.mod(7, 3)|$math.mod(7, 0)"
+	},
+	{
+		"template": "$math.add(1, 2.5)|$math.add(\"1\", \"2\")|$math.add(1, \"x\")|$math.sub(10, 3, 2)|$math.mul(2, 2.5)|$math.div(1 0)|$math.div(7, 2)|$math.div(8, 2)|$math.max(-5, -3)|$math.min(1, 2, 0.5)|$math.pow(2, 10)|$math.pow(2, 0.5)|$math.idiv(7, 2)|$math.mod(7, 3)|$math.mod(7, 0)"
+	},
+	{
+		"template": "$math.add(1, 2.5)|$math.add(\"1\", \"2\")|$math.add(1, \"x\")|$math.sub(10, 3, 2)|$math.mul(2, 2.5)|$math.div(1, 0)|$math.div(, 2)|$math.div(8, 2)|$math.max(-5, -3)|$math.min(1, 2, 0.5)|$math.pow(2, 10)|$math.pow(2, 0.5)|$math.idiv(7, 2)|$math.mod(7, 3)|$math.mod(7, 0)"
+	},
+	{
+		"template": "$math.add(1, 2.5)|$math.add(\"1\", \"2\")|$math.add(1, \"x\")|$math.sub(10, 3, 2)|$math.mul(2, 2.5)|$math.div(1, 0)|$math.div(7, 2)|$math.div(8, 2)|$math.max(-, -3)|$math.min(1, 2, 0.5)|$math.pow(2, 10)|$math.pow(2, 0.5)|$math.idiv(7, 2)|$math.mod(7, 3)|$math.mod(7, 0)"
+	},
+	{
+		"template": "$math.add(1, 2.5)|$math.add(\"1\", \"2\")|$math.add(1, \"x\")|$math.sub(10, 3, 2)|$math.mul(2, 2.5)|$math.div(1, 0)|$math.div(7, 2)|$math.div(8, 2)|$math.max(-5 -3)|$math.min(1, 2, 0.5)|$math.pow(2, 10)|$math.pow(2, 0.5)|$math.idiv(7, 2)|$math.mod(7, 3)|$math.mod(7, 0)"
+	},
+	{
+		"template": "$math.add(1, 2.5)|$math.add(\"1\", \"2\")|$math.add(1, \"x\")|$math.sub(10, 3, 2)|$math.mul(2, 2.5)|$math.div(1, 0)|$math.div(7, 2)|$math.div(8, 2)|$math.max(-5, -)|$math.min(1, 2, 0.5)|$math.pow(2, 10)|$math.pow(2, 0.5)|$math.idiv(7, 2)|$math.mod(7, 3)|$math.mod(7, 0)"
+	},
+	{
+		"template": "$math.add(1, 2.5)|$math.add(\"1\", \"2\")|$math.add(1, \"x\")|$math.sub(10, 3, 2)|$math.mul(2, 2.5)|$math.div(1, 0)|$math.div(7, 2)|$math.div(8, 2)|$math.max(-5, -3)|$math.min(1, 2 0.5)|$math.pow(2, 10)|$math.pow(2, 0.5)|$math.idiv(7, 2)|$math.mod(7, 3)|$math.mod(7, 0)"
+	},
+	{
+		"template": "$math.add(1, 2.5)|$math.add(\"1\", \"2\")|$math.add(1, \"x\")|$math.sub(10, 3, 2)|$math.mul(2, 2.5)|$math.div(1, 0)|$math.div(7, 2)|$math.div(8, 2)|$math.max(-5, -3)|$math.min(1, 2, 0.5)|$math.pow(2 10)|$math.pow(2, 0.5)|$math.idiv(7, 2)|$math.mod(7, 3)|$math.mod(7, 0)"
+	},
+	{
+		"template": "$math.add(1, 2.5)|$math.add(\"1\", \"2\")|$math.add(1, \"x\")|$math.sub(10, 3, 2)|$math.mul(2, 2.5)|$math.div(1, 0)|$math.div(7, 2)|$math.div(8, 2)|$math.max(-5, -3)|$math.min(1, 2, 0.5)|$math.pow(2, 10)|$math.pow(2 0.5)|$math.idiv(7, 2)|$math.mod(7, 3)|$math.mod(7, 0)"
+	},
+	{
+		"template": "$math.add(1, 2.5)|$math.add(\"1\", \"2\")|$math.add(1, \"x\")|$math.sub(10, 3, 2)|$math.mul(2, 2.5)|$math.div(1, 0)|$math.div(7, 2)|$math.div(8, 2)|$math.max(-5, -3)|$math.min(1, 2, 0.5)|$math.pow(2, 10)|$math.pow(2, 0."
+	},
+	{
+		"template": "$math.add(1, 2.5)|$math.add(\"1\", \"2\")|$math.add(1, \"x\")|$math.sub(10, 3, 2)|$math.mul(2, 2.5)|$math.div(1, 0)|$math.div(7, 2)|$math.div(8, 2)|$math.max(-5, -3)|$math.min(1, 2, 0.5)|$math.pow(2, 10)|$math.pow(2, 0.5)|$math.idiv(7, 2)|$math.mod(7 3)|$math.mod(7, 0)"
+	},
+	{
+		"template": "$math.add(1, 2.5)|$math.add(\"1\", \"2\")|$math.add(1, \"x\")|$math.sub(10, 3, 2)|$math.mul(2, 2.5)|$math.div(1, 0)|$math.div(7, 2)|$math.div(8, 2)|$math.max(-5, -3)|$math.min(1, 2, 0.5)|$math.pow(2, 10)|$math.pow(2, 0.5)|$math.idiv(7, 2)|$math.mod(7, 3)|$math.mod(, 0)"
+	},
+	{
+		"template": "$math.add(1, 2.5)|$math.add(\"1\", \"2\")|$math.add(1, \"x\")|$math.sub(10, 3, 2)|$math.mul(2, 2.5)|$math.div(1, 0)|$math.div(7, 2)|$math.div(8, 2)|$math.max(-5, -3)|$math.min(1, 2, 0.5)|$math.pow(2, 10)|$math.pow(2, 0.5)|$math.idiv(7, 2)|$math.mod(7, 3)|$math.mod(7 0)"
+	},
+	{
+		"template": "$math.add(1, 2.5)|$math.add(\"1\", \"2)|$math.add(1, \"x\")|$math.sub(10, 3, 2)|$math.mul(2, 2.5)|$math.div(1, 0)|$math.div(7, 2)|$math.div(8, 2)|$math.max(-5, -3)|$math.min(1, 2, 0.5)|$math.pow(2, 10)|$math.pow(2, 0.5)|$math.idiv(7, 2)|$math.mod(7, 3)|$math.mod(7, 0)"
+	},
+	{
+		"template": "$math.add(2147483647, 1)|$math.mul(100000, 100000)|$math.add(1.0 2)|$math.add(1E2, 2)|$math.sub(0.3, 0.1)|$math.div(1, 3)|$math.max()|$math.max(1)|$math.getTotal([1, \"x\"])|$math.random(1, 1)|$math.toLong(\"9999999999\")"
+	},
+	{
+		"template": "$math.add(2147483647, 1)|$math.mul(100000, 100000)|$math.add(1.0, 2)|$math.add(1E"
+	},
+	{
+		"template": "$math.add(2147483647, 1)|$math.mul(100000, 100000)|$math.add(1.0, 2)|$math.add(1E, 2)|$math.sub(0.3, 0.1)|$math.div(1, 3)|$math.max()|$math.max(1)|$math.getTotal([1, \"x\"])|$math.random(1, 1)|$math.toLong(\"9999999999\")"
+	},
+	{
+		"template": "$math.add(2147483647, 1)|$math.mul(100000, 100000)|$math.add(1.0, 2)|$math.add(1E2, 2)|$math.sub(0.3 0.1)|$math.div(1, 3)|$math.max()|$math.max(1)|$math.getTotal([1, \"x\"])|$math.random(1, 1)|$math.toLong(\"9999999999\")"
+	},
+	{
+		"template": "$math.add(2147483647, 1)|$math.mul(100000, 100000)|$math.add(1.0, 2)|$math.add(1E2, 2)|$math.sub(0.3, 0.1)|$math.div(1 3)|$math.max()|$math.max(1)|$math.getTotal([1, \"x\"])|$math.random(1, 1)|$math.toLong(\"9999999999\")"
+	},
+	{
+		"template": "$math.add(2147483647, 1)|$math.mul(100000, 100000)|$math.add(1.0, 2)|$math.add(1E2, 2)|$math.sub(0.3, 0.1)|$math.div(1, )|$math.max()|$math.max(1)|$math.getTotal([1, \"x\"])|$math.random(1, 1)|$math.toLong(\"9999999999\")"
+	},
+	{
+		"template": "$math.add(2147483647, 1)|$math.mul(100000, 100000)|$math.add(1.0, 2)|$math.add(1E2, 2)|$math.sub(0.3, 0.1)|$math.div(1, 3)|$math.max()|$math.max(1)|$math.getTotal(1, \"x\"])|$math.random(1, 1)|$math.toLong(\"9999999999\")"
+	},
+	{
+		"template": "$math.add(2147483647, 1)|$math.mul(100000, 100000)|$math.add(1.0, 2)|$math.add(1E2, 2)|$math.sub(0.3, 0.1)|$math.div(1, 3)|$math.max()|$math.max(1)|$math.getTotal([1 \"x\"])|$math.random(1, 1)|$math.toLong(\"9999999999\")"
+	},
+	{
+		"template": "$math.add(2147483647, 1)|$math.mul(100000, 100000)|$math.add(1.0, 2)|$math.add(1E2, 2)|$math.sub(0.3, 0.1)|$math.div(1, 3)|$math.max()|$math.max(1)|$math.getTotal([1, \"x\"])|$math.random(1 1)|$math.toLong(\"9999999999\")"
+	},
+	{
+		"template": "$math.add(2147483647, 1)|$math.mul(100000, 100000)|$math.add(1.0, 2)|$math.add(1E2, 2)|$math.sub(0.3, 0.1)|$math.div(1, 3)|$math.max()|$math.max(}1)|$math.getTotal([1, \"x\"])|$math.random(1, 1)|$math.toLong(\"9999999999\")"
+	},
+	{
+		"template": "$math.div(7 2)"
+	},
+	{
+		"template": "$math.max(1 5, 3)"
+	},
+	{
+		"template": "$math.max(1, 5 3)"
+	},
+	{
+		"template": "$math.max(1, 5, ${3)"
+	},
+	{
+		"template": "$nam.true"
+	},
+	{
+		"template": "$name#if"
+	},
+	{
+		"template": "$name#if(1rue)x#end"
+	},
+	{
+		"template": "$name#if(tr"
+	},
+	{
+		"template": "$name#if(true#if($a))x#end"
+	},
+	{
+		"template": "$name.nope(]"
+	},
+	{
+		"template": "$name.substring(1,${3)"
+	},
+	{
+		"template": "$name.substring(10["
+	},
+	{
+		"template": "$name.true/"
+	},
+	{
+		"template": "$nested.inner.x[2.y"
+	},
+	{
+		"template": "$number.format(\"#0.0#0\" 1)"
+	},
+	{
+		"template": "$number.format(#0.0#0\", 1)"
+	},
+	{
+		"template": "$number.format('#0.00', 3.1}4159)"
+	},
+	{
+		"template": "$xml.parse(\"<a><b></a>\").isEmpty()|$xml.parse('<a xmlns=\"urn:d\"><b/></a>')$xml|$xml.find(\"//b)|$xml.find(\"b\")|$xml.children()"
+	},
+	{
+		"template": "$xml.parse(\"<a><b></a>).isEmpty()|$xml.parse('<a xmlns=\"urn:d\"><b/></a>')$xml|$xml.find(\"//b\")|$xml.find(\"b\")|$xml.children()"
+	},
+	{
+		"template": "$xml.parse(\"not xml\").isEmpty(#if($a))|$xml.parse(\"<a/><b/>\").isEmpty()|$xml.parse(\"<a>\").isEmpty()|$xml.parse(\"  <a/>  \").isEmpty()|$xml.parse(\"x<a/>\").isEmpty()"
+	},
+	{
+		"template": "$xml.parse(\"not xml\").isEmpty()|$xml.parse(\"<a/><b/>\").isEmpty()|$xml.parse(\"<a>\").isEmpty()|$xml.parse(  <a/>  \").isEmpty()|$xml.parse(\"x<a/>\").isEmpty()"
+	},
+	{
+		"template": "$xml.parse(\"not xml\").isEmpty()|$xml.parse(\"<a/><b/>\").isEmpty()|$xml.parse(\"<a>\").isEmpty()|$xml.parse(\"  <a/>  \").isEmpty()|$xml.parse(\"x<a/>\"+.isEmpty()"
+	},
+	{
+		"template": "$xml.parse(\"not xml\").isEmpty()|$xml.parse(\"<a/><b/>\").isEmpty()|$xml.parse(\"<a>\").isEmpty()|$xml.parse(\"  <a/>  ).isEmpty()|$xml.parse(\"x<a/>\").isEmpty()"
+	},
+	{
+		"template": "$xml.parse(\"not xml\").isEmpty()|$xml.parse(\"<a/><b/>\").isEmpty()|$xml.parse(\"<a>).isEmpty()|$xml.parse(\"  <a/>  \").isEmpty()|$xml.parse(\"x<a/>\").isEmpty()"
+	},
+	{
+		"template": "$xml.parse(\"not xml|).isEmpty()|$xml.parse(\"<a/><b/>\").isEmpty()|$xml.parse(\"<a>\").isEmpty()|$xml.parse(\"  <a/>  \").isEmpty()|$xml.parse(\"x<a/>\").isEmpty()"
+	},
+	{
+		"template": "$xml.parse('<?xml version=\"1.0\"?><!DOCTYPE r [<!ENTITY e \"ent<b>val</b>\">]><r a=\"x&#10;y\tz\">&e;&#x41;</r>')$xml|$xml.text|$xml.find(//b\")"
+	},
+	{
+		"template": "$xml.parse('<a z=\"1\" b=\"2\" xmlns:p=\"urn:p\"><!--c--><b>x</b>&amp;<![CDATA[<y>]]><p:c p:q=\"1\">t\r\n\"q\"</p:c><e/></a>')$xml.find(\"//b\").getPath()|$xml.find(\"e\".path|$xml.children().size()|$xml.text|$xml.name"
+	},
+	{
+		"template": "$xml.parse('<a z=\"1\" b=\"2\" xmlns:p=\"urn:p\"><!--c--><b>x</b>&amp;<![CDATA[<y>]]><p:c p:q=\"1\">t\r\n\"q\"</p:c><e/></a>')$xml.find(\"//b).getPath()|$xml.find(\"e\").path|$xml.children().size()|$xml.text|$xml.name"
+	},
+	{
+		"template": "$xml.parse('<a z=\"1\" b=\"2\" xmlns:p=\"urn:p\"><!--c--><b>x</b>&amp;<![CDATA[<y>]]><p:c p:q=\"1\">t\r\n\"q\"</p:c><e/></a>')$xml.find(\"//p:c\")|$xml.find(\"c)|$xml.find(\"//*[local-name()='c']\")|$xml.find(\"/a/@*\")|$xml.find(\"//text()\")"
+	},
+	{
+		"template": "$xml.parse('<a z=\"1\" b=\"2\" xmlns:p=\"urn:p\"><!--c--><b>x</b>&amp;<![CDATA[<y>]]><p:c p:q=\"1\">t\r\n\"q\"</p:c><e/></a>')$xml.find(\"//p:c)|$xml.find(\"c\")|$xml.find(\"//*[local-name()='c']\")|$xml.find(\"/a/@*\")|$xml.find(\"//text()\")"
+	},
+	{
+		"template": "$xml.parse('<a z=\"1\" b=\"2\" xmlns:p=\"urn:p\"><!--c--><b>x</b>&amp;<![CDATA[<y>]]><p:c p:q=\"1\">t\r\n\"q\"</p:c><e/></a>)$xml.find(\"//p:c\")|$xml.find(\"c\")|$xml.find(\"//*[local-name()='c']\")|$xml.find(\"/a/@*\")|$xml.find(\"//text()\")"
+	},
+	{
+		"template": "$xml.parse('<r>  '<!-- x --> <i> a </i>text<![CDATA[cd]]>more</r>')$xml.children().size()|$xml.find(\"//text()\").size()|$xml.find(\"r/text()[2]\")|$xml.node().getTextContent()"
+	},
+	{
+		"template": "$xml.parse('<r>  <!-- x --> <i> a </i>text<![CDATA[cd]]>more</r>')$xml.children().size()|$xml.find(\"//text()\").size()|$xml.find(\"r/text()[2]\"1|$xml.node().getTextContent()"
+	},
+	{
+		"template": "$xml.parse('<r>  <!-- x --> <i> a </i>text<![CDATA[cd]]>more</r>')$xml.children().size()|$xml.find(\"//text()).size()|$xml.find(\"r/text()[2]\")|$xml.node().getTextContent()"
+	},
+	{
+		"template": "$xml.parse('<r><a k=\"v\"/></r>')$xml.attributes()|$xml.find(\"a\").attributes()|$xml.find(\"a\").attr(\"k\")|$xml.find(\"a\").attr(\"z\")|$xml.find(\"a\""
+	},
+	{
+		"template": "$xml.parse('<r><a k=\"v\"/></r>')$xml.attributes()|$xml.find(\"a\").attributes()|$xml.find(\"a\").attr(\"k\")|$xml.find(\"a\").attr(\"z\")|$xml.find(\"a\").get(\"k )|$xml.find(\"a\").k|$xml.first|$xml.last|$xml.parent|$xml.find(\"a\").parent"
+	},
+	{
+		"template": "$xml.parse('<r><a k=\"v\"/></r>')$xml.attributes()|$xml.find(\"a\").attributes()|$xml.find(\"a\").attr(\"k\")|$xml.find(\"a\").attr(\"z\")|$xml.find(\"a\").get(\"k\")|$xml.find(\"a\").k|$xml.first|$xml.la{t|$xml.parent|$xml.find(\"a\").parent"
+	},
+	{
+		"template": "$xml.parse('<r><a k=\"v\"/></r>')$xml.attributes()|$xml.find(\"a\").attributes()|$xml.find(\"a\").attr(\"k\")|$xml.find(\"a\").attr(\"z\")|$xml.find(\"a).get(\"k\")|$xml.find(\"a\").k|$xml.first|$xml.last|$xml.parent|$xml.find(\"a\").parent"
+	},
+	{
+		"template": "$xml.parse('<r><a k=\"v\"/></r>')$xml.attributes()|$xml.find(\"a\").attributes()|$xml.find(\"a\").attr(\"k\")|$xml.find(\"a\"[.attr(\"z\")|$xml.find(\"a\").get(\"k\")|$xml.find(\"a\").k|$xml.first|$xml.last|$xml.parent|$xml.find(\"a\").parent"
+	},
+	{
+		"template": "$xml.parse('<r><a k=\"v\"/></r>')$xml.attributes()|$xml.find(\"a\").attributes()|$xml.find(\"a\").attr(\"k\")|$xml.find(\"a).attr(\"z\")|$xml.find(\"a\").get(\"k\")|$xml.find(\"a\").k|$xml.first|$xml.last|$xml.parent|$xml.find(\"a\").parent"
+	},
+	{
+		"template": "$xml.parse('<r><a k=\"v\"/></r>')$xml.attributes()|$xml.find(\"a\").attributes()|$xml.find(\"a).attr(\"k\")|$xml.find(\"a\").attr(\"z\")|$xml.find(\"a\").get(\"k\")|$xml.find(\"a\").k|$xml.first|$xml.last|$xml.parent|$xml.find(\"a\").parent"
+	},
+	{
+		"template": "$xml.parse('<r><a k=\"v\"/></r>')$xml.attributes()|$xml.find(\"a\".attributes()|$xml.find(\"a\").attr(\"k\")|$xml.find(\"a\").attr(\"z\")|$xml.find(\"a\").get(\"k\")|$xml.find(\"a\").k|$xml.first|$xml.last|$xml.parent|$xml.find(\"a\").parent"
+	},
+	{
+		"template": "$xml.parse('<r><a k=\"v\"/></r>')$xml.attributes()|$xml.find(\"a).attributes()|$xml.find(\"a\").attr(\"k\")|$xml.find(\"a\").attr(\"z\")|$xml.find(\"a\").get(\"k\")|$xml.find(\"a\").k|$xml.first|$xml.last|$xml.parent|$xml.find(\"a\").parent"
+	},
+	{
+		"template": "$xml.parse('<r><a/></r>'&&$xml.find(\"//a[\")|$xml.find(\"//a[@]\")|$xml.find(\"\")|$xml.find(\"$v\")|$xml.find(\"foo(1)\")"
+	},
+	{
+		"template": "$xml.parse('<r><a/></r>')$xml.find(\"//a[\")|$xml.find(\"//a[@]\")|$xml.find(\"\")|$xml.find(\"$v)|$xml.find(\"foo(1)\")"
+	},
+	{
+		"template": "$xml.parse('<r><a/></r>')$xml.find(\"//a[\")|$xml.find(\"//a[@]\")|$xml.find(\")|$xml.find(\"$v\")|$xml.find(\"foo(1)\")"
+	},
+	{
+		"template": "$xml.parse('<r><a/></r>')$xml.find(\"//a[\")|$xml.find(\"//a[@])|$xml.find(\"\")|$xml.find(\"$v\")|$xml.find(\"foo(1)\")"
+	},
+	{
+		"template": "$xml.parse('<r><a>1</a><b>2</b></r>')$xml.find(\"//a | //b\")|$xml.find(\"//*[not(self::a)]\")|$xml.find(\"//*[contains(concat(name(), 'x'), 'bx')]\")|$xml.find(\"//*[string-length(name()) = 1][2]\")|$xml.find(\"//*[number(.) mod 2 = 0]\")|$xml.find(//*[translate(., '12', 'ab') = 'b']\")"
+	},
+	{
+		"template": "$xml.parse('<r><a>1</a><b>2</b></r>')$xml.find(\"//a | //b\")|$xml.find(\"//*[not(self::a)]\")|$xml.find(\"//*[contains(concat(name(), 'x'), 'bx')])|$xml.find(\"//*[string-length(name()) = 1][2]\")|$xml.find(\"//*[number(.) mod 2 = 0]\")|$xml.find(\"//*[translate(., '12', 'ab') = 'b']\")"
+	},
+	{
+		"template": "$xml.parse('<r><a>1</a><b>2</b></r>)$xml.find(\"//a | //b\")|$xml.find(\"//*[not(self::a)]\")|$xml.find(\"//*[contains(concat(name(), 'x'), 'bx')]\")|$xml.find(\"//*[string-length(name()) = 1][2]\")|$xml.find(\"//*[number(.) mod 2 = 0]\")|$xml.find(\"//*[translate(., '12', 'ab') = 'b']\")"
+	},
+	{
+		"template": "$xml.parse('<r><i n=\"1\">a</i><i n=\"2\">b</i><i>c</i></r>')$xml.find(\"//i[2]\")|$xml.find(\"//i[last()]\").text|$xml.find(\"count(//i)\")|$xml.find(\"//i[@n>1]\")|$xml.get(\"i\")|$xml.get(1)|$xml.get(\"0\")|$xml.children(+).parents()"
+	},
+	{
+		"template": "$xml.parse('<r><i n=\"1\">a</i><i n=\"2\">b</i><i>c</i></r>')$xml.find(\"//i[2]\")|$xml.find(\"//i[last()]\").text|$xml.find(\"count(//i)\")|$xml.find(\"//i[@n>1]\")|$xml.get(\"i)|$xml.get(1)|$xml.get(\"0\")|$xml.children().parents()"
+	},
+	{
+		"template": "$xml.parse('<r><i n=\"1\">a</i><i n=\"2\">b</i><i>c</i></r>')$xml.find(\"//i[2]\")|$xml.find(\"//i[last()]\").text|$xml.find(\"count(//i)\")|$xml.find(\"//i[@n>1])|$xml.get(\"i\")|$xml.get(1)|$xml.get(\"0\")|$xml.children().parents()"
+	},
+	{
+		"template": "$xml.parse('<r><i>1</i><i>2</i></r>')#foreach($i in $xml.find#if($a)\"i\"))[$i]#end|$xml.find(\"i\").iterator().next()|$xml.find(\"sum(//i)\")"
+	},
+	{
+		"template": "$xml.parse('<r><i>1</i><i>2</i></r>')#foreach($i in $xml.find("
+	},
+	{
+		"template": "$xml.parse('<r><i>1</i><i>2</i></r>')#foreach($i in $xml.find(\"i\"))[$i]#end|$xml.find(\"i\").iterator(.next()|$xml.find(\"sum(//i)\")"
+	},
+	{
+		"template": "$xml.parse('<r><i>1</i><i>2</i></r>')#foreach($i in $xml.find(\"i\"))[$i]#end|$xml.find(\"i).iterator().next()|$xml.find(\"sum(//i)\")"
+	},
+	{
+		"template": "$xml.parse('<r><i>1</i><i>2</i></r>')#foreach($i in $xml.find(\"i))[$i]#end|$xml.find(\"i\").iterator().next()|$xml.find(\"sum(//i)\")"
+	},
+	{
+		"template": "$xml.parse('<r><i>1</i><i>2</i></r>')#foreach($i in $xmlfind(\"i\"))[$i]#end|$xml.find(\"i\").iterator().next()|$xml.find(\"sum(//i)\")"
+	},
+	{
+		"template": "$xml.parse('<r><i>1</i><i>2</i></r>')#foreach(i in $xml.find(\"i\"))[$i]#end|$xml.find(\"i\").iterator().next()|$xml.find(\"sum(//i)\")"
+	},
+	{
+		"template": "$xml.parse(<a><b></a>\").isEmpty()|$xml.parse('<a xmlns=\"urn:d\"><b/></a>')$xml|$xml.find(\"//b\")|$xml.find(\"b\")|$xml.children()"
+	},
+	{
+		"template": "$xml.parse(<r><a k=\"v\"/></r>')$xml.attributes()|$xml.find(\"a\").attributes()|$xml.find(\"a\").attr(\"k\")|$xml.find(\"a\").attr(\"z\")|$xml.find(\"a\").get(\"k\")|$xml.find(\"a\").k|$xml.first|$xml.last|$xml.parent|$xml.find(\"a\").parent"
+	},
+	{
+		"template": "${ #set("
+	},
+	{
+		"template": "${$name## c\nd"
+	},
+	{
+		"template": "${a"
+	},
+	{
+		"template": "${a"
+	},
+	{
+		"template": "${a "
+	},
+	{
+		"template": "${a b"
+	},
+	{
+		"template": "${a b*"
+	},
+	{
+		"template": "${a b|"
+	},
+	{
+		"template": "${a b}"
+	},
+	{
+		"template": "${a }"
+	},
+	{
+		"template": "${a$!b(}"
+	},
+	{
+		"template": "${a&&|"
+	},
+	{
+		"template": "${a(b}"
+	},
+	{
+		"template": "${a*|"
+	},
+	{
+		"template": "${a,}"
+	},
+	{
+		"template": "${a."
+	},
+	{
+		"template": "${a.(}"
+	},
+	{
+		"template": "${a..c"
+	},
+	{
+		"template": "${a.]}"
+	},
+	{
+		"template": "${a.b\n"
+	},
+	{
+		"template": "${a.b(}"
+	},
+	{
+		"template": "${a.b(}("
+	},
+	{
+		"template": "${a.b*"
+	},
+	{
+		"template": "${a.b*c"
+	},
+	{
+		"template": "${a.b."
+	},
+	{
+		"template": "${a.b.${c"
+	},
+	{
+		"template": "${a.b.c"
+	},
+	{
+		"template": "${a.b/}"
+	},
+	{
+		"template": "${a.b[0.c(1)}"
+	},
+	{
+		"template": "${a.b[0].c("
+	},
+	{
+		"template": "${a.b[0].c(1).."
+	},
+	{
+		"template": "${a.b[0].c(1.}"
+	},
+	{
+		"template": "${a.b[0].c(1/}"
+	},
+	{
+		"template": "${a.b[0].c(1}"
+	},
+	{
+		"template": "${a.b[0].c1)}"
+	},
+	{
+		"template": "${a.b[0]c(1)}"
+	},
+	{
+		"template": "${a.|}"
+	},
+	{
+		"template": "${a.}"
+	},
+	{
+		"template": "${a.}"
+	},
+	{
+		"template": "${a0]"
+	},
+	{
+		"template": "${a[0]"
+	},
+	{
+		"template": "${a[0]"
+	},
+	{
+		"template": "${a[0]\\"
+	},
+	{
+		"template": "${a]"
+	},
+	{
+		"template": "${ab(}"
+	},
+	{
+		"template": "${a{.b.c"
+	},
+	{
+		"template": "${a|'d',}"
+	},
+	{
+		"template": "${e\\pty|'alt'}"
+	},
+	{
+		"template": "${emp$!y|'alt'}"
+	},
+	{
+		"template": "${macro(m $a $b)$a$b#end#m(1 2)"
+	},
+	{
+		"template": "${mi#elsessing}"
+	},
+	{
+		"template": "${miss\\ng|$name}"
+	},
+	{
+		"template": "${missi##ng|'alt'}"
+	},
+	{
+		"template": "${missin\ng|$name}"
+	},
+	{
+		"template": "${missin${|$name}"
+	},
+	{
+		"template": "${missing!}"
+	},
+	{
+		"template": "${missing\""
+	},
+	{
+		"template": "${missing$!|$name}"
+	},
+	{
+		"template": "${missing|$n"
+	},
+	{
+		"template": "${missing|$na"
+	},
+	{
+		"template": "${missing|$nam"
+	},
+	{
+		"template": "${missing|'alt']}"
+	},
+	{
+		"template": "${missing|+alt'}"
+	},
+	{
+		"template": "${n"
+	},
+	{
+		"template": "${na&&e"
+	},
+	{
+		"template": "${na*e}"
+	},
+	{
+		"template": "${nam*"
+	},
+	{
+		"template": "${name==}"
+	},
+	{
+		"template": "${zero|'alt'!"
+	},
+	{
+		"template": "${zero|'alt'#"
+	},
+	{
+		"template": "${{a b}"
+	},
+	{
+		"template": "&&#define(a)x#end"
+	},
+	{
+		"template": "---\n $\n #\n $$foo$\n $$foo#\n $#foo \n $#foo$\n $#foo#\n $#foo \n #$foo$\n #$foo#\n #$foo \n $#foo($\n $#foo()#\n $#@foo()hop#end$\n $#@foo()hop#end#\n $#@foo()hop#end \n---\n"
+	},
+	{
+		"template": "---\n $\n #\n $$foo$\n $$foo#\n $#foo \n $#foo$\n $#foo#\n $#foo \n #$foo$\n #$foo#\n #$foo \n $#foo()$\n $#foo(#\n $#@foo()hop#end$\n $#@foo()hop#end#\n $#@foo()hop#end \n---\n"
+	},
+	{
+		"template": "---\n $\n #\n $$foo$\n $$foo#\n $#foo \n $#foo$\n $#foo#\n $#foo ( #$foo$\n #$foo#\n #$foo \n $#foo()$\n $#foo()#\n $#@foo()hop#end$\n $#@foo()hop#end#\n $#@foo()hop#end \n---\n"
+	},
+	{
+		"template": "1$a.b(1,,2)"
+	},
+	{
+		"template": "<table>\n  #foreach($ in [1..1])\n    <tr>\n      #foreach($b in [1..1])\n        <td>\n          blabla\n        </td>\n      #end\n    </tr>\n  #end\n</table>\n"
+	},
+	{
+		"template": "<table>\n  #foreach($a in [1..1)\n    <tr>\n      #foreach($b in [1..1])\n        <td>\n          blabla\n        </td>\n      #end\n    </tr>\n  #end\n</table>\n"
+	},
+	{
+		"template": "<table>\n  #foreach($a in [1..1])\n    <tr>\n      #foreach($bin [1..1])\n        <td>\n          blabla\n        </td>\n      #end\n    </tr>\n  #end\n</table>\n"
+	},
+	{
+		"template": "<table>\n  #foreach($a in [1..1])\n    <tr>\n      #foreach(b in [1..1])\n        <td>\n          blabla\n        </td>\n      #end\n    </tr>\n  #end\n</table>\n"
+	},
+	{
+		"template": "<table>\n  <tbody>\n#foreach($row in ["
+	},
+	{
+		"template": "<table>\n  <tbody>\n#foreach($row in [1"
+	},
+	{
+		"template": "<table>\n  <tbody>\n#foreach($row in [1."
+	},
+	{
+		"template": "<table>\n  <tbody>\n#foreach($row in [1.."
+	},
+	{
+		"template": "<table>\n  <tbody>\n#foreach($row in [1..2])\n    <tr>\n  #foreach($col in [..2])\n      <td>\n    #if( $row == 1 && $col == 1)\n        first cell\n    #elseif( $row == 2 && $coll == 2)\n        last cell\n    #else\n        middle cell\n    #end\n      </td>\n  #end\n    </tr>\n#end\n  </tbody>\n</table>\n"
+	},
+	{
+		"template": "<table>\n  <tbody>\n#foreach($row in [1..2])\n    <tr>\n  #foreach($col in [1..2]\n      <td>\n    #if( $row == 1 && $col == 1)\n        first cell\n    #elseif( $row == 2 && $coll == 2)\n        last cell\n    #else\n        middle cell\n    #end\n      </td>\n  #end\n    </tr>\n#end\n  </tbody>\n</table>\n"
+	},
+	{
+		"template": "<table>\n  <tbody>\n#foreach($row in [1..2])\n    <tr>\n  #foreach($col in [1..2])\n      <td>\n    #if( $row == 1 && $col == 1)\n        first cell\n    #el${seif( $row == 2 && $coll == 2)\n        last cell\n    #else\n        middle cell\n    #end\n      </td>\n  #end\n    </tr>\n#end\n  </tbody>\n</table>\n"
+	},
+	{
+		"template": "<table>\n  <tbody>\n#foreach($row in [1..2])\n    <tr>\n  #foreach($col in [1..2])\n      <td>\n    #if( $row == 1 && $col == 1)\n        first cell\n    #elseif( $r==w == 2 && $coll == 2)\n        last cell\n    #else\n        middle cell\n    #end\n      </td>\n  #end\n    </tr>\n#end\n  </tbody>\n</table>\n"
+	},
+	{
+		"template": "<table>\n  <tbody>\n#foreach($row in [1..2])\n    <tr>\n  #foreach($col in [1..2])\n      <td>\n    #if( $row == 1 && $col == 1)\n        first cell\n    #elseif( $row == 2 && $c"
+	},
+	{
+		"template": "<table>\n  <tbody>\n#foreach($row in [1..2])\n    <tr>\n  #foreach($col in [1..2])\n      <td>\n    #if( $row == 1 && $col == 1)\n        first cell\n    #elseif( row == 2 && $coll == 2)\n        last cell\n    #else\n        middle cell\n    #end\n      </td>\n  #end\n    </tr>\n#end\n  </tbody>\n</table>\n"
+	},
+	{
+		"template": "<table>\n  <tbody>\n#foreach($row in [1..2])\n    <tr>\n  #foreach($col in [1..2])\n      <td>\n    #if( $row == 1 && $col == 1)\n        first cell\n    #eseif( $row == 2 && $coll == 2)\n        last cell\n    #else\n        middle cell\n    #end\n      </td>\n  #end\n    </tr>\n#end\n  </tbody>\n</table>\n"
+	},
+	{
+		"template": "<table>\n  <tbody>\n#foreach($row in [1..2])\n    <tr>\n  #foreach($col in [1..2])\n      <td>\n    #if( $row == 1 && col == 1)\n        first cell\n    #elseif( $row == 2 && $coll == 2)\n        last cell\n    #else\n        middle cell\n    #end\n      </td>\n  #end\n    </tr>\n#end\n  </tbody>\n</table>\n"
+	},
+	{
+		"template": "<table>\n  <tbody>\n#foreach($row in [1..2])\n    <tr>\n  #foreach($col in [1..2])\n      <td>\n    #if( row == 1 && $col == 1)\n        first cell\n    #elseif( $row == 2 && $coll == 2)\n        last cell\n    #else\n        middle cell\n    #end\n      </td>\n  #end\n    </tr>\n#end\n  </tbody>\n</table>\n"
+	},
+	{
+		"template": "<table>\n  <tbody>\n#foreach($row in [1..2])\n    <tr>\n  #foreach(col in [1..2])\n      <td>\n    #if( $row == 1 && $col == 1)\n        first cell\n    #elseif( $row == 2 && $coll == 2)\n        last cell\n    #else\n        middle cell\n    #end\n      </td>\n  #end\n    </tr>\n#end\n  </tbody>\n</table>\n"
+	},
+	{
+		"template": "<table>\n  <tbody>\n#foreach($rowin [1..2])\n    <tr>\n  #foreach($col in [1..2])\n      <td>\n    #if( $row == 1 && $col == 1)\n        first cell\n    #elseif( $row == 2 && $coll == 2)\n        last cell\n    #else\n        middle cell\n    #end\n      </td>\n  #end\n    </tr>\n#end\n  </tbody>\n</table>\n"
+	},
+	{
+		"template": "BAD parse ${ile b"
+	},
+	{
+		"template": "Test File 1\n#include(\"/includeevent/include-a.vm\")\n\n#parse(\"/includeevent/parse-a.vm\"||)\n"
+	},
+	{
+		"template": "Test File 1\n#include(\"include-a.vm\")\n\n#parse"
+	},
+	{
+		"template": "Test File 1\n#include(/includeevent/include-a.vm\")\n\n#parse(\"/includeevent/parse-a.vm\")\n"
+	},
+	{
+		"template": "Test File 2\n#include(\"include-b.vm\")\n\n#parse(parse-b.vm\")\n\n#include(\"/include-c.vm\")\n\n#parse(\"/parse-c.vm\")\n"
+	},
+	{
+		"template": "Test File 2\n#include(include-b.vm\")\n\n#parse(\"parse-b.vm\")\n\n#include(\"/include-c.vm\")\n\n#parse(\"/parse-c.vm\")\n"
+	},
+	{
+		"template": "This is an example of chinese code encoding:\n\n#set ($c==h = \"\u4e0a\u7f51\")\nThe chinese string is $ch, its length is $ch.length()\n"
+	},
+	{
+		"template": "This is an example of chinese code encoding:\n\n#set ($ch = \"\u4e0a\u7f51\"\nThe chinese string is $ch, its length is $ch.length()\n"
+	},
+	{
+		"template": "This is an example of chinese code encoding:\n\n#set (ch = \"\u4e0a\u7f51\")\nThe chinese string is $ch, its length is $ch.length()\n"
+	},
+	{
+		"template": "This page checks the stop directive in the main body\n\n#stop\n\nthis should not render\n\ncheck reference\n#set($a  10)\n$a\n\ncheck method call\n$a.toString()\n\ncheck escaped directive\n\\#if\n\ncheck escaped reference\n\\$a\n\n"
+	},
+	{
+		"template": "This page checks the stop directive inside an if statement\n\n#if(false)\n\n    #stop\n\n#end\n\nthis should render\n\n#if(true)\n\n#stop\n\n#end\n\nthis should not render\n\ncheck reference\n#set($a  10)\n$a\n\ncheck method call\n$a.toString()\n\ncheck escaped directive\n\\#if\n\ncheck escaped reference\n\\$a\n\n"
+	},
+	{
+		"template": "This test checks the stop directive when included from a parse directive.\n\n#set($foo = \"stop3-include.vm\"\nFoo is: $foo\n#parse(\"$foo\")\nSince the template issued a stop, this line should not be visible.\n#parse(\"$foo\")\n\n"
+	},
+	{
+		"template": "This test checks the stop directive when included from a parse directive.\n\n#set($foo = \"stop3-include.vm\")\nFoo is: $foo\n#parse"
+	},
+	{
+		"template": "This test checks the stop directive when included from a parse directive.\n\n#set($foo = \"stop3-include.vm\")\nFoo is: $foo\n#parse\"$foo\")\nSince the template issued a stop, this line should not be visible.\n#parse(\"$foo\")\n\n"
+	},
+	{
+		"template": "This test checks the stop directive when included from a parse directive.\n\n#set($foo = \"stop3-include.vm\")\nFoo is: $foo\n#parse(\"$foo\"\nSince the template issued a stop, this line should not be visible.\n#parse(\"$foo\")\n\n"
+	},
+	{
+		"template": "This test checks the stop directive when included from a parse directive.\n\n#set($foo = \"stop3-include.vm\")\nFoo is: $foo\n#parse(\"$foo\")\nSince the template issued a stop, this line should not be visible.\n#parse"
+	},
+	{
+		"template": "This test checks the stop directive when included from a parse directive.\n\n#set($fo|o = \"stop3-include.vm\")\nFoo is: $foo\n#parse(\"$foo\")\nSince the template issued a stop, this line should not be visible.\n#parse(\"$foo\")\n\n"
+	},
+	{
+		"template": "\\\"#if x"
+	},
+	{
+		"template": "\\${na||e}"
+	},
+	{
+		"template": "\\\\#if :x"
+	},
+	{
+		"template": "\\\\#if x"
+	},
+	{
+		"template": "\\\\#if(tue)x#end"
+	},
+	{
+		"template": "\\\\#if-true)x#end"
+	},
+	{
+		"template": "\\}#if x"
+	},
+	{
+		"template": "a\n#if(tr#endue)\n  b\n#end\nc"
+	},
+	{
+		"template": "a\n#if(true\n  b\n#end\nc"
+	},
+	{
+		"template": "a #set($a  1) b$a"
+	},
+	{
+		"template": "a #set($a = 1 b$a"
+	},
+	{
+		"template": "a #set($a = 1## b$a"
+	},
+	{
+		"template": "a${stop b"
+	},
+	{
+		"template": "blaa1#{stop}${blaa2\n"
+	},
+	{
+		"template": "line 1\n#include(\"include/include1.vm\")\nline 2\n#parse(\"include/include1.vm\"##\nline 3"
+	},
+	{
+		"template": "o\nok\nok\nok\n #set($s)\nok\nok"
+	},
+	{
+		"template": "ok\nok\nok\nk\n #set($s)\nok\nok"
+	},
+	{
+		"template": "ok\nok\nok\nok\n #set($)\nok\nok"
+	},
+	{
+		"template": "ok\nok\nok\nok\n #set($s\nok\nok"
+	},
+	{
+		"template": "ok\nok\nok\nok\n #set($s&&\nok\nok"
+	},
+	{
+		"template": "ok\nok\nok\nok\n #set($s)\nok\no"
+	},
+	{
+		"template": "ok\nok\nok\nok\n #set($})\nok\nok"
+	},
+	{
+		"template": "ok\nok\nok\nok\n #set(s)\nok\nok"
+	},
+	{
+		"template": "text1#parse"
+	},
+	{
+		"template": "text1#parse\"parse.vm\")text2\n"
+	},
+	{
+		"template": "text1#parse)\"parse.vm\")text2\n"
+	},
+	{
+		"template": "x\n  #if(tre)y#end\nz"
+	},
+	{
+		"template": "x ## y\n#set($..="
+	},
+	{
+		"template": "x ## y\n#set($a="
+	},
+	{
+		"template": "x #set("
+	},
+	{
+		"template": "x ${a"
+	},
+	{
+		"template": "x\u2028y\n$${a.("
+	},
+	{
+		"template": "\u00e9$a.b(*"
+	},
+	{
+		"template": "\u00e9\u00e9\n#if("
+	},
+	{
+		"template": "\u00e9\u00e9\n#if}"
+	},
+	{
+		"template": "\ud83d\ude00#if("
+	},
+	{
+		"template": "\ud83d\ude00#if}("
+	}
+]

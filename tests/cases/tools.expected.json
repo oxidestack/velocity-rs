@@ -1,0 +1,98 @@
+[
+	{
+		"output":"<a xmlns:p=\"urn:p\" b=\"2\" z=\"1\"><!--c--><b>x<\/b>&amp;<![CDATA[<y>]]><p:c p:q=\"1\">t\n\"q\"<\/p:c><e\/><\/a><a xmlns:p=\"urn:p\" b=\"2\" z=\"1\"><!--c--><b>x<\/b>&amp;<![CDATA[<y>]]><p:c p:q=\"1\">t\n\"q\"<\/p:c><e\/><\/a>"
+	},
+	{
+		"output":"<a xmlns:p=\"urn:p\" b=\"2\" z=\"1\"><!--c--><b>x<\/b>&amp;<![CDATA[<y>]]><p:c p:q=\"1\">t\n\"q\"<\/p:c><e\/><\/a>$xml.find(\"\/\/p:c\")|$xml.find(\"c\")|<p:c xmlns:p=\"urn:p\" p:q=\"1\">t\n\"q\"<\/p:c>|21|x&amp;t\n\"q\""
+	},
+	{
+		"output":"<a xmlns:p=\"urn:p\" b=\"2\" z=\"1\"><!--c--><b>x<\/b>&amp;<![CDATA[<y>]]><p:c p:q=\"1\">t\n\"q\"<\/p:c><e\/><\/a>\/a[1]\/b[1]|\/a[1]\/e[1]|6|x&<y>t\n\"q\"|a"
+	},
+	{
+		"output":"<r><i n=\"1\">a<\/i><i n=\"2\">b<\/i><i>c<\/i><\/r><i n=\"2\">b<\/i>|c|$xml.find(\"count(\/\/i)\")|<i n=\"2\">b<\/i>|<i n=\"1\">a<\/i><i n=\"2\">b<\/i><i>c<\/i>|$xml.get(1)|<r><i n=\"1\">a<\/i><i n=\"2\">b<\/i><i>c<\/i><\/r>|<r><i n=\"1\">a<\/i><i n=\"2\">b<\/i><i>c<\/i><\/r>"
+	},
+	{
+		"output":"<r a=\"x&#10;y z\">ent<b>val<\/b>A<\/r><r a=\"x&#10;y z\">ent<b>val<\/b>A<\/r>|entvalA|<b>val<\/b>"
+	},
+	{
+		"output":"true|<a xmlns=\"urn:d\"><b\/><\/a><a xmlns=\"urn:d\"><b\/><\/a>|$xml.find(\"\/\/b\")|$xml.find(\"b\")|<b xmlns=\"urn:d\"\/>"
+	},
+	{
+		"output":"<r><i>1<\/i><i>2<\/i><\/r>[<i>1<\/i>][<i>2<\/i>]|<i>1<\/i>|$xml.find(\"sum(\/\/i)\")"
+	},
+	{
+		"output":"<r>  <!-- x --> <i> a <\/i>text<![CDATA[cd]]>more<\/r>5|4|$xml.find(\"r\/text()[2]\")|    a textcdmore"
+	},
+	{
+		"output":"<r><a id=\"7\"><b name=\"n\"\/><c\/><c\/><\/a><\/r>\/r[1]\/a[@id='7']\/b[@name='n']|\/r[1]\/a[@id='7']\/c[2]|\/r[1]\/a[@id='7']|2|1"
+	},
+	{
+		"output":"<r x=\"1\"><a>1<\/a><a>2<\/a><b>3<\/b><\/r><a>2<\/a><b>3<\/b>|<a>2<\/a>|<b>3<\/b>|<a>2<\/a><b>3<\/b>|<a>2<\/a>|<r x=\"1\"><a>1<\/a><a>2<\/a><b>3<\/b><\/r>|<r x=\"1\"><a>1<\/a><a>2<\/a><b>3<\/b><\/r>|$xml.find(\"r\/a\")|<a>1<\/a><a>2<\/a>|r"
+	},
+	{
+		"output":"<r><a>1<\/a><b>2<\/b><\/r><a>1<\/a><b>2<\/b>|<r><a>1<\/a><b>2<\/b><\/r><b>2<\/b>|<b>2<\/b>|<b>2<\/b>|<r><a>1<\/a><b>2<\/b><\/r><b>2<\/b>|<b>2<\/b>"
+	},
+	{
+		"output":"<r><a k=\"v\"\/><\/r>{}|{k=v}|v|$xml.find(\"a\").attr(\"z\")|v|v|<r><a k=\"v\"\/><\/r>|<r><a k=\"v\"\/><\/r>|$xml.parent|<r><a k=\"v\"\/><\/r>"
+	},
+	{
+		"output":"<r><a>&lt;&gt;&amp;\"'<\/a><b c=\"&lt;&amp;&quot;'&gt;\"\/><\/r><r><a>&lt;&gt;&amp;\"'<\/a><b c=\"&lt;&amp;&quot;'&gt;\"\/><\/r>|<>&\"'"
+	},
+	{
+		"output":"<r><?pi data?><a\/><\/r><r><?pi data?><a\/><\/r>|<?pi data?>|2|3"
+	},
+	{
+		"output":"true|true|true|false|true"
+	},
+	{
+		"output":"<r><a\/><\/r>$xml.find(\"\/\/a[\")|$xml.find(\"\/\/a[@]\")|$xml.find(\"\")|$xml.find(\"$v\")|$xml.find(\"foo(1)\")"
+	},
+	{
+		"output":"Tue Jan 02 03:04:05 GMT 2007|Jan 2, 2007, 3:04:05\u202FAM|2007-01-02T03:04:05|2007-01-02T03:04:05Z|2007-01-02 03:04:05 GMT|1\/2\/07, 3:04\u202FAM|January 2, 2007|3:04:05\u202FAM Greenwich Mean Time|Jan 2, 2007, 3:04\u202FAM"
+	},
+	{
+		"output":"Tue, 2 Jan 2007|$date.format(\"yyyy\", $d, \"fr\")|$date.format(\"full_date\", $d, \"fr_FR\")|2007|0|2|3|3|$date.getValue(\"nope\", $d)"
+	},
+	{
+		"output":"java.util.GregorianCalendar|Thu Jan 01 00:00:01 GMT 1970|$date.toDate(\"x\")|$date.format(\"yyyy\", \"2019-01-01\")|Tue Jan 01 00:00:00 GMT 2019|$date.toLocalizedPattern(\"short\", \"fr\")|$date.toLocalizedPattern(\"intl_tz\", \"fr\")|default"
+	},
+	{
+		"output":"1 month later|1 month earlier|1 month|1 month later|1 m later|1 month later|44|6|1|same time|0 milliseconds|1 month later"
+	},
+	{
+		"output":"64 years later|64 years earlier|64|24|23|65 years later|-65 years|$date.whenIs(null, $b)|64 y later"
+	},
+	{
+		"output":"1167696000000|1970-01-01 00:00 +0000|1970-01-02|1|1|$date.format(\"y-M-d\", null)|$date.format(null, 0)"
+	},
+	{
+		"output":"3.5|3|$math.add(1, \"x\")|5|5.0|$math.div(1, 0)|3.5|4|4.9E-324|0.5|1024|1.4142135623730951|3|1|$math.mod(7, 0)"
+	},
+	{
+		"output":"3|3.5|3|-3|2|4|3.14|3.1|12|3.0|1234.5|6|2.5|0|NaN|7|2|5"
+	},
+	{
+		"output":"2147483648|10000000000|3.0|102.0|0.19999999999999998|0.3333333333333333|4.9E-324|1|$math.getTotal([1, \"x\"])|1|9999999999"
+	},
+	{
+		"output":"1,234,567.891|¤1,234.50|26%|1,234|3.14|12345.|¤3.00|13|50%|-1,234.5|$number.format(\"x\")|$number.format(null)|12.5|12"
+	},
+	{
+		"output":"$number.format(\"number\", 1234.5, \"fr\")|$number.format(\"currency\", 1234.5, \"fr_FR\")|$number.format(\"currency\", 1234.5, \"en_GB\")|$number.format(\"#,##0.0\", 1234.5, \"de\")|$number.toNumber(\"number\", \"1 234,5\", \"fr\")|$number.format(\"'\")|$number.getNumberFormat(\"percent\", \"en\").class.name|en|fr_FR"
+	},
+	{
+		"error":"org.apache.velocity.exception.MethodInvocationException: Invocation of method 'format' in  class org.apache.velocity.tools.generic.ComparisonDateTool threw exception java.lang.IllegalArgumentException: Illegal pattern character 'x' at $date.format(\"x\", \"y\")[line 1, column 7]"
+	},
+	{
+		"error":"org.apache.velocity.exception.MethodInvocationException: Invocation of method 'format' in  class org.apache.velocity.tools.generic.NumberTool threw exception java.lang.IllegalArgumentException: Unexpected '0' in pattern \"#0.0#0\" at $number.format(\"#0.0#0\", 1)[line 1, column 9]"
+	},
+	{
+		"output":"$number.format(\"number\", 1234.5, \"fr\")|1,234.5|2007 Jan 1, Mon|\u20AC 3.00|£3.00|\u20AC 3.00"
+	},
+	{
+		"output":"1, 2 and 3|true|true|true|true|esc|en|default|default|,|abcdefghijklmnopqrstuvwxyz0...|a and 2|x-00042|3.14"
+	},
+	{
+		"output":"a, b and c|[C, a, b]|[1, 2]|${esc.d}x${esc.h}y|xy|abc  |boxes|{ height: 2, width: 3 }"
+	}
+]
