@@ -11,3 +11,7 @@ required, Features, Bug fixes, Performance and Other changes. The versions follo
 
 The changes since the last release are the release notes of the commits after its tag; a release gathers them into
 its section below.
+
+## [0.1.0] - 2026-11-19
+
+The first release, published to crates.io from the commit tagged `v0.1.0`. It has no earlier version to upgrade from.
